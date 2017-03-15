@@ -1,0 +1,392 @@
+/*_____________Kode av: xut004, kandidat 268 _____________*/
+
+body, html {
+	margin: 0;
+	width: 100%;
+}
+
+/*_____________Fonts_____________*/
+
+h1 {
+font-family: Lato, Helvetica Neue, Helvetica, Arial;
+font-size: 2em;
+font-weight: 300;
+letter-spacing: 1.8px;
+color: #808080;
+text-align: center;
+margin: 2em 0 0 0;
+}
+
+h3 {
+font-family: Lato, Helvetica Neue, Helvetica, Arial;
+font-size: 1.3em;
+font-weight: 300;
+letter-spacing: 1.8px;
+color: #808080;
+}
+
+.underline {
+width: 60px;
+border-bottom: 3px solid red;
+margin: 12px auto 25px auto;
+}
+
+.underlineh3 {
+width: 60px;
+border-bottom: 3px solid red;
+margin-left:0.8em;
+}
+
+p {
+font-family: Lato, Helvetica Neue, Helvetica, Arial;
+font-size: 0.8em;
+color: black;
+}
+
+a {
+	text-decoration: none;
+	color: #acacaa;
+}
+
+/* fjerner blå outline fra lenker i chrome */
+a:focus {
+	outline:0;
+}
+
+/* breadbrumb liste */
+.breadcrumb {
+	list-style: none;
+	padding: 0px;
+}
+
+.breadcrumb li {
+	float: left;
+	padding-left: 35px;
+}
+
+/*_____________ Navigasjon _____________*/
+
+#headerbackground {
+	background-color: white;
+  opacity: 0.93;
+	height: 65px;
+	width: 100%;
+	position: fixed;
+  top: 0px;
+	z-index: 9;
+  position: fixed;
+  /*border: 1px solid red;*/
+}
+
+nav {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 0.15em;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+	top: 6px;
+	position: fixed;
+	z-index: 10;
+  /*border: 1px solid blue;*/
+}
+
+#logo {
+	width: 110px;
+  padding: 5 5 5 5;
+	height: auto;
+	border: 0px;
+	float: left;
+  z-index: 11;
+}
+
+nav a {
+	text-decoration: none;
+	color: #808080;
+}
+nav a:hover {
+	color: red;
+  text-decoration: none;
+}
+
+/* fjerner blå outline fra lenker i chrome */
+a:focus {
+  outline:0;
+}
+
+/* kode inspirert fra http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
+#search input[type="text"] {
+    font-family: Lato, Helvetica Neue, Helvetica, Arial;
+    font-size: 0.85em;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: #808080;
+    text-transform: uppercase;
+    position: relative;
+    top: -3px;
+
+    border: 1px solid #d1d1d1;
+    width: 100px;
+    padding: 3px 10px 3px 15px;
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    width: 200px;
+    outline: 0;
+    border: 1px solid red;
+}
+
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
+li {
+	float: right;
+	padding-left: 35px;
+  padding-top: 5px;
+}
+
+/* dropdown minside */
+.dropdown{
+	float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 23px;
+    background-color: white;
+    min-width: 120px;
+    border: 0.5px solid red;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+/* lenkene i dropdown */
+.dropdown-content a {
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+/* vise alternativer ved hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*_____________Main section_____________*/
+
+#wrapper{
+	color: #565655;
+	margin:auto;
+	max-width: 1000px;
+	display: flex;
+	flex-direction: column; /*| row-reverse | row | column-reverse;*/
+	padding:1em;
+	width: 70%;
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	/*background-color:#f6f6f6;
+	-webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.46);
+	-moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.46);
+	box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.46);*/
+}
+
+
+/*---------------------post-------------------------*/
+#anmeldelse{
+	display: flex;
+	padding: 2em;
+}
+#comment{
+	width:100%;
+}
+
+
+/*---------------------rating-------------------------*/
+/* code inspired by http://findnerd.com/list/view/Star-rating-using-pure-css/12096/ */
+.rate {
+	float: right;
+	height: 3em;
+	padding: 0.5em;
+	margin:1em;
+}
+
+.rate:not(:checked) > input {
+	position: absolute;
+	top: -9999px;
+}
+
+.rate:not(:checked) > label {
+	float: right;
+	width: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 30px;
+	color: #dbdbdb;
+}
+
+.rate:not(:checked) > label:before { content: '★ '; }
+
+.rate > input:checked ~ label { color: red; } /*når valgt*/
+
+.rate:not(:checked) > label:hover, .rate:not(:checked) > label:hover ~ label { color: #E01515; } /*når hover over*/
+
+.rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label, .rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label, .rate > label:hover ~ input:checked ~ label { color: #E12323; } /*når går over de som  allerede er valgt*/
+
+
+/*---------------------breadcrumb-------------------------*/
+
+.breadcrumb{
+	margin-top:4em;
+	background-color:red;
+}
+
+.breadcrumb a, .breadcrumb li{
+	color: white  !important;
+}
+
+#visited{
+	font-style: italic;
+}
+
+#minListe {
+	height:2em !important;
+	margin-left:auto;
+	display:block;
+
+}
+
+#wrapper a{
+	color:#53749d;
+}
+
+#wrapper a:hover{
+	text-decoration: underline;
+	color:red;
+}
+#wrapper p{
+	margin: 0.5em;
+}
+
+.handling{
+	margin-left:3em;
+}
+
+.images{
+	margin: auto;
+}
+
+.images img{
+	height:15em;
+}
+
+iframe{
+	margin: auto;
+	padding:1em;
+	border:0;
+}
+
+/* ______________________________ Responsive meny ________________________________________ */
+
+ @media only screen and (max-width: 1070px) {
+#wrapper{
+	width:60%;
+}
+.images img{
+	height: 10em;
+}
+iframe{
+    width: 400px;
+    height: 215px;
+}
+
+   /*_____________Fonts_____________*/
+
+   h2 {
+     font-size: 9px;
+   	font-weight: 400;
+   	letter-spacing: 1.5px;
+   }
+
+   h3 {
+     font-size: 1em;
+   }
+
+   p{
+     font-size: 0.7em;
+   }
+
+ }
+
+/* ______________________________________ Small screen _________________________________________*/
+
+@media only screen and (max-width: 750px) and (min-width: 410px){
+#wrapper{
+	width:80%;
+}
+.images img{
+	height: 5em ;
+}
+iframe{
+    width: 300px;
+    height: 215px;
+}
+
+  #logo {
+  	width: 80px;
+  }
+  /*_____________Fonts_____________*/
+
+  h1{
+    font-size: 1.2em;
+  }
+
+
+}
+
+/* ______________________________________ Smallest screen _________________________________________*/
+
+@media only screen and (max-width: 410px){
+#wrapper{
+	width:70%;
+}
+.images img{
+	height: 3em ;
+}
+iframe{
+    width: 200px;
+    height: 115px;
+}
+
+#logo {
+	width: 80px;
+}
+
+  /*_____________Fonts_____________*/
+
+  h1{
+    font-size: 1.2em;
+  }
+
+  h2{
+    padding-top: 30px;
+  }
+
+
+}

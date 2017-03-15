@@ -1,26 +1,352 @@
 <!DOCTYPE html>
 
 <html>
+
   <meta charset="utf-8"/>
   <head>
-    <!-- Don't need scripts here -->
+    <!-- Tittel -->
+    <title>FilmBib</title>
+		<!-- Font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300,100' rel='stylesheet' type='text/css'>
+		<!-- css kode -->
+		<link rel="stylesheet" href="css/index.css">
+		<!-- Andre ting som hjelper koden vår -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
+
+
   <body onload="load_example();">
-    <h2 id="filmtittel">Filmbiblioteket</h2>
-    <a href="all_movies.html">All movies</a>
-	<!-- Skjemaet gir mulighet for å søke etter film tittel. Dere må inkludere muligheten for et mer avansert søk -->
-	<form id="search" action="search_results.html" method="get">
-		<div>
-			<h1>Quick search</h1>
-		</div>
-		<fieldset>
-			<legend>Søk</legend>
-			<div>
-				<label for="film_title">Film tittel</label>
-				<input id="film_title" name="film_title" type="text" placeholder="e.g. King Kong" >
-			</div>
-		</fieldset>
-		<input type="submit" id="submit_search" value="Søk">
-	</form>
+
+  <!-- Det hvite feltet bak navigasjonen -->
+  <div id="headerbackground">
+  </div>
+
+  <!-- Navigasjon -->
+  <nav>
+    <a href="index.html ">
+      <img src="img/logo/logo.png" id="logo" alt="Logo">
+    </a>
+    <a href="#" id="menyikon"></a>
+      <ul>
+        <!-- her på li være før div. Jobber med å finne en loosning -->
+        <div class="dropdown">
+          <li><a href="minside.html">Min Side</a></li>
+          <div class="dropdown-content">
+            <a href="minside.html">Min side</a>
+            <a href="login.html">Logg ut</a>
+          </div>
+        </div>
+
+        <li>
+        <!--   <form method="get" action="resultater.html" id="search">
+            <input name="q" type="text" size="40" placeholder="Søk..." />
+          </form>  -->
+
+          <!-- Skjemaet gir mulighet for å søke etter film tittel. -->
+        	<form id="search" action="search_results.html" method="get">
+        	   <input id="film_title" name="film_title" type="text" size="40" placeholder="søk filmtittel" >
+        		<!-- <input type="submit" id="submit_search" value="Søk">-->
+        	</form>
+
+
+        </li>
+      </ul>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+  			<!-- Anbefalinger -->
+  		<section id="mainsection">
+
+  			<h1>Anbefalinger</h1>
+  			<div class="underline"></div>
+
+  			<section id="films">
+  			<!-- Film 1 -->
+  			<div class="movieimg" id="film1">
+      		<div class="hovereffect">
+          	<img class="img-responsive" src="img/TheIntouchables.jpg" alt="The Intouchables movie cover">
+            <div class="overlay">
+  						<a href="film1.html">
+              <h2>Intouchables</h2>
+  						<p > Den sanne historien om to menn som aldri skulle ha møtt hverandre -
+  								De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter.
+  						</p></a>
+            </div>
+      		</div>
+  				<a href="film1.html"><h2 class="h22">Intouchables</h2></a>
+  			</div>
+
+  			<!-- Film 2 -->
+  			<div class="movieimg" id="film2">
+      		<div class="hovereffect">
+          	<img class="img-responsive" src="img/TheLunchbox.jpg" alt="The Lunchbox movie cover">
+            <div class="overlay">
+  						<a href="film2.html">
+              <h2>The Lunchbox</h2>
+  						<p> Indiske The Lunchbox er en sjelden filmperle som har begeistret
+  								et stort internasjonalt publikum med sin originalitet og varme.
+  						</p></a>
+            </div>
+      		</div>
+  				<a href="film2.html"><h2 class="h22">The Lunchbox</h2></a>
+  			</div>
+
+  			<!-- Film 3 -->
+  			<div class="movieimg" id="film3">
+      		<div class="hovereffect">
+          	<img class="img-responsive" src="img/HolyGrail.jpg" alt="The Holy Grail movie cover">
+            <div class="overlay">
+  						<a href="film1.html">
+              <h2>Monty Python &<br>the Holy Grail</h2>
+  						<p>Kong Arthur og hans riddere skal finne Den Hellige Gral.
+  						</p></a>
+            </div>
+      		</div>
+  				<a href="film2.html"><h2 class="h22">Monty Python &<br>the Holy Grail</h2></a>
+  			</div>
+
+  			<!-- Film 4 -->
+  			<div class="movieimg" id="film4">
+      		<div class="hovereffect">
+          	<img class="img-responsive" src="img/MinorityReport.jpg" alt="Minority Report movie cover">
+            <div class="overlay">
+  						<a href="film1.html">
+              <h2>Minority Report</h2>
+  						<p>Lederen for prekriminaliteten blir beskyldt for et fremtidig drap og må finne ut hvem
+  							som ha pekt han ut, ellers blir han et offer selv.
+  						</p></a>
+            </div>
+      		</div>
+  				<a href="film2.html"><h2 class="h22">Minority Report</h2></a>
+  			</div>
+
+  			<!-- Film 5 -->
+  			<div class="movieimg" id="film5">
+      		<div class="hovereffect">
+          	<img class="img-responsive" src="img/TheIntouchables.jpg" alt="The Intouchables movie cover">
+            <div class="overlay">
+  						<a href="film1.html">
+              <h2>Intouchables</h2>
+  						<p> Den sanne historien om to menn som aldri skulle ha møtt hverandre -
+  								De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter.
+  						</p></a>
+            </div>
+      		</div>
+  			</div>
+
+  			<!-- Film 6 -->
+  			<div class="movieimg" id="film6">
+      		<div class="hovereffect">
+          	<img class="img-responsive" src="img/TheLunchbox.jpg" alt="The Lunchbox movie cover">
+            <div class="overlay">
+  						<a href="film2.html">
+              <h2>The Lunchbox</h2>
+  						<p> Indiske The Lunchbox er en sjelden filmperle som har begeistret
+  								et stort internasjonalt publikum med sin originalitet og varme.
+  						</p></a>
+            </div>
+      		</div>
+  			</div>
+
+  			<!-- Film 7 -->
+  			<div class="movieimg" id="film7">
+      		<div class="hovereffect">
+          	<img class="img-responsive" src="img/HolyGrail.jpg" alt="The Holy Grail movie cover">
+            <div class="overlay">
+  						<a href="film1.html">
+              <h2>Monty Python and <br>the Holy Grail</h2>
+  						<p>Kong Arthur og hans riddere skal finne Den Hellige Gral.
+  						</p></a>
+            </div>
+      		</div>
+  			</div>
+
+  			<!-- Film 8 -->
+  			<div class="movieimg" id="film8">
+      		<div class="hovereffect">
+          	<img class="img-responsive" src="img/MinorityReport.jpg" alt="Minority Report movie cover">
+            <div class="overlay">
+  						<a href="film1.html">
+              <h2>Minority Report</h2>
+  						<p>Lederen for prekriminaliteten blir beskyldt for et fremtidig drap og må finne ut hvem
+  							som ha pekt han ut, ellers blir han et offer selv.
+  						</p></a>
+            </div>
+      		</div>
+  			</div>
+
+  			<p><a href="resultater.html"> Se flere... </a> </p>
+
+  		</section>
+
+
+
+  		<section id="boks1">
+  			<!-- avansert soot -->
+  			<section id="avansertSok">
+  				<h3>Avansert søk</h3>
+  				<div class="underline"></div>
+
+
+  				<p>Skriv inn hele eller deler av det eller de ordene du vil søke etter.
+  					Du kan også begrense søket ved å velge type og/eller format. </p>
+
+  				<form method="get" action="resultater.html" id="search2">
+  				  <input type="hidden" name="action" value="list">
+  					<br>
+  				  <select name="f_type" title="Type">
+  				    <option value="" class="postsep">Alle</option>
+  				  	<option value="v">Film</option> <option value="h">Hørespill</option> <option value="s">Spill</option>
+  				  </select><br><br>
+
+  				  <select name="f_format" title="Format">
+  				    <option value="" class="postsep">Alle formater</option>
+  				  	<option value="cd-rom">cd-rom</option> <option value="dvd-video">dvd-video</option> <option value="online">online</option>
+  						<option value="playstation2">playstation2</option> <option value="vhs">vhs</option>
+  				  </select><br><br>
+
+  				<!--  <input type="submit" value="Søk">
+  				</form>
+
+      		<form method="get" action="resultater.html" id="search3"> -->
+        		<input type="hidden" name="action" value="list">
+        		<select name="f_genre" onchange="this.form.submit()">
+          		<option class="postsep">Genre:</option>
+    					<option value="biografi">Biografi</option> <option value="drama">Drama</option>
+  						<option value="komedie">Komedie</option> <option value="romanse">Romanse</option>
+  					</select><br><br>
+
+  					<select name="f_country" onchange="this.form.submit()">
+          		<option class="postsep"> Land:</option>
+    					<option value="IND">IND</option><option value="FRA">FRA</option>
+  					</select><br><br>
+
+  					<select name="f_folk" onchange="this.form.submit()">
+          		<option class="postsep">Regissører:</option>
+    					<option value="Olivier Nakache">Olivier Nakache</option> <option value="Eric Toledano">Eric Toledano</option> <option value="Ritesh Batra">Ritesh Batra</option>
+  					</select><br><br>
+  					<input type="submit" value="Søk">
+  				</form>
+
+  			</section>
+
+  			<!-- rutiner for laan -->
+  			<section id="rutiner">
+  				<h3>Rutiner for lån</h3>
+  				<div class="underline"></div>
+
+  				<p>
+  					1. Følgende kan låne: staben ved Institutt for informasjons- og medievitenskap,
+  					studenter ved instituttet, på grunnlag av faglig begrunnelse, andre ved UiB etter
+  					særlig avtale for et avgrenset tidsrom eller for et avgrenset prosjekt. <br><br>
+
+  					2. Bestillinger vil bli effektuert hver arbeidsdag mellom klokken 14:00 og 15:00. <br><br>
+
+  					3. Ansatte ved instituttet får filmen lagt i posthyllen, studenter og andre får
+  					tilbakemelding om hvor og når filmen kan hentes. <br><br>
+
+  					4. For alt utlån gjelder en generell regel om lånetid på 1 uke, som kan forlenges
+  					med ytterligere en uke. Ønskes en film lånt over en lengre periode må dette begrunnes,
+  					og hver enkelt forespørsel vil bli vurdert. <br><br>
+
+  					5. Film skal leveres tilbake i posthyllen merket retur av film.
+  				</p>
+  			</section>
+
+  		</section>
+
+  		<section id="boks2">
+  			<!-- siste tilgjengeliggjorte filmer -->
+  			<section id="sistTilgjengeligjort">
+  				<h3>Siste tilgjengeliggjorte filmer</h3>
+  				<div class="underline"></div>
+
+  				<section class="mid">
+
+  					<section class="litenfilm">
+  						<a href="film1.html">
+  							<img class="img-small" src="img/MinorityReport.jpg" alt="Minority Report movie cover">
+  						</a>
+  						<h4>Minority Report</h4>
+  					</section>
+
+  					<section class="litenfilm">
+  						<a href="film1.html">
+  							<img class="img-small" src="img/HolyGrail.jpg" alt="The Holy Grail movie cover">
+  						</a>
+  						<h4>The Holy Grail</h4>
+  					</section>
+
+  					<section class="litenfilm">
+  						<a href="film2.html">
+  							<img class="img-small" src="img/TheLunchbox.jpg" alt="The Lunchbox movie cover">
+  						</a>
+  						<h4>The Lunchbox</h4>
+  					</section>
+
+  					<section class="litenfilm">
+  						<a href="film1.html">
+  							<img class="img-small" src="img/TheIntouchables.jpg" alt="The Intouchables movie cover">
+  						</a>
+  						<h4>Intouchables</h4>
+  					</section>
+  				</section>
+  			</section>
+
+  			<!-- siste laante -->
+  			<section id="sistLante">
+  				<h3>Siste lånte</h3>
+  				<div class="underline"></div>
+
+  				<section class="mid">
+
+  					<section class="litenfilm">
+  						<a href="film1.html">
+  							<img class="img-small" src="img/MinorityReport.jpg" alt="Minority Report movie cover">
+  						</a>
+  						<h4>Minority Report</h4>
+  					</section>
+
+  					<section class="litenfilm">
+  						<a href="film1.html">
+  							<img class="img-small" src="img/HolyGrail.jpg" alt="The Holy Grail movie cover">
+  						</a>
+  						<h4>The Holy Grail</h4>
+  					</section>
+
+  					<section class="litenfilm">
+  						<a href="film2.html">
+  							<img class="img-small" src="img/TheLunchbox.jpg" alt="The Lunchbox movie cover">
+  						</a>
+  						<h4>The Lunchbox</h4>
+  					</section>
+
+  					<section class="litenfilm">
+  						<a href="film1.html">
+  							<img class="img-small" src="img/TheIntouchables.jpg" alt="The Intouchables movie cover">
+  						</a>
+  						<h4>Intouchables</h4>
+  					</section>
+
+  				</section>
+
+  			</section>
+
+  		</section>
+
+  		<!-- slutt på mainsection -->
+  		</section>
+
+
+
   </body>
 </html>

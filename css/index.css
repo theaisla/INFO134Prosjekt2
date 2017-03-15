@@ -1,0 +1,544 @@
+/*_____________ Kode av: tcl059, kandidat 139 _____________*/
+body, html {
+	margin: 0;
+  width: 100%;
+}
+
+/*_____________Fonts_____________*/
+
+h1 {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 2em;
+	font-weight: 300;
+	letter-spacing: 1.8px;
+	color: #808080;
+  text-align: center;
+  margin: 5 0 0 0;
+}
+
+.underline {
+	width: 60px;
+	border-bottom: 3px solid red;
+	margin: 12px auto 25px auto;
+}
+
+p {
+  font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8em;
+	color: #4d4d4d;
+}
+
+h2 {
+  font-family: Lato, Helvetica Neue, Helvetica, Arial;
+  font-size: 13px;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	color: white;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 1.3em;
+	font-weight: 300;
+	letter-spacing: 1.8px;
+	color: #808080;
+  text-align: center;
+  margin: 10px auto 10px auto;
+}
+
+h4 {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8em;
+	font-weight: 300;
+	letter-spacing: 1.2px;
+	color: #808080;
+  margin: 0 0 0 0;
+  text-align: center;
+}
+
+h5 {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.9em;
+	font-weight: 400;
+	letter-spacing: 1.2px;
+	color: #808080;
+  margin: 3 0 3 3;
+}
+
+/*_____________ Navigasjon _____________*/
+
+#headerbackground {
+	background-color: white;
+  opacity: 0.93;
+	height: 65px;
+	width: 100%;
+	position: fixed;
+  top: 0px;
+	z-index: 9;
+  position: fixed;
+  /*border: 1px solid red;*/
+}
+
+nav {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 0.15em;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+	top: 6px;
+	position: fixed;
+	z-index: 10;
+  /*border: 1px solid blue;*/
+}
+
+#logo {
+	width: 110px;
+  padding: 5 5 5 5;
+	height: auto;
+	border: 0px;
+	float: left;
+  z-index: 11;
+}
+
+nav a {
+	text-decoration: none;
+	color: #808080;
+}
+nav a:hover {
+	color: red;
+  text-decoration: none;
+}
+
+/* fjerner blå outline fra lenker i chrome */
+a:focus {
+  outline:0;
+}
+
+/* kode inspirert fra http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
+#search input[type="text"] {
+    font-family: Lato, Helvetica Neue, Helvetica, Arial;
+    font-size: 0.85em;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: #808080;
+    text-transform: uppercase;
+    position: relative;
+    top: -3px;
+
+    border: 1px solid #d1d1d1;
+    width: 100px;
+    padding: 3px 10px 3px 15px;
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+#search input[type="text"]:focus {
+    width: 200px;
+    outline: 0;
+    border: 1px solid red;
+}
+
+ul {
+	list-style: none;
+	padding: 0px;
+}
+
+li {
+	float: right;
+	padding-left: 35px;
+  padding-top: 5px;
+}
+
+/* dropdown minside */
+.dropdown{
+	float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 23px;
+    background-color: white;
+    min-width: 120px;
+    border: 0.5px solid red;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+/* lenkene i dropdown */
+.dropdown-content a {
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+/* vise alternativer ved hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#minside {
+  color: red;
+}
+
+
+/*_____________Hoved section_____________*/
+
+#mainsection {
+  width: 70%;
+  margin: auto;
+  z-index: 0;
+  position: relative;
+  top: 80px;
+  padding: 10;
+  /*border: 1px solid pink;*/
+}
+
+a {
+	text-decoration: none;
+	color: #53749d;
+}
+a:hover {
+	color: red;
+  text-decoration: underline;
+}
+
+#films {
+  margin-right: auto;
+  margin-left: auto;
+  width: 780px;
+}
+
+
+/*_____________Hover effect on movie images_____________*/
+/* Inspired by miketricking.github.io */
+
+.h22 {
+  display: none;
+}
+
+.movieimg{
+  width: 170px;
+  height: auto;
+  display: inline-block;
+  margin: 10px;
+}
+
+.hovereffect {
+  width: 100%;
+  height: auto;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: black;
+}
+
+.hovereffect .overlay {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: -20;
+  left: 0;
+  padding: 50px 20px;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 10px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hovereffect:hover img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect h2 {
+  opacity: 0;
+}
+
+.hovereffect:hover h2 {
+  opacity: 1;
+
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0.5em 0;
+  background-color: transparent;
+}
+
+.hovereffect h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+.hovereffect:hover h2:after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect a, .hovereffect p {
+  color: #FFF;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+}
+
+.hovereffect:hover a, .hovereffect:hover p {
+  opacity: 1;
+  text-decoration: none;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+/*_____________Mindre sections_____________*/
+
+#boks1{
+  height: 415px;
+  padding: 5px;
+}
+
+#avansertSok{
+  width: 45%;
+  float: left;
+  margin-left: 3%;
+}
+
+#rutiner{
+  width: 45%;
+  float: right;
+  margin-right: 3%;
+}
+
+#boks2{
+  height: 450px;
+}
+
+#sistTilgjengeligjort {
+  width: 45%;
+  float: left;
+  margin-left: 3%;
+}
+
+#sistLante{
+  width: 45%;
+  float: right;
+  margin-right: 3%;
+}
+
+.img-small{
+  width: 100px;
+  height: auto;
+  margin: 2%;
+  display: inline-block;
+}
+
+.litenfilm {
+  display: inline-block;
+  margin: 8px;
+}
+
+.mid{
+  margin-top: -13px;
+  margin-left: auto;
+  margin-right: auto;
+  width:250px;
+}
+
+/* ______________________________ Responsive meny ________________________________________ */
+
+ @media only screen and (max-width: 1070px) {
+
+   /*_____________Fonts_____________*/
+
+   h2 {
+     font-size: 9px;
+   	font-weight: 400;
+   	letter-spacing: 1.5px;
+   }
+
+   h3 {
+     font-size: 1em;
+   }
+
+   p{
+     font-size: 0.7em;
+   }
+
+   /*_____________ Bilde av filmer store _____________*/
+
+   #films {
+     width: 550px;
+   }
+
+   .movieimg{
+     width: 120px;
+     margin: 6px;
+   }
+
+   .hovereffect .overlay {
+     width: 70%;
+   }
+
+   .hovereffect p{
+     font-size: 9px;
+     font-weight: 300;
+   }
+
+   /*_____________Mindre sections_____________*/
+
+   #boks1{
+     height: 370px;
+     padding: 5px;
+   }
+
+ }
+
+/* ______________________________________ Small screen _________________________________________*/
+
+@media only screen and (max-width: 750px) and (min-width: 410px){
+  #mainsection {
+    width: 90%;
+  }
+
+  /*_____________Fonts_____________*/
+
+  h1{
+    font-size: 1.2em;
+  }
+
+  h2 {
+
+  }
+
+
+  /*_____________ Bilde av filmer store _____________*/
+
+  #films {
+    width: 270px;
+  }
+
+  #film5, #film6, #film7, #film8{
+    display: none;
+  }
+
+
+  /*_____________Mindre sections_____________*/
+
+  #boks1, #boks2{
+    height: auto;
+  }
+
+  #sistLante, #sistTilgjengeligjort, #rutiner, #avansertSok{
+    width: 75%;
+    float: none;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+}
+
+/* ______________________________________ Smallest screen _________________________________________*/
+
+@media only screen and (max-width: 410px){
+
+  #mainsection {
+    width: 90%;
+  }
+
+  #logo {
+  	width: 80px;
+  }
+
+  /*_____________Fonts_____________*/
+
+  h1{
+    font-size: 1.2em;
+  }
+
+  h2{
+    padding-top: 30px;
+  }
+
+
+  /*_____________ Bilde av filmer store _____________*/
+
+  #films {
+    width: 275px;
+  }
+
+  #film4{
+    position: relative;
+    top: -10px;
+  }
+
+  #film5, #film6, #film7, #film8{
+    display: none;
+  }
+
+  .hovereffect {
+    pointer-events:none;
+    margin-bottom: 10px;
+  }
+
+  .h22 {
+    display: block;
+    color: #808080;
+    text-align: center;
+  }
+
+  /*_____________Mindre sections_____________*/
+
+  #boks1, #boks2{
+    height: auto;
+  }
+
+  #sistLante, #sistTilgjengeligjort, #rutiner, #avansertSok{
+    width: 75%;
+    float: none;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+}
