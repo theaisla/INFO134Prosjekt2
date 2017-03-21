@@ -125,7 +125,8 @@ a:focus {
     font-weight: 300;
     letter-spacing: 0.15em;
     color: #808080;
-    text-transform: uppercase;
+    text-transform: none;
+		font-style: italic;
     position: relative;
     top: -3px;
 
