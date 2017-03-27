@@ -1,25 +1,22 @@
+query_params = get_query_string_parameters();
+var relevanteFilmen = movies_object[query_params.id];
+//var relevanteSjanger = genre_object[query_params.id];
 
-/*------------------------------- Strat på trailer kode--------------------------------------------*/
-var id = "46";
-var alien = movies_object[id];
+/*------------------------------- Start på trailer kode--------------------------------------------*/
+var id = relevanteFilmen["id"];
+var trailerTilFilm = movies_object[id];
+
 if (movies_object["youtube trailer id"] !== "" ){
-document.getElementById("trailer").src =('https://www.youtube.com/embed/' + alien["youtube trailer id"]);
+document.getElementById("trailer").src =('https://www.youtube.com/embed/' + trailerTilFilm["youtube trailer id"]);
 }
 /*------------------------------- Slutt på trailer kode--------------------------------------------*/
 
-
-var films = [];
-for(x in movies_object){
-	films.push(movies_object[x]);
-}
-
-for (var i=0; i < films.length; i++){
-	if(films[i]["youtube trailer id"]){
-		console.log(films[i]);
-		
-		if(films[i]===alien){
-		 console.log(alien["youtube trailer id"]);
-		}
-		
-	}
-}
+document.getElementById("ntitle").innerHTML =(relevanteFilmen["ntitle"]);
+document.getElementById("etitle").innerHTML =(relevanteFilmen["etitle"]);
+document.getElementById("length").innerHTML =(relevanteFilmen["length"]);
+document.getElementById("country").innerHTML =(relevanteFilmen["country"]);
+document.getElementById("year").innerHTML =(relevanteFilmen["year"]);
+//document.getElementById("genre").innerHTML =(relevanteSjanger["genre"]);
+document.getElementById("description").innerHTML =(relevanteFilmen["description"]);
+document.getElementById("dir").innerHTML =(relevanteFilmen["dir"]);
+document.getElementById("folk").innerHTML =(relevanteFilmen["folk"]);
