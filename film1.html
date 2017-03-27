@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 
 		<title>Filmregister</title>
-
+	
 		<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300,100' rel='stylesheet' type='text/css'>
@@ -59,13 +59,36 @@
 				<li id="visited"><a href="#">Intouchables</a></li>
 			</ul>
 			
-			<h1>Intouchables (2011)</h1>
+			<h2 id="otitle"></h2>
 			<div class="underline"></div>
-			<p>Norsk tittel: <em>De Urørlige</em></p>
-			<p>Engelsk tittel: <em>The Intouchables</em></p>
-			<p>| 112 minutter | FRA |</p>
+			<p id="ntitle">Norsk tittel: <em>De Urørlige</em></p>
+			<p id ="etitle">Orginal tittel: <em>The Intouchables</em></p>
+			<p id="length">| 112 minutter | </p>
+			<p id="country">| FRA | </p>	<p id="year">| xxxx | </p>
 
-			<!-- Rating -->
+			
+			 <table id="movie_stat_table" border=1>
+      <caption>Table: Stats from "object"</caption>
+      <tr>
+		<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
+      </tr>
+    </table>
+    
+    <table id="genre_stat_table" border=1>
+      <caption>Table: Stats from "object_genre"</caption>
+      <tr>
+		<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
+      </tr>
+    </table>
+    
+    <table id="review_stat_table" border=1>
+      <caption>Table: Stats from "reivew"</caption>
+      <tr>
+		<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
+      </tr>
+    </table>
+			
+			<!-- Rating >
 			<div class="rate">
 				<input type="radio" id="star5" name="rate" value="5" />
 				<label for="star5" title="text">5 stjerner</label>
@@ -77,7 +100,7 @@
 				<label for="star2" title="text">2 stjerner</label>
 				<input type="radio" id="star1" name="rate" value="1" />
 				<label for="star1" title="text">1 stjerne</label>
-			</div>	
+			</div-->	
 			
 			<!-- bildene -->
 			<section class="images">
@@ -86,22 +109,31 @@
 				<img src="Prosjekt_Filmer/Film1/The_Intouchables_2.jpg" alt="dvdcover"/>
 			</section>
 
-			<p><strong>Regissørene: </strong><a href ="http://www.imdb.com/name/nm0619923/?ref_=tt_ov_dr">Olivier Nakache</a>, <a href ="http://www.imdb.com/name/nm0865918/?ref_=tt_ov_dr">Eric Toledano</a></p>
-			<p><strong>Skuespillerer: </strong><a href ="http://www.imdb.com/name/nm2031248/">Alba Gaïa Kraghede Bellugi</a>, <a href ="http://www.imdb.com/name/nm0494504/?ref_=fn_al_nm_1">Anne Le Ny</a>, <a href ="http://www.imdb.com/name/nm1109153/?ref_=fn_al_nm_1">Audrey Fleurot</a>, <a href ="http://www.imdb.com/name/nm0597042/?ref_=fn_al_nm_1">Clotilde Mollet</a>, <a href ="http://www.imdb.com/name/nm0167388/?ref_=fn_al_nm_1">Francois Cluzet</a>, <a href ="http://www.imdb.com/name/nm1082477/?ref_=fn_al_nm_1">Omar Sy</a></p>
-			<p><strong>Sjanger: </strong>drama, biografi, komedie</p>
+			<p id="dir"><strong>Regissørene: </strong><a href ="http://www.imdb.com/name/nm0619923/?ref_=tt_ov_dr">Olivier Nakache</a>, <a href ="http://www.imdb.com/name/nm0865918/?ref_=tt_ov_dr">Eric Toledano</a></p>
+			<p id="folk"><strong>Skuespillerer: </strong><a href ="http://www.imdb.com/name/nm2031248/">Alba Gaïa Kraghede Bellugi</a>, <a href ="http://www.imdb.com/name/nm0494504/?ref_=fn_al_nm_1">Anne Le Ny</a>, <a href ="http://www.imdb.com/name/nm1109153/?ref_=fn_al_nm_1">Audrey Fleurot</a>, <a href ="http://www.imdb.com/name/nm0597042/?ref_=fn_al_nm_1">Clotilde Mollet</a>, <a href ="http://www.imdb.com/name/nm0167388/?ref_=fn_al_nm_1">Francois Cluzet</a>, <a href ="http://www.imdb.com/name/nm1082477/?ref_=fn_al_nm_1">Omar Sy</a></p>
+	
+	<p id="genre"><strong>Sjanger: </strong></p>
+							    
+
 			
 			<!-- min liste -->
 			<a href="minside.html"><img src="img/icons/pluss.png" alt="Min Liste" title="Legg til i min liste" id="minListe"> </a>
 			
 			<h3>Handling </h3>
 			<div class="underlineh3"></div>
-			<p class="handling">Den sanne historien om to menn som aldri skulle ha møtt hverandre - De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter. Mangemillionæren Philippe er lam fra nakken og ned etter en paragliderulykke, og må leve resten av livet i rullestol. Han bor i luksuriøse omgivelser i Paris og skal ansette en ny pleieassistent. Den eneste av søkerne som skiller seg ut er Driss - den unge mannen som har levert søknaden kun fordi han må vise at han er aktiv arbeidssøker for å beholde trygdepengene. Snart begynner et usannsynlig kameratskap forankret i ærlighet og humor mellom to individer som på overflaten ikke ville hatt noe til felles. De Urørlige er basert på en utrolig, men sann historie. Filmen, som er sett av 20 millioner franskmenn, har blitt et internasjonalt fenomen og er den mest inntjenende ikke-engelskspråklige filmen i historien. (Cover)</p>
+			<p class="handling" id="description">Den sanne historien om to menn som aldri skulle ha møtt hverandre - De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter. Mangemillionæren Philippe er lam fra nakken og ned etter en paragliderulykke, og må leve resten av livet i rullestol. Han bor i luksuriøse omgivelser i Paris og skal ansette en ny pleieassistent. Den eneste av søkerne som skiller seg ut er Driss - den unge mannen som har levert søknaden kun fordi han må vise at han er aktiv arbeidssøker for å beholde trygdepengene. Snart begynner et usannsynlig kameratskap forankret i ærlighet og humor mellom to individer som på overflaten ikke ville hatt noe til felles. De Urørlige er basert på en utrolig, men sann historie. Filmen, som er sett av 20 millioner franskmenn, har blitt et internasjonalt fenomen og er den mest inntjenende ikke-engelskspråklige filmen i historien. (Cover)</p>
 			
 			<!-- Trailer til filmen -->
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/34WIbmXkewU" allowfullscreen></iframe>
+			<div class="target">
+			<h3>Trailer </h3>
+			<div class="underlineh3"></div>
+			<iframe id="trailer" width="560" height="315" src="" allowfullscreen></iframe>
+			</div>
+			
+			
 			
 			<!-- Kommentarer til filmen -->
-			<h3>Anmeldelse </h3>
+			<h3 id="review">Anmeldelse </h3>
 			<div class="underlineh3"></div>
 			<form id="anmeldelse" method="POST">
 				<p>Navn: </p>
@@ -112,12 +144,19 @@
 			</form>
 			
 			<a href="http://www.imdb.com/title/tt1675434/reviews?ref_=tt_urv"> Les flere kommentarer...</a>
-		
 		<!-- slutt på wrapper -->
 		</section>
 
 	<footer>
 		<p>&copy; <p>
+		
+				<!-- JS -->
+		<script type="text/javascript" src="script/object.js"></script>
+		<script type="text/javascript" src="script/genres.js"></script>
+		<script type="text/javascript" src="script/reviews.js"></script>
+		<script type="text/javascript" src="script/query_params.js"></script>
+		<script type="text/javascript" src="script/show_movie.js"></script>
+		<script type="text/javascript" src="script/movie.js"></script>
 	</footer>
 	</body>
 </HTML>
