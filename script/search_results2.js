@@ -3,9 +3,14 @@ var input = get_query_string_parameters();
 // lagre resultater i en array
 var results = [];
 
+query_params = get_query_string_parameters();
+var relevanteFilmen = movies_object[query_params.id];
+//var relevanteSjanger = genres_object[query_params.id];
+//var relevanteAnmeldelse = reviews_object[query_params.id];
+
 var resultList = document.querySelector("#res_list");
 
-function search_for_X(e) {
+function search_for_movie(e) {
   //e.preventDefault();
   // Gjør at objects.js kan leses som en array
 	var films = [];
@@ -17,11 +22,37 @@ function search_for_X(e) {
 		if (films[i].otitle === input.film_title || films[i].etitle === input.film_title  || films[i].ntitle === input.film_title ){
 			results.push(films[i]);
 			console.log(films[i]);
-      displayResults(results)
+      //displayResults(results)
       //console.log(results);
+      document.getElementById("film_title").innerHTML = ("Tittel: " + films[i].otitle);
 		}
 	}
 }
+
+//function displayResults(results) {
+
+
+
+  //if(relevanteFilmen["length"] !== null && relevanteFilmen["country"] !== null && relevanteFilmen["year"] !== null){
+  //document.getElementById("facts").innerHTML =("| " + relevanteFilmen["length"] + " minutter | " + relevanteFilmen["country"] + " | " + relevanteFilmen["year"] + " | " );
+  //}
+
+/*
+  <div id="film_title"></div>
+  <div id="actor"></div>
+  <div id="director"></div>
+  <div id="genre"></div>
+  <div id="country"></div>
+  <div id="picture" src=""></div>
+  <!-- Returnere resultatene som en (ordered <ol>) liste -->
+  <ol id="res_list"></ol>
+
+*/
+
+
+
+
+
 
 /*function displayResults(results) {
 
@@ -49,7 +80,7 @@ window.onload = function() {
 
 	if (query_params.film_title) {
         film_title = document.getElementById("film_title");
-    search_for_X(input);
+    search_for_movie(input);
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
     }
 
