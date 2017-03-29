@@ -18,11 +18,12 @@ function search_for_X(e) {
 			results.push(films[i]);
 			console.log(films[i]);
       displayResults(results)
+      //console.log(results);
 		}
 	}
 }
 
-function displayResults(results) {
+/*function displayResults(results) {
 
   for(var i = 0; i < results.length; i++) {
     //console.log(results[i]);
@@ -35,7 +36,7 @@ function displayResults(results) {
   	// Legg li-taggen til i resultList (resultList er en ol-tagg)
   	resultList.appendChild(ol);
   }
-}
+}*/
 
 
 //search_for_X(input);
@@ -48,7 +49,7 @@ window.onload = function() {
 
 	if (query_params.film_title) {
         film_title = document.getElementById("film_title");
-        search_for_X(input);
+    search_for_X(input);
 		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
     }
 
