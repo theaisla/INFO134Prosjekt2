@@ -3,10 +3,6 @@ var input = get_query_string_parameters();
 // lagre resultater i en array
 var results = [];
 
-//var relevanteFilmen = movies_object[query_params.id];
-//var idFilm = relevanteFilmen["id"];
-//var trailerTilFilm = movies_object[idTrailer];
-
 function search_for_movie(e) {
   //e.preventDefault();
   // Gjør at objects.js kan leses som en array
@@ -20,15 +16,9 @@ function search_for_movie(e) {
 			results.push(films[i]);
 			console.log(films[i]);
 
-			//document.getElementById("search").action =("film1.html?id=" + films[i].id);
+			// videresende til informasjonssiden om filmen
 			var url = "film1.html?id=" + films[i].id;
 			window.location = url;
 		}
-
-		/*else if (films[i].otitle !== input.film_title && films[i].etitle !== input.film_title  && films[i].ntitle !== input.film_title){
-			//window.alert("Denne filmen finnes ikke hos oss");
-			window.location = "google.com";
-		}*/
-
 	}
 }
