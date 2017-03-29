@@ -9,16 +9,32 @@ Om ﬁlm id er lik “2345”, vil URLen være https://nelson.uib.no/o/2/2345.jp
 
 Det er krav om ˚a inkludere et bilde. Men dere kan inkludere to eller tre bilder (om de ﬁnnes), hvor for bilde 2, ender URLen med ﬁlm id etterfulgt av “b.jpg” (“2345b.jpg” i forrige eksempel), og for bilde nummer tre m˚a den bli etterfulgt av “c.jpg” (“2345c.jpg” i eksempelet). Merk at ikke alle ﬁlmene har mer en ett bilde.*/
 /*
-if(x<1000){
-https://nelson.uib.no/o/0/xxx.jpg
-}
-if (x>=1000 && x<2000){
-https://nelson.uib.no/o/1/xxxx.jpg
-}
-if (x>=2000){
-https://nelson.uib.no/o/2/xxxx.jpg
-}*/
 
-function hentBilder(x){
-	
+
+function myFunction() {
+    var x = document.getElementById("myImg").src;
+    document.getElementById("demo").innerHTML = x;
 }
+
+
+
+var idbilde = relevanteFilmen["id"];
+var trailerTilFilm = movies_object[idTrailer];
+
+
+*/
+query_params = get_query_string_parameters();
+var relevanteFilmen = movies_object[query_params.id];
+var bildeId = relevanteFilmen['id'];
+
+if(bildeId < 1000){
+	document.getElementById("bilde").src =('https://nelson.uib.no/o/0/' + bildeId +  ".jpg");
+}
+if (bildeId >= 1000 && bildeId < 2000){
+	document.getElementById("bilde").src =('https://nelson.uib.no/o/1/' + bildeId +  ".jpg");
+}
+if (bildeId>=2000){
+	document.getElementById("bilde").src =('https://nelson.uib.no/o/2/' + bildeId +  ".jpg");
+}
+
+console.log(bildeId);

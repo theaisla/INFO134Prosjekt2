@@ -4,11 +4,11 @@ var relevanteSjanger = genres_object[query_params.id];
 var relevanteAnmeldelse = reviews_object[query_params.id];
 
 
-/*------------------------------- Start på review kode--------------------------------------------*/
+/*------------------------------- Start på review kode--------------------------------------------*
 var id3 = relevanteAnmeldelse["object"];
 var anmeldelseTilFilm = reviews_object[id3];
 
-document.getElementById("anmeldelse").innerHTML =(relevanteAnmeldelse["rating"]);
+document.getElementById("anmeldelse").innerHTML =(relevanteAnmeldelse);
 console.log(relevanteAnmeldelse);
 /*------------------------------- slutt på review kode--------------------------------------------*/
 
@@ -30,8 +30,8 @@ if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 		//id 1697
 	}
 }
-/*
 
+/*
 if(relevanteFilmen["etitle"] === ""){
 	var link = document.getElementById('etitleDiv');
 	link.style.display = 'none';
@@ -104,9 +104,12 @@ document.getElementById("facts").innerHTML =("| " + relevanteFilmen["country"] +
 if (relevanteFilmen["description"] === null || relevanteFilmen["description"] === "" ){
 	var link = document.getElementById('descriptionDiv');
 	link.style.display = 'none';
+	console.log("null discription");
 }
 else{
 	document.getElementById("description").innerHTML =(relevanteFilmen["description"]);
+	console.log(" discription");
+	
 }
 /*------------------------------- Slutt på handling kode--------------------------------------------*/
 
@@ -115,9 +118,11 @@ else{
 if(movies_object["dir"] !== ""){
 	if (relevanteFilmen["dir"] !== ""){
 	document.getElementById("dir").innerHTML =(relevanteFilmen["dir"]);
+	console.log("direktør");
 	} else{
 		var link = document.getElementById('dirDiv');
 		link.style.display = 'none';
+		console.log("null direktør");
 	}
 }
 
