@@ -13,8 +13,10 @@ font-size: 2em;
 font-weight: 300;
 letter-spacing: 1.8px;
 color: #808080;
-text-align: center;
+/*text-align: center;*/
+display: inline-table;
 margin: 2em 0 0 0;
+border-bottom: 3px solid red;
 }
 
 h3 {
@@ -24,18 +26,18 @@ font-weight: 300;
 letter-spacing: 1.8px;
 color: #808080;
 }
-
+/*
 .underline {
 width: 60px;
 border-bottom: 3px solid red;
-margin: 12px auto 25px auto;
+margin: auto 25px auto;
 }
 
 .underlineh3 {
 width: 60px;
 border-bottom: 3px solid red;
 margin-left:0.8em;
-}
+}*/
 
 p {
 font-family: Lato, Helvetica Neue, Helvetica, Arial;
@@ -204,8 +206,7 @@ li {
 }
 
 #right{
-	display: flex;
-	flex-direction: column-reverse; /*| row-reverse | row | column-reverse;*/
+	float: right;
 }
 
 
