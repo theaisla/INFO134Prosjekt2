@@ -4,6 +4,14 @@ var relevanteSjanger = genres_object[query_params.id];
 var relevanteAnmeldelse = reviews_object[query_params.id];
 
 
+/*------------------------------- Start på review kode--------------------------------------------*/
+var id3 = relevanteAnmeldelse["object"];
+var anmeldelseTilFilm = reviews_object[id3];
+
+document.getElementById("anmeldelse").innerHTML =(relevanteAnmeldelse["rating"]);
+console.log(relevanteAnmeldelse);
+/*------------------------------- slutt på review kode--------------------------------------------*/
+
 
 /*------------------------------- Start på tittel kode--------------------------------------------*/
 document.getElementById("otitle").innerHTML =(relevanteFilmen["otitle"]); //orginaltittel til filmen
@@ -22,29 +30,22 @@ if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 		//id 1697
 	}
 }
+/*
 
-if(relevanteFilmen["etitle"] !== ""){
+if(relevanteFilmen["etitle"] === ""){
 	var link = document.getElementById('etitleDiv');
 	link.style.display = 'none';
 		console.log("null engelsk");
 }
 
-if(relevanteFilmen["ntitle"] !== ""){
+if(relevanteFilmen["ntitle"] === ""){
 	console.log("null norsk");//id=64
 	var link = document.getElementById('ntitleDiv');
 	link.style.display = 'none';
-}
+}*/
 
 //2345
 /*------------------------------- Slutt på tittel kode--------------------------------------------*/
-
-/*------------------------------- Start på review kode--------------------------------------------*
-var id3 = relevanteAnmeldelse["object"];
-var anmeldelseTilFilm = reviews_object[id3];
-
-document.getElementById("anmeldelse").innerHTML =(relevanteAnmeldelse["rating"]);
-console.log(relevanteAnmeldelse);
-/*------------------------------- slutt på review kode--------------------------------------------*/
 
 
 /*------------------------------- Start på sjanger kode--------------------------------------------*/
@@ -100,11 +101,10 @@ document.getElementById("facts").innerHTML =("| " + relevanteFilmen["country"] +
 
 
 /*------------------------------- Start på handling kode--------------------------------------------*/
-if (relevanteFilmen["description"]){
+if (relevanteFilmen["description"] === null || relevanteFilmen["description"] === "" ){
 	var link = document.getElementById('descriptionDiv');
 	link.style.display = 'none';
 }
-
 else{
 	document.getElementById("description").innerHTML =(relevanteFilmen["description"]);
 }
