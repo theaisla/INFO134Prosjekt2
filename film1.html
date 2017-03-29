@@ -56,37 +56,15 @@
 			<ul class="breadcrumb">
 				<li><a href="index.html">Film Bib</a></li>
 				<li> > </li>
-				<li id="visited"><a href="#">Intouchables</a></li>
+				<li id="visited"><a href="#" id="title"></a></li>
 			</ul>
 			
 			<h2 id="otitle"></h2>
 			<div class="underline"></div>
-			<p>Norsk tittel: <em id="ntitle"></em></p>
-			<p >Orginal tittel: <em id ="etitle"></em></p>
-			<p id="length">| 112 minutter | </p>
-			<p id="country">| FRA | </p>	<p id="year">| xxxx | </p>
-
-			
-											<table id="movie_stat_table" border=1>
-											<caption>Table: Stats from "object"</caption>
-											<tr>
-											<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
-											</tr>
-											</table>
-
-											<table id="genre_stat_table" border=1>
-											<caption>Table: Stats from "object_genre"</caption>
-											<tr>
-											<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
-											</tr>
-											</table>
-
-											<table id="review_stat_table" border=1>
-											<caption>Table: Stats from "reivew"</caption>
-											<tr>
-											<td align="center"><b>Key</b></td><td align="center"><b>Value</b></td>
-											</tr>
-											</table>
+			<p id= "norskt"> Norsk tittel: <em id="ntitle"></em></p>
+			<p id="engelskt">Engelsk tittel: <em id ="etitle"></em></p>
+			<p id="facts"></p>
+		
 			
 			<!-- Rating >
 			<div class="rate">
@@ -109,25 +87,29 @@
 				<img src="Prosjekt_Filmer/Film1/The_Intouchables_2.jpg" alt="dvdcover"/>
 			</section>
 
-			<p><strong>Regissørene: </strong><div id="dir"></div></p>
-			<p><strong>Skuespillerer: </strong><div id="folk"></div></p>
-	
-			<p><strong>Sjanger: </strong><div id="genre"></div></p>
+			<p id="dirDiv"><strong>Regissørene: </strong><div id="dir"></div></p>
+			<p id="folkDiv"><strong>Skuespillerer: </strong><div id="folk"></div></p>
+			<p id="genreDiv"><strong>Sjanger: </strong><div id="genre"></div></p>
 							    
-
 			
-			<!-- min liste -->
+			<!-- min liste 
 			<a href="minside.html"><img src="img/icons/pluss.png" alt="Min Liste" title="Legg til i min liste" id="minListe"> </a>
+			-->
 			
-			<h3>Handling </h3>
-			<div class="underlineh3"></div>
-			<p class="handling" id="description"></p>
+			
+			<div id="descriptionDiv">
+				<h3>Handling </h3>
+				<div class="underlineh3"></div>
+				<p id="description"></p>
+			</div>
+		
+			
 			
 			<!-- Trailer til filmen -->
-			<div class="target">
-			<h3>Trailer </h3>
-			<div class="underlineh3"></div>
-			<iframe id="trailer" width="560" height="315" src="" allowfullscreen></iframe>
+			<div id="trailerDiv">
+				<h3>Trailer </h3>
+				<div class="underlineh3"></div>
+				<iframe id="trailer" width="560" height="315" src="" allowfullscreen></iframe>
 			</div>
 			
 			
@@ -144,6 +126,8 @@
 			</form>
 			
 			<a href="http://www.imdb.com/title/tt1675434/reviews?ref_=tt_urv"> Les flere kommentarer...</a>
+			
+			
 		<!-- slutt på wrapper -->
 		</section>
 
@@ -155,7 +139,6 @@
 		<script type="text/javascript" src="script/genres.js"></script>
 		<script type="text/javascript" src="script/reviews.js"></script>
 		<script type="text/javascript" src="script/query_params.js"></script>
-		<script type="text/javascript" src="script/show_movie.js"></script>
 		<script type="text/javascript" src="script/movie.js"></script>
 	</footer>
 	</body>
