@@ -3,6 +3,39 @@ var relevanteFilmen = movies_object[query_params.id];
 var relevanteSjanger = genres_object[query_params.id];
 var relevanteAnmeldelse = reviews_object[query_params.id];
 
+
+
+/*------------------------------- Start på tittel kode--------------------------------------------*/
+document.getElementById("otitle").innerHTML =(relevanteFilmen["otitle"]); //orginaltittel til filmen
+document.getElementById("title").innerHTML =(relevanteFilmen["otitle"]); //tittel vises i breadcrum
+if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
+	if(relevanteFilmen["ntitle"] !== ""){
+		document.getElementById("ntitle").innerHTML =(relevanteFilmen["ntitle"]);
+		console.log("norsk tittel");
+		//id=239
+
+	}
+
+	if(relevanteFilmen["etitle"] !== ""){
+		document.getElementById("etitle").innerHTML =(relevanteFilmen["etitle"]);
+		console.log("engelsk tittel");
+		//id 1697
+	}
+}
+if(!relevanteFilmen["ntitle"]){
+	var link = document.getElementById('ntitleDiv');
+	link.style.display = 'none';
+	console.log("null norsk");
+	}
+
+if(relevanteFilmen["etitle"] === "" ){
+	var link = document.getElementById('engelskt');
+	link.style.display = 'none';
+	console.log("null engelsk");
+}
+//2345
+/*------------------------------- Slutt på tittel kode--------------------------------------------*/
+
 /*------------------------------- Start på review kode--------------------------------------------*
 var id3 = relevanteAnmeldelse["object"];
 var anmeldelseTilFilm = reviews_object[id3];
@@ -13,7 +46,8 @@ console.log(relevanteAnmeldelse);
 
 
 /*------------------------------- Start på sjanger kode--------------------------------------------*/
-if(relevanteSjanger[0] !== ""){
+//får feil hvis filmen ikke har sjanger!! 1697
+if(relevanteSjanger && relevanteSjanger[0] !== "" ){
 	console.log(relevanteSjanger[0]);//id = 3519
 	document.getElementById("genre").innerHTML =(relevanteSjanger);
 }else{
@@ -21,6 +55,7 @@ if(relevanteSjanger[0] !== ""){
 	var link = document.getElementById('genreDiv');
 	link.style.display = 'none'; //1697
 }
+
 /*------------------------------- Slutt på sjanger kode--------------------------------------------*/
 
 
@@ -37,38 +72,6 @@ if (trailerTilFilm["youtube trailer id"] !== "" ){
 	link.style.display = 'none';
 }
 /*------------------------------- Slutt på trailer kode--------------------------------------------*/
-
-
-/*------------------------------- Start på tittel kode--------------------------------------------*/
-document.getElementById("otitle").innerHTML =(relevanteFilmen["otitle"]);
-document.getElementById("title").innerHTML =(relevanteFilmen["otitle"]);
-
-if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
-	if(relevanteFilmen["ntitle"] !== "" ){
-		document.getElementById("ntitle").innerHTML =(relevanteFilmen["ntitle"]);
-		console.log("norsk tittel");
-		//id=239
-	}
-	
-	if(relevanteFilmen["etitle"] !== ""){
-		document.getElementById("etitle").innerHTML =(relevanteFilmen["etitle"]);
-		console.log("engelsk tittel");
-		//id 1697
-	}
-
-}
-if(relevanteFilmen["ntitle"] === "" ){
-	var link = document.getElementById('norskt');
-	link.style.display = 'none';
-	console.log("null norsk");
-	}
-
-if(relevanteFilmen["etitle"] === "" ){
-	var link = document.getElementById('engelskt');
-	link.style.display = 'none';
-	console.log("null engelsk");
-}
-/*------------------------------- Slutt på tittel kode--------------------------------------------*/
 
 
 /*------------------------------- Start på fakta kode--------------------------------------------*/
@@ -95,10 +98,11 @@ document.getElementById("facts").innerHTML =("| " + relevanteFilmen["country"] +
 
 
 /*------------------------------- Start på handling kode--------------------------------------------*/
-if (relevanteFilmen["description"] === null || relevanteFilmen["description"] === "" ){
+if (relevanteFilmen["description"]){
 	var link = document.getElementById('descriptionDiv');
 	link.style.display = 'none';
 }
+
 else{
 	document.getElementById("description").innerHTML =(relevanteFilmen["description"]);
 }

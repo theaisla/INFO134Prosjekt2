@@ -41,9 +41,9 @@
 					</div>
 
 					<li>
-						<form method="get" action="resultater.html" id="search">
-  						<input name="q" type="text" size="40" placeholder="Søk..." />
-						</form>
+					<form id="search" action="search_results_tittel.html" method="get" name ="searchForm">
+        	   <input id="film_t" name="film_title" type="text" size="40" placeholder="Søk filmtittel" >
+        	</form>
 					</li>
 				</ul>
 			</nav>
@@ -61,12 +61,12 @@
 			
 			<h2 id="otitle"></h2>
 			<div class="underline"></div>
-			<p id= "norskt"> Norsk tittel: <em id="ntitle"></em></p>
-			<p id="engelskt">Engelsk tittel: <em id ="etitle"></em></p>
+			<p id="ntitleDiv">Norsk tittel: <em id="ntitle"></em></p>
+			<p id="etitleDiv">Engelsk tittel: <em id ="etitle"></em></p>
 			<p id="facts"></p>
 		
 			
-			<!-- Rating >
+			<!-- Rating-->
 			<div class="rate">
 				<input type="radio" id="star5" name="rate" value="5" />
 				<label for="star5" title="text">5 stjerner</label>
@@ -78,15 +78,12 @@
 				<label for="star2" title="text">2 stjerner</label>
 				<input type="radio" id="star1" name="rate" value="1" />
 				<label for="star1" title="text">1 stjerne</label>
-			</div-->	
+			</div>	
 			
 			<!-- bildene -->
-			<section class="images">
-				<img src="Prosjekt_Filmer/Film1/The_Intouchables_3.jpg" alt="dvdcover"/>
-				<img src="Prosjekt_Filmer/Film1/The_Intouchables_1.jpg" alt="dvdcover"/>
-				<img src="Prosjekt_Filmer/Film1/The_Intouchables_2.jpg" alt="dvdcover"/>
-			</section>
+			<section id="bilder"></section>
 
+			<!-- Mennesker innvolvert/sjanger -->
 			<p id="dirDiv"><strong>Regissørene: </strong><div id="dir"></div></p>
 			<p id="folkDiv"><strong>Skuespillerer: </strong><div id="folk"></div></p>
 			<p id="genreDiv"><strong>Sjanger: </strong><div id="genre"></div></p>
@@ -96,7 +93,7 @@
 			<a href="minside.html"><img src="img/icons/pluss.png" alt="Min Liste" title="Legg til i min liste" id="minListe"> </a>
 			-->
 			
-			
+			<!-- Handling til filmen -->
 			<div id="descriptionDiv">
 				<h3>Handling </h3>
 				<div class="underlineh3"></div>
@@ -134,12 +131,13 @@
 	<footer>
 		<p>&copy; <p>
 		
-				<!-- JS -->
+		<!-- JS -->
 		<script type="text/javascript" src="script/object.js"></script>
 		<script type="text/javascript" src="script/genres.js"></script>
 		<script type="text/javascript" src="script/reviews.js"></script>
 		<script type="text/javascript" src="script/query_params.js"></script>
 		<script type="text/javascript" src="script/movie.js"></script>
+		<script type="text/javascript" src="script/bilder.js"></script>
 	</footer>
 	</body>
 </HTML>

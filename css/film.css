@@ -209,7 +209,7 @@ li {
 
 #facts{
 	display: flex;
-	flex-direction: row-reverse; /*| row-reverse | row | column-reverse;*/
+	flex-direction: row; /*| row-reverse | row | column-reverse;*/
 }
 
 
