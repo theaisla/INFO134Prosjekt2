@@ -3,75 +3,59 @@ var input = get_query_string_parameters();
 // lagre resultater i en array
 var results = [];
 
-query_params = get_query_string_parameters();
-var relevanteFilmen = movies_object[query_params.id];
-//var relevanteSjanger = genres_object[query_params.id];
-//var relevanteAnmeldelse = reviews_object[query_params.id];
+var relevanteFilmen = movies_object[input.id];
 
 var resultList = document.querySelector("#res_list");
 
-function search_for_movie(e) {
-  //e.preventDefault();
-  // Gjør at objects.js kan leses som en array
-	var films = [];
+var films = [];
+
+function readAsArray(a){
+	// Gjør at objects.js kan leses som en array
 	for (x in movies_object){
 		films.push(movies_object[x]);
 	}
+}
+
+function search_for_movie_title(e) {
+  //e.preventDefault();
+  readAsArray(e);
   // søke gjennom objects til den finner en film med lik tittel som input.
 	for(var i = 0; i < films.length; i++){
-		if (films[i].otitle === input.film_title || films[i].etitle === input.film_title  || films[i].ntitle === input.film_title ){
+		if (films[i].otitle === input.film_title || films[i].etitle === input.film_title  || films[i].ntitle === input.film_title){
 			results.push(films[i]);
 			console.log(films[i]);
-      //displayResults(results)
-      //console.log(results);
-      document.getElementById("film_title").innerHTML = ("Tittel: " + films[i].otitle);
+
+			var url = "film1.html?id=" + films[i].id;
+			document.getElementById("title").innerHTML = ("<h3> Filmtittel </h3>");
+      document.getElementById("title").innerHTML = ("<a href=" + url + ">" + films[i].otitle + "</a>");
 		}
 	}
 }
 
-//function displayResults(results) {
+function search_for_actor(e) {
+  //e.preventDefault();
+  readAsArray(e);
+	var actors = [];
+  // søke gjennom objects til den finner en film med lik tittel som input.
+	for(var i = 0; i < films.length; i++){
+		if (films[i].folk === input.actor){
+			results.push(films[i]);
+			console.log(films[i]);
+
+			/*var url = "film1.html?id=" + films[i].id;
+			document.getElementById("title").innerHTML = ("<h3> Skuespiller </h3>");
+			for (x in films){
+				films.push(movies_object[x]);
+      	document.getElementById("title").innerHTML = ("<a href=" + url + ">" + films[i].otitle + "</a>");
+			}*/
+		}
+	}
+}
 
 
 
-  //if(relevanteFilmen["length"] !== null && relevanteFilmen["country"] !== null && relevanteFilmen["year"] !== null){
-  //document.getElementById("facts").innerHTML =("| " + relevanteFilmen["length"] + " minutter | " + relevanteFilmen["country"] + " | " + relevanteFilmen["year"] + " | " );
-  //}
-
-/*
-  <div id="film_title"></div>
-  <div id="actor"></div>
-  <div id="director"></div>
-  <div id="genre"></div>
-  <div id="country"></div>
-  <div id="picture" src=""></div>
-  <!-- Returnere resultatene som en (ordered <ol>) liste -->
-  <ol id="res_list"></ol>
-
-*/
 
 
-
-
-
-
-/*function displayResults(results) {
-
-  for(var i = 0; i < results.length; i++) {
-    //console.log(results[i]);
-  	// Opprett en ny li-tagg
-  	var ol = document.createElement("ol");
-  	// Sett en tekststreng som innhold
-    ol.innerHTML = results[i];
-
-    //getElementById("film_title");
-  	// Legg li-taggen til i resultList (resultList er en ol-tagg)
-  	resultList.appendChild(ol);
-  }
-}*/
-
-
-//search_for_X(input);
-//displayResults(results);
 
 window.onload = function() {
 	query_params = get_query_string_parameters();
@@ -80,13 +64,13 @@ window.onload = function() {
 
 	if (query_params.film_title) {
         film_title = document.getElementById("film_title");
-    search_for_movie(input);
-		//Her kan dere for eksempel kalle en søkefunksjon som søker for tittel.
+    search_for_movie_title(input);
     }
 
 	if (query_params.actor) {
         actor = document.getElementById("actor");
 		actor.innerHTML = query_params.actor;
+		search_for_actor(input);
     }
 
 	if (query_params.director) {
@@ -106,3 +90,22 @@ window.onload = function() {
 
 	//Her kan dere for eksempel kalle en (display) funksjon som viser søkeresultater
 }
+
+
+
+// skriver ut id til alle som har youtubevideo.
+/*var films = [];
+var results = [];
+
+for(x in movies_object){
+	films.push(movies_object[x]);
+}
+for (var i=0; i < films.length; i++){
+	if(films[i]["youtube trailer id"]){
+		results.push(films[i]);
+		console.log(films[i]["id"]);
+
+
+	}
+}
+*/
