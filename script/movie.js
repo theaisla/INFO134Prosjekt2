@@ -22,17 +22,19 @@ if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 		//id 1697
 	}
 }
-if(!relevanteFilmen["ntitle"]){
+
+if(relevanteFilmen["etitle"] !== ""){
+	var link = document.getElementById('etitleDiv');
+	link.style.display = 'none';
+		console.log("null engelsk");
+}
+
+if(relevanteFilmen["ntitle"] !== ""){
+	console.log("null norsk");//id=64
 	var link = document.getElementById('ntitleDiv');
 	link.style.display = 'none';
-	console.log("null norsk");
-	}
-
-if(relevanteFilmen["etitle"] === "" ){
-	var link = document.getElementById('engelskt');
-	link.style.display = 'none';
-	console.log("null engelsk");
 }
+
 //2345
 /*------------------------------- Slutt på tittel kode--------------------------------------------*/
 
