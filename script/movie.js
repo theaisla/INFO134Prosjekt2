@@ -5,46 +5,39 @@ var relevanteAnmeldelse = reviews_object[query_params.id];
 
 
 /*------------------------------- Start på review kode--------------------------------------------*/
-/*
-var anId = relevanteAnmeldelse["object"];
-var anmeldelseTilFilm = reviews_object[anId];*/
-
-function add_row(table, left, right) {
-    new_row = document.createElement("TR");
-    left_cell = document.createElement("TD");
-    left_cell.appendChild(left);
-    new_row.appendChild(left_cell);
-    
-    right_cell = document.createElement("TD");
-    right_cell.appendChild(right);
-    new_row.appendChild(right_cell);
-    
-    table.appendChild(new_row);
-}
-
-review_table = document.getElementById("review");
+//skriver ut bruker, rating og kommentar
 for (key in relevanteAnmeldelse) {
-	left = document.createTextNode(key);
-	right = document.createTextNode(relevanteAnmeldelse[key]);
-	add_row(review_table, left, right);
-	for (subkey in relevanteAnmeldelse[key]) {
-	    left = document.createTextNode(subkey);
-	    right = document.createTextNode(relevanteAnmeldelse[key][subkey]);
-	    add_row(review_table, left, right);
-	}
-    }
-/*
-for(var i =0 ; i< relevanteAnmeldelse.length; i++){
-	document.getElementById("review").innerHTML =(relevanteAnmeldelse);
-
+			var bruker = relevanteAnmeldelse[key]['username'] + "---" +relevanteAnmeldelse[key]['rating']  + "---" + relevanteAnmeldelse[key]['comment'];
+			var p = document.createElement("p");
+			p.innerHTML =bruker;
+			document.getElementById("review").appendChild(p);
 }
 
+	
+//skriver ut gjennomsnittlig rate
+var brukerneIArray = [];
+var karaktereneIArray = [];
 
-document.getElementById("review").innerHTML =("Rating fra " + relevanteAnmeldelse + " " + relevanteAnmeldelse['xyz010']['rating']);
-	console.log(relevanteAnmeldelse);
+for(kommentarFraBruker in relevanteAnmeldelse){
+	brukerneIArray.push(relevanteAnmeldelse[kommentarFraBruker]);
+}
+for (var i=0; i < brukerneIArray.length; i++){
+	if(brukerneIArray[i]["rating"]){
+		karaktereneIArray.push(brukerneIArray[i]['rating']);
+	}
+}
 
-console.log(relevanteAnmeldelse['xyz010']['rating']);
-console.log(reviews_object["username"]);*/
+var p = document.createElement("p");
+var total = 0;
+for(var i = 0; i < karaktereneIArray.length; i++) {
+	total += karaktereneIArray[i];
+}
+
+var avg = total / karaktereneIArray.length;
+p.innerHTML =avg;
+document.getElementById("rate").appendChild(p);
+
+console.log( "The sum of all the elements is: " + total + " The average is: " + avg );
 /*------------------------------- slutt på review kode--------------------------------------------*/
 
 

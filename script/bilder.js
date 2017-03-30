@@ -21,8 +21,11 @@ if(bildeId < 1000){
 if (bildeId >= 1000 && bildeId < 2000){
 	document.getElementById("bilde").src =('https://nelson.uib.no/o/1/' + bildeId +  ".jpg");
 }
-if (bildeId>=2000){
+if (bildeId >= 2000 && bildeId < 3000){
 	document.getElementById("bilde").src =('https://nelson.uib.no/o/2/' + bildeId +  ".jpg");
+}
+if (bildeId >= 3000){
+	document.getElementById("bilde").src =('https://nelson.uib.no/o/3/' + bildeId +  ".jpg");
 }
 
 //console.log(bildeId);
