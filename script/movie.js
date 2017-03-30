@@ -4,12 +4,47 @@ var relevanteSjanger = genres_object[query_params.id];
 var relevanteAnmeldelse = reviews_object[query_params.id];
 
 
-/*------------------------------- Start på review kode--------------------------------------------*
-var id3 = relevanteAnmeldelse["object"];
-var anmeldelseTilFilm = reviews_object[id3];
+/*------------------------------- Start på review kode--------------------------------------------*/
+/*
+var anId = relevanteAnmeldelse["object"];
+var anmeldelseTilFilm = reviews_object[anId];*/
 
-document.getElementById("anmeldelse").innerHTML =(relevanteAnmeldelse);
-console.log(relevanteAnmeldelse);
+function add_row(table, left, right) {
+    new_row = document.createElement("TR");
+    left_cell = document.createElement("TD");
+    left_cell.appendChild(left);
+    new_row.appendChild(left_cell);
+    
+    right_cell = document.createElement("TD");
+    right_cell.appendChild(right);
+    new_row.appendChild(right_cell);
+    
+    table.appendChild(new_row);
+}
+
+review_table = document.getElementById("review");
+for (key in relevanteAnmeldelse) {
+	left = document.createTextNode(key);
+	right = document.createTextNode(relevanteAnmeldelse[key]);
+	add_row(review_table, left, right);
+	for (subkey in relevanteAnmeldelse[key]) {
+	    left = document.createTextNode(subkey);
+	    right = document.createTextNode(relevanteAnmeldelse[key][subkey]);
+	    add_row(review_table, left, right);
+	}
+    }
+/*
+for(var i =0 ; i< relevanteAnmeldelse.length; i++){
+	document.getElementById("review").innerHTML =(relevanteAnmeldelse);
+
+}
+
+
+document.getElementById("review").innerHTML =("Rating fra " + relevanteAnmeldelse + " " + relevanteAnmeldelse['xyz010']['rating']);
+	console.log(relevanteAnmeldelse);
+
+console.log(relevanteAnmeldelse['xyz010']['rating']);
+console.log(reviews_object["username"]);*/
 /*------------------------------- slutt på review kode--------------------------------------------*/
 
 
@@ -20,13 +55,13 @@ document.getElementById("title").innerHTML =(relevanteFilmen["otitle"]); //titte
 if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 	if(relevanteFilmen["ntitle"] !== ""){
 		document.getElementById("ntitle").innerHTML =("Norsk tittel: " + relevanteFilmen["ntitle"]);
-		console.log("norsk tittel");
+		//console.log("norsk tittel");
 		//id=239
 	}
 
 	if(relevanteFilmen["etitle"] !== ""){
 		document.getElementById("etitle").innerHTML =("Engelsk tittel: " + relevanteFilmen["etitle"]);
-		console.log("engelsk tittel");
+		//console.log("engelsk tittel");
 		//id 1697
 	}
 
@@ -39,10 +74,10 @@ if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 /*------------------------------- Start på sjanger kode--------------------------------------------*/
 //får feil hvis filmen ikke har sjanger!! 1697
 if(relevanteSjanger && relevanteSjanger[0] !== "" ){
-	console.log(relevanteSjanger[0]);//id = 3519
+	//console.log(relevanteSjanger[0]);//id = 3519
 	document.getElementById("genre").innerHTML =(relevanteSjanger);
 }else{
-	console.log("null sjanger");
+	//console.log("null sjanger");
 	var link = document.getElementById('genreDiv');
 	link.style.display = 'none'; //1697
 }
@@ -55,10 +90,10 @@ var idTrailer = relevanteFilmen["id"];
 var trailerTilFilm = movies_object[idTrailer];
 
 if (trailerTilFilm["youtube trailer id"] !== "" ){
-	console.log("trailer"); //id= 46
+	//console.log("trailer"); //id= 46
 	document.getElementById("trailer").src =('https://www.youtube.com/embed/' + trailerTilFilm["youtube trailer id"]);
 }else{
-	console.log("null trailer");//id=64
+	//console.log("null trailer");//id=64
 	var link = document.getElementById('trailerDiv');
 	link.style.display = 'none';
 }
@@ -92,11 +127,11 @@ document.getElementById("facts").innerHTML =("| " + relevanteFilmen["country"] +
 if (relevanteFilmen["description"] === null || relevanteFilmen["description"] === "" ){
 	var link = document.getElementById('descriptionDiv');
 	link.style.display = 'none';
-	console.log("null discription");
+	//console.log("null discription");
 }
 else{
 	document.getElementById("description").innerHTML =(relevanteFilmen["description"]);
-	console.log(" discription");
+	//console.log(" discription");
 	
 }
 /*------------------------------- Slutt på handling kode--------------------------------------------*/
@@ -106,11 +141,11 @@ else{
 if(movies_object["dir"] !== ""){
 	if (relevanteFilmen["dir"] !== ""){
 	document.getElementById("dir").innerHTML =(relevanteFilmen["dir"]);
-	console.log("direktør");
+	//console.log("direktør");
 	} else{
 		var link = document.getElementById('dirDiv');
 		link.style.display = 'none';
-		console.log("null direktør");
+		//console.log("null direktør");
 	}
 }
 
@@ -121,7 +156,7 @@ if(movies_object["folk"] !== ""){
 	if(relevanteFilmen["folk"] !== ""){
 		document.getElementById("folk").innerHTML =(relevanteFilmen["folk"]);
 	}else{
-		console.log("null skespillere");
+		//console.log("null skespillere");
 		var link = document.getElementById('folkDiv');
 		link.style.display = 'none'; //1697
 	}

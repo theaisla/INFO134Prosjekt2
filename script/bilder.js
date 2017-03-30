@@ -14,6 +14,7 @@ var relevanteFilmen = movies_object[query_params.id];
 
 var bildeId = relevanteFilmen['id'];
 
+// må fikse de som IKKE har bilde -- 1033
 if(bildeId < 1000){
 	document.getElementById("bilde").src =('https://nelson.uib.no/o/0/' + bildeId +  ".jpg");
 }
@@ -24,4 +25,4 @@ if (bildeId>=2000){
 	document.getElementById("bilde").src =('https://nelson.uib.no/o/2/' + bildeId +  ".jpg");
 }
 
-console.log(bildeId);
+//console.log(bildeId);
