@@ -2,11 +2,8 @@
 var input = get_query_string_parameters();
 // lagre resultater i en array
 var results = [];
-
-var relevanteFilmen = movies_object[input.id];
-
-var resultList = document.querySelector("#res_list");
-
+//var relevanteFilmen = movies_object[input.id];
+//var resultList = document.querySelector("#res_list");
 var films = [];
 
 function readAsArray(a){
@@ -26,34 +23,52 @@ function search_for_movie_title(e) {
 			console.log(films[i]);
 
 			var url = "film1.html?id=" + films[i].id;
-			document.getElementById("title").innerHTML = ("<h3> Filmtittel </h3>");
+			//document.getElementById("title_h3").innerHTML = ("<h3>Filmtittel</h3>");
       document.getElementById("title").innerHTML = ("<a href=" + url + ">" + films[i].otitle + "</a>");
 		}
 	}
 }
 
-function search_for_actor(e) {
-  //e.preventDefault();
-  readAsArray(e);
-	var actors = [];
-  // søke gjennom objects til den finner en film med lik tittel som input.
-	for(var i = 0; i < films.length; i++){
-		if (films[i].folk === input.actor){
-			results.push(films[i]);
-			console.log(films[i]);
 
-			/*var url = "film1.html?id=" + films[i].id;
-			document.getElementById("title").innerHTML = ("<h3> Skuespiller </h3>");
-			for (x in films){
-				films.push(movies_object[x]);
-      	document.getElementById("title").innerHTML = ("<a href=" + url + ">" + films[i].otitle + "</a>");
-			}*/
+function search_for_director(e) {
+  //e.preventDefault();
+	var director = document.getElementById("director");
+  readAsArray(e);
+	var directors = [];
+
+  // søke gjennom objects til den finner en film med lik tittel som input.
+	for(var j = 0; j < films.length; j++){
+		if (films[j].dir === input.director){
+			//console.log(films[j]);
+
+			var titles = films[j].otitle.toString();
+			var url = "film1.html?id=" + films[j].id;
+			//console.log(titles);
+			//document.getElementById("director").innerHTML = (films[j].dir + ": Regissør av filmene - ");
+
+			var ol = document.createElement("ol");
+			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+			var body = document.getElementById("director");
+			body.appendChild(ol);
+
+
+		//document.getElementById("director").innerHTML = ("<p>" + films[j].dir + ": Regissør av filmene - " + titles + "</p>");
+		//<a href=
 		}
 	}
 }
 
-
-
+/*var relevanteSjanger = genres_object[query_params.id];
+//får feil hvis filmen ikke har sjanger!! 1697
+if(relevanteSjanger && relevanteSjanger[0] !== "" ){
+	console.log(relevanteSjanger[0]);//id = 3519
+	document.getElementById("genre").innerHTML =(relevanteSjanger);
+}else{
+	console.log("null sjanger");
+	var link = document.getElementById('genreDiv');
+	link.style.display = 'none'; //1697
+}
+*/
 
 
 
@@ -75,7 +90,8 @@ window.onload = function() {
 
 	if (query_params.director) {
 		director = document.getElementById("director");
-		director.innerHTML = query_params.director;
+		director.innerHTML = ("<h4>" + query_params.director + ": Regissør av filmene - <h4>");
+		search_for_director(input);
     }
 
 	if (query_params.genre) {
