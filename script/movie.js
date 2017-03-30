@@ -7,10 +7,26 @@ var relevanteAnmeldelse = reviews_object[query_params.id];
 /*------------------------------- Start på review kode--------------------------------------------*/
 //skriver ut bruker, rating og kommentar
 for (key in relevanteAnmeldelse) {
-			var bruker = relevanteAnmeldelse[key]['username'] + "---" +relevanteAnmeldelse[key]['rating']  + "---" + relevanteAnmeldelse[key]['comment'];
+			var bruker = relevanteAnmeldelse[key]['username'] + ":   ";
+
+			
+			var rate = " Karakter: " + relevanteAnmeldelse[key]['rating']  
 			var p = document.createElement("p");
+			var p2 = document.createElement("p");
+			var p3 = document.createElement("p");
+			var p4 = document.createElement("br");
 			p.innerHTML =bruker;
+			p2.innerHTML = rate;
+			p3.innerHTML = kom;
+			p4.innerHTML = "";
 			document.getElementById("review").appendChild(p);
+			document.getElementById("review").appendChild(p2);
+			if (relevanteAnmeldelse[key]['comment']!== ""){
+				var kom = " Kommentar: " + relevanteAnmeldelse[key]['comment'];
+				document.getElementById("review").appendChild(p3);
+			}
+			document.getElementById("review").appendChild(p4);
+
 }
 
 	
@@ -35,7 +51,7 @@ for(var i = 0; i < karaktereneIArray.length; i++) {
 
 var avg = total / karaktereneIArray.length;
 p.innerHTML =avg;
-document.getElementById("rate").appendChild(p);
+document.getElementById("rate2").appendChild(p);
 
 console.log( "The sum of all the elements is: " + total + " The average is: " + avg );
 /*------------------------------- slutt på review kode--------------------------------------------*/
