@@ -13,7 +13,6 @@
 		<!-- Andre ting som hjelper koden vår -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8"/>
-
   </head>
 
 
@@ -23,29 +22,23 @@
   <div id="headerbackground">
   </div>
 
-  <!-- Navigasjon -->
-  <nav>
-    <a href="index.html ">
-      <img src="img/logo/logo.png" id="logo" alt="Logo">
-    </a>
-    <a href="#" id="menyikon"></a>
-      <ul>
-        <!-- her på li være før div. Jobber med å finne en loosning -->
+    <nav>
+      <!-- Logo -->
+      <a href="index.html "> <img src="img/logo/logo.png" id="logo" alt="Logo"></a>
+
+      <!-- Navigasjon -->
+      <div id="nav-container">
         <div class="dropdown">
-          <li><a href="minside.html">Min Side</a></li>
+          <a href="minside.html">Min Side</a>
           <div class="dropdown-content">
             <a href="minside.html">Min side</a>
             <a href="login.html">Logg ut</a>
           </div>
         </div>
-
-        <li>
-          <!-- Skjemaet gir mulighet for å søke etter film tittel. -->
-        	<form class="search" action="search_results.html" method="get" >
-        	   <input id="film_title" name="film_title" type="text" size="40" placeholder="Søk filmtittel" >
-        	</form>
-        </li>
-      </ul>
+        <form class="search" action="search_results.html" method="get" >
+           <input id="film_title" name="film_title" type="text" size="40" placeholder="Søk filmtittel" >
+        </form>
+      </div>
     </nav>
 
   			<!-- Anbefalinger -->
@@ -60,7 +53,7 @@
       		<div class="hovereffect">
           	<img class="img-responsive" src="img/TheIntouchables.jpg" alt="The Intouchables movie cover">
             <div class="overlay">
-  						<a href="film1.html">
+  						<a href="film1.html?id=3823">
               <h2>Intouchables</h2>
   						<p > Den sanne historien om to menn som aldri skulle ha møtt hverandre -
   								De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter.
@@ -75,7 +68,7 @@
       		<div class="hovereffect">
           	<img class="img-responsive" src="img/TheLunchbox.jpg" alt="The Lunchbox movie cover">
             <div class="overlay">
-  						<a href="film2.html">
+  						<a href="film1.html?id=3818">
               <h2>The Lunchbox</h2>
   						<p> Indiske The Lunchbox er en sjelden filmperle som har begeistret
   								et stort internasjonalt publikum med sin originalitet og varme.
@@ -90,7 +83,7 @@
       		<div class="hovereffect">
           	<img class="img-responsive" src="img/HolyGrail.jpg" alt="The Holy Grail movie cover">
             <div class="overlay">
-  						<a href="film1.html">
+  						<a href="film1.html?id=1027">
               <h2>Monty Python &<br>the Holy Grail</h2>
   						<p>Kong Arthur og hans riddere skal finne Den Hellige Gral.
   						</p></a>
@@ -104,7 +97,7 @@
       		<div class="hovereffect">
           	<img class="img-responsive" src="img/MinorityReport.jpg" alt="Minority Report movie cover">
             <div class="overlay">
-  						<a href="film1.html">
+  						<a href="film1.html?id=2274">
               <h2>Minority Report</h2>
   						<p>Lederen for prekriminaliteten blir beskyldt for et fremtidig drap og må finne ut hvem
   							som ha pekt han ut, ellers blir han et offer selv.
@@ -119,7 +112,7 @@
       		<div class="hovereffect">
           	<img class="img-responsive" src="img/TheIntouchables.jpg" alt="The Intouchables movie cover">
             <div class="overlay">
-  						<a href="film1.html">
+  						<a href="film1.html?id=3823">
               <h2>Intouchables</h2>
   						<p> Den sanne historien om to menn som aldri skulle ha møtt hverandre -
   								De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter.
@@ -133,7 +126,7 @@
       		<div class="hovereffect">
           	<img class="img-responsive" src="img/TheLunchbox.jpg" alt="The Lunchbox movie cover">
             <div class="overlay">
-  						<a href="film2.html">
+  						<a href="film1.html?id=3818">
               <h2>The Lunchbox</h2>
   						<p> Indiske The Lunchbox er en sjelden filmperle som har begeistret
   								et stort internasjonalt publikum med sin originalitet og varme.
@@ -147,7 +140,7 @@
       		<div class="hovereffect">
           	<img class="img-responsive" src="img/HolyGrail.jpg" alt="The Holy Grail movie cover">
             <div class="overlay">
-  						<a href="film1.html">
+  						<a href="film1.html?id=1027">
               <h2>Monty Python and <br>the Holy Grail</h2>
   						<p>Kong Arthur og hans riddere skal finne Den Hellige Gral.
   						</p></a>
@@ -160,7 +153,7 @@
       		<div class="hovereffect">
           	<img class="img-responsive" src="img/MinorityReport.jpg" alt="Minority Report movie cover">
             <div class="overlay">
-  						<a href="film1.html">
+  						<a href="film1.html?id=2274">
               <h2>Minority Report</h2>
   						<p>Lederen for prekriminaliteten blir beskyldt for et fremtidig drap og må finne ut hvem
   							som ha pekt han ut, ellers blir han et offer selv.
@@ -243,28 +236,28 @@
   				<section class="mid">
 
   					<section class="litenfilm">
-  						<a href="film1.html">
+  						<a href="film1.html?id=2274">
   							<img class="img-small" src="img/MinorityReport.jpg" alt="Minority Report movie cover">
   						</a>
   						<h4>Minority Report</h4>
   					</section>
 
   					<section class="litenfilm">
-  						<a href="film1.html">
+  						<a href="film1.html?id=1027">
   							<img class="img-small" src="img/HolyGrail.jpg" alt="The Holy Grail movie cover">
   						</a>
   						<h4>The Holy Grail</h4>
   					</section>
 
   					<section class="litenfilm">
-  						<a href="film2.html">
+  						<a href="film1.html?id=3818">
   							<img class="img-small" src="img/TheLunchbox.jpg" alt="The Lunchbox movie cover">
   						</a>
   						<h4>The Lunchbox</h4>
   					</section>
 
   					<section class="litenfilm">
-  						<a href="film1.html">
+  						<a href="film1.html?id=3823">
   							<img class="img-small" src="img/TheIntouchables.jpg" alt="The Intouchables movie cover">
   						</a>
   						<h4>Intouchables</h4>
@@ -280,28 +273,28 @@
   				<section class="mid">
 
   					<section class="litenfilm">
-  						<a href="film1.html">
+  						<a href="film1.html?id=2274">
   							<img class="img-small" src="img/MinorityReport.jpg" alt="Minority Report movie cover">
   						</a>
   						<h4>Minority Report</h4>
   					</section>
 
   					<section class="litenfilm">
-  						<a href="film1.html">
+  						<a href="film1.html?id=1027">
   							<img class="img-small" src="img/HolyGrail.jpg" alt="The Holy Grail movie cover">
   						</a>
   						<h4>The Holy Grail</h4>
   					</section>
 
   					<section class="litenfilm">
-  						<a href="film2.html">
+  						<a href="film1.html?id=3818">
   							<img class="img-small" src="img/TheLunchbox.jpg" alt="The Lunchbox movie cover">
   						</a>
   						<h4>The Lunchbox</h4>
   					</section>
 
   					<section class="litenfilm">
-  						<a href="film1.html">
+  						<a href="film1.html?id=3823">
   							<img class="img-small" src="img/TheIntouchables.jpg" alt="The Intouchables movie cover">
   						</a>
   						<h4>Intouchables</h4>

@@ -13,7 +13,7 @@ h1 {
 	letter-spacing: 1.8px;
 	color: #808080;
   text-align: center;
-  margin: 5 0 0 0;
+  margin: 5px 0px 0px 0px;
 }
 
 .underline {
@@ -63,7 +63,7 @@ h5 {
 	font-weight: 400;
 	letter-spacing: 1.2px;
 	color: #808080;
-  margin: 3 0 3 3;
+  margin: 3px 0px 3px 3px;
 }
 
 /*_____________ Navigasjon _____________*/
@@ -97,7 +97,7 @@ nav {
 
 #logo {
 	width: 110px;
-  padding: 5 5 5 5;
+  padding: 5px 5px 5px 5px;
 	height: auto;
 	border: 0px;
 	float: left;
@@ -145,15 +145,11 @@ a:focus {
     border: 1px solid red;
 }
 
-ul {
-	list-style: none;
-	padding: 0px;
-}
-
-li {
+#nav-container {
 	float: right;
 	padding-left: 35px;
-  padding-top: 5px;
+  padding-top: 17px;
+	width: 320px;
 }
 
 /* dropdown minside */
@@ -164,7 +160,7 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
-    margin-top: 23px;
+    margin-top: 0px;
     background-color: white;
     min-width: 120px;
     border: 0.5px solid red;
@@ -197,7 +193,7 @@ li {
   z-index: 0;
   position: relative;
   top: 80px;
-  padding: 10;
+  padding: 10px;
   /*border: 1px solid pink;*/
 }
 
@@ -516,7 +512,6 @@ a:hover {
   }
 
   .hovereffect {
-    pointer-events:none;
     margin-bottom: 10px;
   }
 
@@ -539,6 +534,5 @@ a:hover {
     margin-right: auto;
     margin-left: auto;
   }
-
 
 }

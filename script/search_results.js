@@ -73,12 +73,12 @@ function search_for_actor(e) {
 		//if (films[j].folk === input.actor){
 			console.log(folkifilm[x]);*/
 
-
+//streng.indexOf(streng2) > -1
 
   // søke gjennom objects til den finner en regissør med samme navn.
-	for(var i = 0; i < folkifilm.length; i++){
-		//if (folkifilm[i].folk === input.actor){
-		if (folkifilm[i].folk.includes(input.actor)){
+	for(var i = 0; i < films.length; i++){
+		//
+		if (films[i].folk && (films[i].folk.indexOf(input.actor)) > -1){
 			console.log(films[i]);
 
 			// gjøre om filmtittel til string
@@ -102,7 +102,7 @@ function search_for_director(e) {
 
   // søke gjennom objects til den finner en regissør med samme navn.
 	for(var j = 0; j < films.length; j++){
-		if (films[j].dir === input.director){
+		if (films[j].fdir && (films[j].dir.indexOf(input.director)) > -1){
 
 			// gjøre om filmtittel til string
 			var titles = films[j].otitle.toString();
@@ -129,18 +129,35 @@ function search_for_genre(e) {
 		genres.push(genres_object[x]);
 	}
 
+genre[id]
+	for(var i = 0; i < films.length; i++){
+		//for(var j = 0; j < genres.length; j++){
+		if (genres_object[id] == input.genre){
+			// gjøre om filmtittel til string
+			var titles = films[j].otitle.toString();
+			// finne url til de ulike filmene.
+			var url = "film1.html?id=" + films[j].id;
+			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
+			var ol = document.createElement("ol");
+			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+			var body = document.getElementById("genre");
+			body.appendChild(ol);
+		}
+
+	}
+}
 
 	//var relevanteSjanger = genres_object[];
 	//console.log(relevanteSjanger );
   //søke gjennom til den finner like.
-	for(var i = 0; i < genres.length; i++){
+	/*for(var i = 0; i < genres.length; i++){
 		if (genres[i] == input.genre){
 			for(var j = 0; j < films.length; j++){
 				if(genres[i] == films[j].id){
 
 					console.log(films[j]);
 				}
-			}
+			}*/
 
 			//console.log(genres[i]);
 
@@ -159,9 +176,7 @@ function search_for_genre(e) {
 			//ol.innerHTML = "<a href=" + url + ">" + gen + "</a>";
 			//var body = document.getElementById("genre");
 			//body.appendChild(ol);
-		}
-	}
-}
+
 
 /*var relevanteSjanger = genres_object[query_params.id];
 //får feil hvis filmen ikke har sjanger!! 1697
