@@ -1,4 +1,4 @@
-// Kode av tcl059
+// Kode av: tcl059, kandidat 139
 
 // lese input
 var input = get_query_string_parameters();
@@ -64,16 +64,6 @@ function search_for_movie_title(e) {
 function search_for_actor(e) {
   //e.preventDefault();
   readAsArray(e);
-	var folkifilm = [];
-
-
-	/*for(var i = 0; i < films.length; i++){
-		//for(x in films[i].folk){
-			folkifilm.push(films[i].folk[x]);
-		//if (films[j].folk === input.actor){
-			console.log(folkifilm[x]);*/
-
-//streng.indexOf(streng2) > -1
 
   // søke gjennom objects til den finner en regissør med samme navn.
 	for(var i = 0; i < films.length; i++){
@@ -124,71 +114,24 @@ function search_for_genre(e) {
   readAsArray(e);
 	var genres = [];
 
-	// legge all genre objekter i en array
-	for (x in genres_object){
-		genres.push(genres_object[x]);
-	}
-
-genre[id]
-	for(var i = 0; i < films.length; i++){
-		//for(var j = 0; j < genres.length; j++){
-		if (genres_object[id] == input.genre){
-			// gjøre om filmtittel til string
-			var titles = films[j].otitle.toString();
-			// finne url til de ulike filmene.
-			var url = "film1.html?id=" + films[j].id;
-			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
-			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
-			var body = document.getElementById("genre");
-			body.appendChild(ol);
-		}
-
-	}
-}
-
-	//var relevanteSjanger = genres_object[];
-	//console.log(relevanteSjanger );
-  //søke gjennom til den finner like.
-	/*for(var i = 0; i < genres.length; i++){
-		if (genres[i] == input.genre){
-			for(var j = 0; j < films.length; j++){
-				if(genres[i] == films[j].id){
-
-					console.log(films[j]);
+for (x in genres_object){
+		if (genres_object[x] && (genres_object[x].indexOf(input.genre)) > -1){
+			for (var i = 0; i < films.length; i++){
+				if (x == films[i].id){
+					// gjøre om filmtittel til string
+					var titles = films[i].otitle.toString();
+					// finne url til de ulike filmene.
+					var url = "film1.html?id=" + films[i].id;
+					// lage en liste av de ulike filmene. Viktig at elementene ikke overskrives.
+					var ol = document.createElement("ol");
+					ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+					var body = document.getElementById("genre");
+					body.appendChild(ol);
 				}
-			}*/
-
-			//console.log(genres[i]);
-
-
-			// gjøre om filmtittel til string
-
-			//var gen = genres[i].otitle.toString();
-
-
-			// finne url til de ulike filmene.
-			//var url = "film1.html?id=" + genres[];
-			//console.log(url);
-
-			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
-			//var ol = document.createElement("ol");
-			//ol.innerHTML = "<a href=" + url + ">" + gen + "</a>";
-			//var body = document.getElementById("genre");
-			//body.appendChild(ol);
-
-
-/*var relevanteSjanger = genres_object[query_params.id];
-//får feil hvis filmen ikke har sjanger!! 1697
-if(relevanteSjanger && relevanteSjanger[0] !== "" ){
-	console.log(relevanteSjanger[0]);//id = 3519
-	document.getElementById("genre").innerHTML =(relevanteSjanger);
-}else{
-	console.log("null sjanger");
-	var link = document.getElementById('genreDiv');
-	link.style.display = 'none'; //1697
+			}
+		}
+	}
 }
-*/
 
 //___________________________________ Søk etter land ____________________________________________________________
 
