@@ -558,11 +558,11 @@ a:hover {
 
 	.search input[id="film_title_res"] {
 			margin-top: 10px;
-	    width: 75px;
+	    width: 80px;
 	}
 
 	.search input[type="text"]:focus {
-	    width: 75px;
+	    width: 80px;
 	}
 
   /*_____________Fonts_____________*/
@@ -660,11 +660,11 @@ a:hover {
 
 	.search input[id="film_title_res"] {
 			margin-top: 10px;
-			width: 75px;
+			width: 80px;
 	}
 
 	.search input[type="text"]:focus {
-			width: 75px;
+			width: 80px;
 	}
 
   /*_____________Fonts_____________*/

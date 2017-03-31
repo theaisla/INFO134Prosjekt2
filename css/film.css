@@ -350,6 +350,58 @@ iframe{
   #logo {
   	width: 80px;
   }
+
+	nav{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	/*_____________Nav_____________*/
+
+	#menyikon {
+		display: inline-block;
+		border-bottom: 15px double red;
+	  border-top: 5px solid red;
+	  content:"";
+	  height: 5px;
+		width: 35px;
+		margin: 20px;
+		z-index: 10;
+		float: right;
+
+	}
+
+	nav #nav-container, #minside, #unresponsive_search {
+ 	display: none;
+  }
+
+	#responsive_search, nav:hover #nav-container, nav #nav-container:hover  {
+		display: block;
+	}
+
+	.dropdown-content{
+		display: block;
+		min-width: 120px;
+		height: 100px;
+		top: 30px;
+		position: relative;
+		right: -55px;
+	}
+
+  nav #nav-container {
+ 	text-align: center;
+ 	width: 100px;
+ 	z-index: 100;
+  }
+
+	.search input[id="film_title_res"] {
+			margin-top: 10px;
+	    width: 80px;
+	}
+
+	.search input[type="text"]:focus {
+	    width: 80px;
+	}
   /*_____________Fonts_____________*/
 
   h1{
@@ -375,6 +427,58 @@ iframe{
 
 #logo {
 	width: 80px;
+}
+
+nav{
+	width: 90%;
+	margin-left: 5%;
+}
+
+/*_____________Nav_____________*/
+
+#menyikon {
+	display: inline-block;
+	border-bottom: 15px double red;
+	border-top: 5px solid red;
+	content:"";
+	height: 5px;
+	width: 35px;
+	margin: 20px;
+	z-index: 10;
+	float: right;
+
+}
+
+nav #nav-container, #minside, #unresponsive_search {
+display: none;
+}
+
+#responsive_search, nav:hover #nav-container, nav #nav-container:hover  {
+	display: block;
+}
+
+.dropdown-content{
+	display: block;
+	min-width: 120px;
+	height: 100px;
+	top: 30px;
+	position: relative;
+	right: -55px;
+}
+
+nav #nav-container {
+text-align: center;
+width: 100px;
+z-index: 100;
+}
+
+.search input[id="film_title_res"] {
+		margin-top: 10px;
+		width: 80px;
+}
+
+.search input[type="text"]:focus {
+		width: 80px;
 }
 
   /*_____________Fonts_____________*/
