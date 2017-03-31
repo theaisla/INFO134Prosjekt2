@@ -31,6 +31,7 @@ for (key in relevanteAnmeldelse) {
 
 	
 //skriver ut gjennomsnittlig rate
+if (relevanteAnmeldelse){
 var brukerneIArray = [];
 var karaktereneIArray = [];
 
@@ -50,8 +51,11 @@ for(var i = 0; i < karaktereneIArray.length; i++) {
 }
 
 var avg = total / karaktereneIArray.length;
-p.innerHTML =avg;
+p.innerHTML ="Gjennomsnittlig karakter: "+avg;
+
+
 document.getElementById("rate2").appendChild(p);
+}
 
 console.log( "The sum of all the elements is: " + total + " The average is: " + avg );
 /*------------------------------- slutt på review kode--------------------------------------------*/
