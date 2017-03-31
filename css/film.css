@@ -71,6 +71,10 @@ a:focus {
 
 /*_____________ Navigasjon _____________*/
 
+#responsive_search{
+	display: none;
+}
+
 #headerbackground {
 	background-color: white;
   opacity: 0.93;
@@ -131,7 +135,6 @@ a:focus {
     text-transform: none;
 		font-style: italic;
     position: relative;
-    top: -3px;
 
     border: 1px solid #d1d1d1;
     width: 150px;
@@ -186,6 +189,8 @@ a:focus {
 #minside {
   color: red;
 }
+
+
 
 /*_____________Main section_____________*/
 
