@@ -65,6 +65,8 @@ console.log( "The sum of all the elements is: " + total + " The average is: " + 
 document.getElementById("otitle").innerHTML =(relevanteFilmen["otitle"]); //orginaltittel til filmen
 document.getElementById("title").innerHTML =(relevanteFilmen["otitle"]); //tittel vises i breadcrum
 
+
+
 if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 	if(relevanteFilmen["ntitle"] !== ""){
 		document.getElementById("ntitle").innerHTML =("Norsk tittel: " + relevanteFilmen["ntitle"]);
@@ -163,12 +165,10 @@ if(movies_object["dir"] !== ""){
 }
 
 if(movies_object["folk"] !== ""){
-	if (relevanteFilmen["folk"] !== null){
+	if (relevanteFilmen["folk"] !== null || relevanteFilmen["folk"] !== ""){
 		document.getElementById("folk").innerHTML =(relevanteFilmen["folk"]);
 	}
-	if(relevanteFilmen["folk"] !== ""){
-		document.getElementById("folk").innerHTML =(relevanteFilmen["folk"]);
-	}else{
+else{
 		//console.log("null skespillere");
 		var link = document.getElementById('folkDiv');
 		link.style.display = 'none'; //1697

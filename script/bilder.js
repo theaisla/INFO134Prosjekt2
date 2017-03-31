@@ -12,20 +12,22 @@ Det er krav om ˚a inkludere et bilde. Men dere kan inkludere to eller tre bilde
 query_params = get_query_string_parameters();
 var relevanteFilmen = movies_object[query_params.id];
 
+
+
 var bildeId = relevanteFilmen['id'];
-
-// må fikse de som IKKE har bilde -- 1033
-if(bildeId < 1000){
-	document.getElementById("bilde").src =('https://nelson.uib.no/o/0/' + bildeId +  ".jpg");
+if(bildeId){
+	// må fikse de som IKKE har bilde -- 1033
+	if(bildeId < 1000){
+		document.getElementById("bilde").src =('https://nelson.uib.no/o/0/' + bildeId +  ".jpg");
+	}
+	if (bildeId >= 1000 && bildeId < 2000){
+		document.getElementById("bilde").src =('https://nelson.uib.no/o/1/' + bildeId +  ".jpg");
+	}
+	if (bildeId >= 2000 && bildeId < 3000){
+		document.getElementById("bilde").src =('https://nelson.uib.no/o/2/' + bildeId +  ".jpg");
+	}
+	if (bildeId >= 3000){
+		document.getElementById("bilde").src =('https://nelson.uib.no/o/3/' + bildeId +  ".jpg");
+	}
 }
-if (bildeId >= 1000 && bildeId < 2000){
-	document.getElementById("bilde").src =('https://nelson.uib.no/o/1/' + bildeId +  ".jpg");
-}
-if (bildeId >= 2000 && bildeId < 3000){
-	document.getElementById("bilde").src =('https://nelson.uib.no/o/2/' + bildeId +  ".jpg");
-}
-if (bildeId >= 3000){
-	document.getElementById("bilde").src =('https://nelson.uib.no/o/3/' + bildeId +  ".jpg");
-}
-
 //console.log(bildeId);
