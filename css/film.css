@@ -100,7 +100,7 @@ nav {
 
 #logo {
 	width: 110px;
-  padding: 5 5 5 5;
+  padding: 5px 5px 5px 5px;
 	height: auto;
 	border: 0px;
 	float: left;
@@ -122,47 +122,37 @@ a:focus {
 }
 
 /* kode inspirert fra http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
-#search input[type="text"] {
+.search input[type="text"] {
     font-family: Lato, Helvetica Neue, Helvetica, Arial;
     font-size: 0.85em;
     font-weight: 300;
     letter-spacing: 0.15em;
     color: #808080;
-    text-transform: uppercase;
+    text-transform: none;
+		font-style: italic;
     position: relative;
     top: -3px;
 
     border: 1px solid #d1d1d1;
-    width: 100px;
+    width: 150px;
     padding: 3px 10px 3px 15px;
-
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
     -webkit-transition: all 0.7s ease 0s;
-    -moz-transition: all 0.7s ease 0s;
-    -o-transition: all 0.7s ease 0s;
     transition: all 0.7s ease 0s;
 }
 
-#search input[type="text"]:focus {
+.search input[type="text"]:focus {
     width: 200px;
     outline: 0;
     border: 1px solid red;
 }
 
-ul {
-	list-style: none;
-	padding: 0px;
-}
-
-li {
+#nav-container {
 	float: right;
 	padding-left: 35px;
-  padding-top: 5px;
+  padding-top: 17px;
+	width: 320px;
 }
 
 /* dropdown minside */
@@ -173,7 +163,7 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
-    margin-top: 23px;
+    margin-top: 0px;
     background-color: white;
     min-width: 120px;
     border: 0.5px solid red;
@@ -193,6 +183,9 @@ li {
     display: block;
 }
 
+#minside {
+  color: red;
+}
 
 /*_____________Main section_____________*/
 

@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 
 		<title>Filmregister</title>
-	
+
 		<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300,100' rel='stylesheet' type='text/css'>
@@ -19,55 +19,49 @@
 
 
 	<body>
-		<header>
-		<!-- Det hvite feltet bak navigasjonen -->
-		<div id="headerbackground">
-		</div>
 
-		<!-- Navigasjon -->
+	<!-- Det hvite feltet bak navigasjonen -->
+	<div id="headerbackground">
+	</div>
+
 		<nav>
-			<a href="index.html ">
-				<img src="img/logo/logo.png" id="logo" alt="Logo">
-			</a>
-			<a href="#" id="menyikon"></a>
-				<ul>
+			<!-- Logo -->
+			<a href="index.html "> <img src="img/logo/logo.png" id="logo" alt="Logo"></a>
 
-					<div class="dropdown">
-						<li><a href="minside.html" id="minside">Min Side</a></li>
-  					<div class="dropdown-content">
-							<a href="minside.html">Min side</a>
-							<a href="login.html">Logg ut</a>
-  					</div>
+			<!-- Navigasjon -->
+			<div id="nav-container">
+				<div class="dropdown">
+					<a href="minside.html">Min Side</a>
+					<div class="dropdown-content">
+						<a href="minside.html">Min side</a>
+						<a href="login.html">Logg ut</a>
 					</div>
+				</div>
+				<form class="search" action="search_results.html" method="get" >
+					 <input id="film_title" name="film_title" type="text" size="40" placeholder="Søk filmtittel" >
+				</form>
+			</div>
+		</nav>
 
-					<li>
-					<form id="search" action="search_results_tittel.html" method="get" name ="searchForm">
-        	   <input id="film_t" name="film_title" type="text" size="40" placeholder="Søk filmtittel" >
-        	</form>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		
 		<!-- Innhold -->
 		<section id=wrapper>
-		
+
 			<!-- breadcrumbs -->
 			<ul class="breadcrumb">
 				<li><a href="index.html">Film Bib</a></li>
 				<li> > </li>
 				<li id="visited"><a href="#" id="title"></a></li>
 			</ul>
-			
+
 			<!-- Filmen -->
 			<h1 id="otitle">Film</h1>
 			<div class="underline"></div>
-			
+
 			<p id="ntitle"></p>
 			<p id ="etitle"></p>
 			<p id="facts"></p>
-			
-			
+
+
 			<!-- Gjennomsnittlig rate-->
 			<div id="rate2">	</div>
 			<div class="rate">
@@ -82,14 +76,14 @@
 				<input type="radio" id="star1" name="rate" value="1" />
 				<label for="star1" title="text">1 stjerne</label>
 			</div>
-			
+
 			<!-- bildene -->
 			<section class="images">
 			<img id="bilde" src="#" alt="Bilde til den relevante filmen">
 			<img id="bilde2" src="#" alt="Bilde til den relevante filmen">
 			<img id="bilde3" src="#" alt="Bilde til den relevante filmen">
 			</section>
-			
+
 			<!-- Fakta om film -->
 			<div id="right">
 
@@ -97,37 +91,37 @@
 				<p id="folkDiv"><strong>Skuespillerer: </strong></p><div id="folk"></div>
 				<p id="genreDiv"><strong>Sjanger: </strong></p><div id="genre"></div>
 			</div>
-							    
-			
+
+
 			<!-- min liste 			-->
 			<a href="minside.html"><img src="img/icons/pluss.png" alt="Min Liste" title="Legg til i min liste" id="minListe"> </a>
 
-			
+
 			<!-- Handling til filmen -->
 			<div id="descriptionDiv">
 				<h3>Handling </h3>
 				<div class="underlineh3"></div>
 				<p id="description"></p>
 			</div>
-		
-			
-			
+
+
+
 			<!-- Trailer til filmen -->
 			<div id="trailerDiv">
 				<h3>Trailer </h3>
 				<div class="underlineh3"></div>
 				<iframe id="trailer" width="560" height="315" src="#" allowfullscreen></iframe>
 			</div>
-			
-			
-			
+
+
+
 			<!-- Kommentarer til filmen -->
 			<h3>Anmeldelse </h3>
 			<div class="underlineh3"></div>
-			
+
 			<!-- Kommentarer Hentet fra reviews -->
 			<div id="review"></div>
-			
+
 			<!-- Kommentarer til filmen  fra bruker, blir ikke lagret-->
 			<form id="anmeldelse" method="POST">
 				<p>Navn: </p>
@@ -136,18 +130,18 @@
 				<textarea class="textField" id="comment" name="newpost" maxlength="1000"></textarea>
 				<input type="submit" value="send" style="display: block;">
 			</form>
-			
+
 			<a href="http://www.imdb.com/title/tt2350496/reviews?ref_=tt_urv"> Les flere kommentarer...</a>
 
 
-			
-			
+
+
 		<!-- slutt på wrapper -->
 		</section>
 
 	<footer>
 		<p>&copy; <p>
-		
+
 		<!-- JS -->
 		<script type="text/javascript" src="script/object.js"></script>
 		<script type="text/javascript" src="script/genres.js"></script>
