@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<!-- Kode av tcl059 -->
 <html>
 
   <head>
@@ -7,14 +8,12 @@
     <title>FilmBib</title>
 		<!-- Font -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300,100' rel='stylesheet' type='text/css'>
 		<!-- css kode -->
 		<link rel="stylesheet" href="css/index.css">
 		<!-- Andre ting som hjelper koden vår -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8"/>
-    <script src="script/object.js" type="text/javascript"></script>
-    <script src="script/genres.js" type="text/javascript"></script>
+
   </head>
 
 
@@ -42,7 +41,7 @@
 
         <li>
           <!-- Skjemaet gir mulighet for å søke etter film tittel. -->
-        	<form id="search" action="search_results_tittel.html" method="get" name ="searchForm">
+        	<form class="search" action="search_results.html" method="get" >
         	   <input id="film_title" name="film_title" type="text" size="40" placeholder="Søk filmtittel" >
         	</form>
         </li>
@@ -175,7 +174,7 @@
 
 
   		<section id="boks1">
-  			<!-- avansert soot -->
+  			<!-- avansert sook -->
   			<section id="avansertSok">
   				<h3>Avansert søk</h3>
   				<div class="underline"></div>
@@ -184,7 +183,7 @@
   				<p>Skriv inn hele eller deler av det eller de ordene du vil søke etter.
   					Du kan også begrense søket ved å velge type og/eller format. </p>
 
-            <form id="search" action="search_results.html" method="get">
+            <form class="search" action="search_results.html" method="get">
         			<div>
         				<label for="title">Film tittel   </label>
         				<input id="title" name="title" type="text" placeholder="e.g. King Kong" >
@@ -316,8 +315,6 @@
 
   		<!-- slutt på mainsection -->
   		</section>
-
-      <script src="script/avansert_sok.js" type="text/javascript"></script>
 
   </body>
 </html>

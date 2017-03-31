@@ -119,7 +119,7 @@ a:focus {
 }
 
 /* kode inspirert fra http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
-#search input[type="text"] {
+.search input[type="text"] {
     font-family: Lato, Helvetica Neue, Helvetica, Arial;
     font-size: 0.85em;
     font-weight: 300;
@@ -139,7 +139,7 @@ a:focus {
     transition: all 0.7s ease 0s;
 }
 
-#search input[type="text"]:focus {
+.search input[type="text"]:focus {
     width: 200px;
     outline: 0;
     border: 1px solid red;
