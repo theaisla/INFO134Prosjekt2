@@ -57,7 +57,7 @@ p.innerHTML ="Gjennomsnittlig karakter: "+avg;
 document.getElementById("rate2").appendChild(p);
 }
 
-console.log( "The sum of all the elements is: " + total + " The average is: " + avg );
+//console.log( "The sum of all the elements is: " + total + " The average is: " + avg );
 /*------------------------------- slutt på review kode--------------------------------------------*/
 
 
@@ -155,7 +155,14 @@ else{
 /*------------------------------- Start på personer kode--------------------------------------------*/
 if(movies_object["dir"] !== ""){
 	if (relevanteFilmen["dir"] !== ""){
-	document.getElementById("dir").innerHTML =(relevanteFilmen["dir"]);
+		
+		var direk = relevanteFilmen["dir"];
+		var direkList = direk.split('og');
+		var direkt = '<a href="search_results.html?actor=' + direkList[0] + '">' + direkList[0] + '</a>'
+		for(var i =1; i<direkList.length;i++){
+			direkt = direkt + ", " + '<a href="search_results.html?actor=' + direkList[i] + '">' + direkList[i] + '</a>';
+		}
+	document.getElementById("dir").innerHTML =(direkt);
 	//console.log("direktør");
 	} else{
 		var link = document.getElementById('dirDiv');
@@ -166,7 +173,13 @@ if(movies_object["dir"] !== ""){
 
 if(movies_object["folk"] !== ""){
 	if (relevanteFilmen["folk"] !== null || relevanteFilmen["folk"] !== ""){
-		document.getElementById("folk").innerHTML =(relevanteFilmen["folk"]);
+		var skuespillere = relevanteFilmen["folk"];
+		var skuList = skuespillere.split(',');
+		var sku = '<a href="search_results.html?actor=' + skuList[0] + '">' + skuList[0] + '</a>'
+		for(var i =1; i<skuList.length;i++){
+			sku = sku + ", " + '<a href="search_results.html?actor=' + skuList[i] + '">' + skuList[i] + '</a>';
+		}
+		document.getElementById("folk").innerHTML = sku;
 	}
 else{
 		//console.log("null skespillere");
@@ -175,3 +188,35 @@ else{
 	}
 }
 /*------------------------------- Slutt på personer kode--------------------------------------------*/
+
+
+/*------------------------------- Start på bilde kode--------------------------------------------*/
+var bildeId = relevanteFilmen['id'];
+var tittel = relevanteFilmen['otitle'];
+if(bildeId){
+	document.getElementById("bilde").alt =('Coverbilde til ' + tittel);
+	document.getElementById("bilde2").alt =('Coverbilde til ' + tittel);
+	document.getElementById("bilde3").alt =('Coverbilde til ' + tittel);
+	// må fikse de som IKKE har bilde -- 1033
+	if(bildeId < 1000){
+		document.getElementById("bilde").src =('https://nelson.uib.no/o/0/' + bildeId +  ".jpg");
+		document.getElementById("bilde2").src =('https://nelson.uib.no/o/0/' + bildeId +  "b.jpg");
+		document.getElementById("bilde3").src =('https://nelson.uib.no/o/0/' + bildeId +  "c.jpg");
+	}
+	if (bildeId >= 1000 && bildeId < 2000){
+		document.getElementById("bilde").src =('https://nelson.uib.no/o/1/' + bildeId +  ".jpg");
+		document.getElementById("bilde2").src =('https://nelson.uib.no/o/1/' + bildeId +  "b.jpg");
+		document.getElementById("bilde3").src =('https://nelson.uib.no/o/1/' + bildeId +  "c.jpg");		
+	}
+	if (bildeId >= 2000 && bildeId < 3000){
+		document.getElementById("bilde").src =('https://nelson.uib.no/o/2/' + bildeId +  ".jpg");
+		document.getElementById("bilde2").src =('https://nelson.uib.no/o/2/' + bildeId +  "b.jpg");
+		document.getElementById("bilde3").src =('https://nelson.uib.no/o/2/' + bildeId +  "c.jpg");	
+	}
+	if (bildeId >= 3000){
+		document.getElementById("bilde").src =('https://nelson.uib.no/o/3/' + bildeId +  ".jpg");
+		document.getElementById("bilde2").src =('https://nelson.uib.no/o/3/' + bildeId +  "b.jpg");
+		document.getElementById("bilde3").src =('https://nelson.uib.no/o/3/' + bildeId +  "c.jpg");	
+	}
+}
+/*------------------------------- Slutt på bilde kode--------------------------------------------*/

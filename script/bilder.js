@@ -11,23 +11,27 @@ Det er krav om ˚a inkludere et bilde. Men dere kan inkludere to eller tre bilde
 
 query_params = get_query_string_parameters();
 var relevanteFilmen = movies_object[query_params.id];
-
-
-
 var bildeId = relevanteFilmen['id'];
+var tittel = relevanteFilmen['otitle'];
 if(bildeId){
+	document.getElementById("bilde").alt =('Coverbilde til ' + tittel);
+	document.getElementById("bilde2").alt =('Coverbilde til ' + tittel);
 	// må fikse de som IKKE har bilde -- 1033
 	if(bildeId < 1000){
 		document.getElementById("bilde").src =('https://nelson.uib.no/o/0/' + bildeId +  ".jpg");
+		document.getElementById("bilde2").src =('https://nelson.uib.no/o/0/' + bildeId +  "b.jpg");
 	}
 	if (bildeId >= 1000 && bildeId < 2000){
 		document.getElementById("bilde").src =('https://nelson.uib.no/o/1/' + bildeId +  ".jpg");
+		document.getElementById("bilde2").src =('https://nelson.uib.no/o/1/' + bildeId +  "b.jpg");
 	}
 	if (bildeId >= 2000 && bildeId < 3000){
 		document.getElementById("bilde").src =('https://nelson.uib.no/o/2/' + bildeId +  ".jpg");
+		document.getElementById("bilde2").src =('https://nelson.uib.no/o/2/' + bildeId +  "b.jpg");
 	}
 	if (bildeId >= 3000){
 		document.getElementById("bilde").src =('https://nelson.uib.no/o/3/' + bildeId +  ".jpg");
+		document.getElementById("bilde2").src =('https://nelson.uib.no/o/3/' + bildeId +  "b.jpg");
 	}
 }
 //console.log(bildeId);
