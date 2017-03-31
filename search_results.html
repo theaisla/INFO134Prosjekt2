@@ -23,25 +23,32 @@
 
 
   <body>
-    <!-- Det hvite feltet bak navigasjonen -->
-    <div id="headerbackground">
-    </div>
+
+  <!-- Det hvite feltet bak navigasjonen -->
+  <div id="headerbackground">
+  </div>
 
     <nav>
+
       <!-- Logo -->
       <a href="index.html "> <img src="img/logo/logo.png" id="logo" alt="Logo"></a>
 
       <!-- Navigasjon -->
+      <a href="#" id="menyikon"></a>
+
       <div id="nav-container">
         <div class="dropdown">
-          <a href="minside.html">Min Side</a>
+          <a id="minside" href="minside.html">Min Side</a>
           <div class="dropdown-content">
+            <form class="search" id="responsive_search" action="search_results.html" method="get" >
+               <input id="film_title_res" name="film_title" type="text" placeholder="Søk filmtittel" >
+            </form>
             <a href="minside.html">Min side</a>
             <a href="login.html">Logg ut</a>
           </div>
         </div>
-        <form class="search" action="search_results.html" method="get" >
-           <input id="film_title" name="film_title" type="text" size="40" placeholder="Søk filmtittel" >
+        <form class="search" id="unresponsive_search" action="search_results.html" method="get" >
+           <input id="film_title" name="film_title" type="text" placeholder="Søk filmtittel" >
         </form>
       </div>
     </nav>

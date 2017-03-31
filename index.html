@@ -23,20 +23,26 @@
   </div>
 
     <nav>
+
       <!-- Logo -->
       <a href="index.html "> <img src="img/logo/logo.png" id="logo" alt="Logo"></a>
 
       <!-- Navigasjon -->
+      <a href="#" id="menyikon"></a>
+
       <div id="nav-container">
         <div class="dropdown">
-          <a href="minside.html">Min Side</a>
+          <a id="minside" href="minside.html">Min Side</a>
           <div class="dropdown-content">
+            <form class="search" id="responsive_search" action="search_results.html" method="get" >
+               <input id="film_title_res" name="film_title" type="text" placeholder="Søk filmtittel" >
+            </form>
             <a href="minside.html">Min side</a>
             <a href="login.html">Logg ut</a>
           </div>
         </div>
-        <form class="search" action="search_results.html" method="get" >
-           <input id="film_title" name="film_title" type="text" size="40" placeholder="Søk filmtittel" >
+        <form class="search" id="unresponsive_search" action="search_results.html" method="get" >
+           <input id="film_title" name="film_title" type="text" placeholder="Søk filmtittel" >
         </form>
       </div>
     </nav>
@@ -176,24 +182,24 @@
   				<p>Skriv inn hele eller deler av det eller de ordene du vil søke etter.
   					Du kan også begrense søket ved å velge type og/eller format. </p>
 
-            <form class="search" action="search_results.html" method="get">
-        			<div>
+            <form class="av_sok" id="avsok" action="search_results.html" method="get">
+        			<div = class="avsearch">
         				<label for="title">Film tittel   </label>
         				<input id="title" name="title" type="text" placeholder="e.g. King Kong" >
         			</div>
-        			<div>
+        			<div = class="avsearch">
         				<label for="actor">Skuespiller</label>
         				<input id="actor" name="actor" type="text" placeholder="e.g. Kristoffer Joner" >
         			</div>
-        			<div>
+        			<div = class="avsearch">
         				<label for="director">Regissør</label>
         				<input id="director" name="director" type="text" placeholder="e.g. Arne Skouen" >
         			</div>
-        			<div>
+        			<div = class="avsearch">
         				<label for="genre">Sjanger</label>
         				<input id="genre" name="genre" type="text" placeholder="e.g. drama">
         			</div>
-        			<div>
+        			<div = class="avsearch">
         				<label for="country">Land</label>
         				<input id="country" name="country" type="text" placeholder="e.g. NOR">
         			</div>

@@ -66,7 +66,18 @@ h5 {
   margin: 3px 0px 3px 3px;
 }
 
+label {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #4d4d4d;
+}
+
 /*_____________ Navigasjon _____________*/
+
+#responsive_search{
+	display: none;
+}
 
 #headerbackground {
 	background-color: white;
@@ -128,7 +139,6 @@ a:focus {
     text-transform: none;
 		font-style: italic;
     position: relative;
-    top: -3px;
 
     border: 1px solid #d1d1d1;
     width: 150px;
@@ -379,6 +389,74 @@ a:hover {
   width:250px;
 }
 
+.avsearch{
+	margin: 7px 0px 7px 0px;
+}
+
+
+.av_sok input[type="text"] {
+    font-family: Lato, Helvetica Neue, Helvetica, Arial;
+    font-size: 0.7em;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: #808080;
+    text-transform: none;
+		font-style: italic;
+    position: relative;
+    border: 1px solid #d1d1d1;
+    width: 150px;
+    padding: 3px 10px 3px 15px;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+.av_sok input[type="text"]:focus {
+    width: 200px;
+    outline: 0;
+    border: 1px solid red;
+}
+
+.av_sok input[id="title"]{
+	margin-left: 19px;
+}
+
+.av_sok input[id="actor"]{
+	margin-left: 10px;
+}
+
+.av_sok input[id="director"]{
+	margin-left: 24px;
+}
+
+.av_sok input[id="genre"]{
+	margin-left: 28px;
+}
+
+.av_sok input[id="country"]{
+	margin-left: 43px;
+}
+
+.av_sok input[type="submit"]{
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.7em;
+	font-weight: 400;
+	letter-spacing: 0.15em;
+	color: #808080;
+	text-transform: none;
+	position: relative;
+	border: 1px solid #d1d1d1;
+	width: 70px;
+	border-radius: 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+	-webkit-transition: all 0.7s ease 0s;
+	transition: all 0.7s ease 0s;
+	outline:0;
+	margin-top: 5px;
+}
+
+
 /* ______________________________ Responsive meny ________________________________________ */
 
  @media only screen and (max-width: 1070px) {
@@ -435,6 +513,58 @@ a:hover {
     width: 90%;
   }
 
+	nav{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	/*_____________Nav_____________*/
+
+	#menyikon {
+		display: inline-block;
+		border-bottom: 15px double red;
+	  border-top: 5px solid red;
+	  content:"";
+	  height: 5px;
+		width: 35px;
+		margin: 20px;
+		z-index: 10;
+		float: right;
+
+	}
+
+	nav #nav-container, #minside, #unresponsive_search {
+ 	display: none;
+  }
+
+	#responsive_search, nav:hover #nav-container, nav #nav-container:hover  {
+		display: block;
+	}
+
+	.dropdown-content{
+		display: block;
+		min-width: 120px;
+		height: 100px;
+		top: 30px;
+		position: relative;
+		right: -55px;
+	}
+
+  nav #nav-container {
+ 	text-align: center;
+ 	width: 100px;
+ 	z-index: 100;
+  }
+
+	.search input[id="film_title_res"] {
+			margin-top: 10px;
+	    width: 75px;
+	}
+
+	.search input[type="text"]:focus {
+	    width: 75px;
+	}
+
   /*_____________Fonts_____________*/
 
   h1{
@@ -484,6 +614,58 @@ a:hover {
   #logo {
   	width: 80px;
   }
+
+	nav{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	/*_____________Nav_____________*/
+
+	#menyikon {
+		display: inline-block;
+		border-bottom: 15px double red;
+		border-top: 5px solid red;
+		content:"";
+		height: 5px;
+		width: 35px;
+		margin: 20px;
+		z-index: 10;
+		float: right;
+
+	}
+
+	nav #nav-container, #minside, #unresponsive_search {
+	display: none;
+	}
+
+	#responsive_search, nav:hover #nav-container, nav #nav-container:hover  {
+		display: block;
+	}
+
+	.dropdown-content{
+		display: block;
+		min-width: 120px;
+		height: 100px;
+		top: 30px;
+		position: relative;
+		right: -55px;
+	}
+
+	nav #nav-container {
+	text-align: center;
+	width: 100px;
+	z-index: 100;
+	}
+
+	.search input[id="film_title_res"] {
+			margin-top: 10px;
+			width: 75px;
+	}
+
+	.search input[type="text"]:focus {
+			width: 75px;
+	}
 
   /*_____________Fonts_____________*/
 

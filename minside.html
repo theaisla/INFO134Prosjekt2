@@ -20,28 +20,34 @@
 
 	<body>
 
-	<!-- Det hvite feltet bak navigasjonen -->
-	<div id="headerbackground">
-	</div>
+  <!-- Det hvite feltet bak navigasjonen -->
+  <div id="headerbackground">
+  </div>
 
-		<nav>
-			<!-- Logo -->
-			<a href="index.html "> <img src="img/logo/logo.png" id="logo" alt="Logo"></a>
+    <nav>
 
-			<!-- Navigasjon -->
-			<div id="nav-container">
-				<div class="dropdown">
-					<a href="minside.html">Min Side</a>
-					<div class="dropdown-content">
-						<a href="minside.html">Min side</a>
-						<a href="login.html">Logg ut</a>
-					</div>
-				</div>
-				<form class="search" action="search_results.html" method="get" >
-					 <input id="film_title" name="film_title" type="text" size="40" placeholder="Søk filmtittel" >
-				</form>
-			</div>
-		</nav>
+      <!-- Logo -->
+      <a href="index.html "> <img src="img/logo/logo.png" id="logo" alt="Logo"></a>
+
+      <!-- Navigasjon -->
+      <a href="#" id="menyikon"></a>
+
+      <div id="nav-container">
+        <div class="dropdown">
+          <a id="minside" href="minside.html">Min Side</a>
+          <div class="dropdown-content">
+            <form class="search" id="responsive_search" action="search_results.html" method="get" >
+               <input id="film_title_res" name="film_title" type="text" placeholder="Søk filmtittel" >
+            </form>
+            <a href="minside.html">Min side</a>
+            <a href="login.html">Logg ut</a>
+          </div>
+        </div>
+        <form class="search" id="unresponsive_search" action="search_results.html" method="get" >
+           <input id="film_title" name="film_title" type="text" placeholder="Søk filmtittel" >
+        </form>
+      </div>
+    </nav>
 
 			<!-- Min liste -->
 			<section id="mainsection">
@@ -54,7 +60,7 @@
     		<div class="hovereffect">
         	<img class="img-responsive" src="img/TheIntouchables.jpg" alt="The Intouchables movie cover">
           <div class="overlay">
-						<a href="film1.html">
+						<a href="film1.html?id=2274">
             <h2>Intouchables</h2>
 						<p > Den sanne historien om to menn som aldri skulle ha møtt hverandre -
 								De Urørlige er en oppløftende komedie om vennskap, tillit og menneskelige muligheter.
@@ -69,7 +75,7 @@
     		<div class="hovereffect">
         	<img class="img-responsive" src="img/TheLunchbox.jpg" alt="The Lunchbox movie cover">
           <div class="overlay">
-						<a href="film2.html">
+						<a href="film1.html?id=3818">
             <h2>The Lunchbox</h2>
 						<p> Indiske The Lunchbox er en sjelden filmperle som har begeistret
 								et stort internasjonalt publikum med sin originalitet og varme.
@@ -84,7 +90,7 @@
     		<div class="hovereffect">
         	<img class="img-responsive" src="img/HolyGrail.jpg" alt="The Holy Grail movie cover">
           <div class="overlay">
-						<a href="film1.html">
+						<a href="film1.html?id=1027">
             <h2>Monty Python &<br>the Holy Grail</h2>
 						<p>Kong Arthur og hans riddere skal finne Den Hellige Gral.
 						</p></a>
@@ -103,7 +109,7 @@
     		<div class="hovereffect">
         	<img class="img-responsive" src="img/MinorityReport.jpg" alt="Minority Report movie cover">
           <div class="overlay">
-						<a href="film1.html">
+						<a href="film1.html?id=2274">
             <h2>Minority Report</h2>
 						<p>Lederen for prekriminaliteten blir beskyldt for et fremtidig drap og må finne ut hvem
 							som ha pekt han ut, ellers blir han et offer selv.

@@ -36,6 +36,28 @@ function search_for_title(e) {
 	}
 }
 
+//___________________________________ Søk etter tittel responsiv ______________________________________________________
+
+function search_for_title_res(e) {
+  //e.preventDefault();
+  readAsArray(e);
+  // søke gjennom objects til den finner en film med lik tittel som input.
+	for(var i = 0; i < films.length; i++){
+		if (films[i].otitle.includes(input.film_title_res) || films[i].etitle.includes(input.film_title_res)  || films[i].ntitle.includes(input.film_title_res) ){
+			console.log(films[i]);
+			// gjøre om filmtittel til string
+			var titles = films[i].otitle.toString();
+			// finne url til de ulike filmene.
+			var url = "film1.html?id=" + films[i].id;
+			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
+			var ol = document.createElement("ol");
+			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+			var body = document.getElementById("title1");
+			body.appendChild(ol);
+		}
+	}
+}
+
 //___________________________________ Søk etter tittel avansert søk _________________________________________________
 
 function search_for_movie_title(e) {
@@ -168,6 +190,12 @@ window.onload = function() {
 				title1 = document.getElementById("title1");
 		title1.innerHTML = ("<h4> Tittel: <h4>");
 		search_for_title(input);
+		}
+
+	if (query_params.film_title_res) {
+				title1 = document.getElementById("title1");
+		title1.innerHTML = ("<h4> Tittel: <h4>");
+		search_for_title_res(input);
 		}
 
 	if (query_params.title) {
