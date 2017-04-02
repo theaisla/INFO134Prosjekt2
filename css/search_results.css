@@ -1,0 +1,356 @@
+/*_____________ Kode av: tcl059, kandidat 139 _____________*/
+body, html {
+	margin: 0;
+  width: 100%;
+}
+
+/*_____________Fonts_____________*/
+
+h1 {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 2em;
+	font-weight: 300;
+	letter-spacing: 1.8px;
+	color: #808080;
+  text-align: center;
+  margin: 5px 0px 0px 0px;
+}
+
+.underline {
+	width: 60px;
+	border-bottom: 3px solid red;
+	margin: 12px auto 25px auto;
+}
+
+p {
+  font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8em;
+	color: #4d4d4d;
+}
+
+a {
+  font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8em;
+	color: #808080;
+  text-decoration: none;
+}
+
+h2 {
+  font-family: Lato, Helvetica Neue, Helvetica, Arial;
+  font-size: 1.2em;
+	font-weight: 300;
+	letter-spacing: 1.5px;
+	color: #808080;
+}
+
+ol {
+  padding: 0px;
+}
+
+/*_____________ Navigasjon _____________*/
+
+#responsive_search{
+	display: none;
+}
+
+#headerbackground {
+	background-color: white;
+  opacity: 0.93;
+	height: 65px;
+	width: 100%;
+	position: fixed;
+  top: 0px;
+	z-index: 9;
+  position: fixed;
+}
+
+nav {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 0.15em;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+	top: 6px;
+	position: fixed;
+	z-index: 10;
+  /*border: 1px solid blue;*/
+}
+
+#logo {
+	width: 110px;
+  padding: 5px 5px 5px 5px;
+	height: auto;
+	border: 0px;
+	float: left;
+  z-index: 11;
+}
+
+nav a {
+	text-decoration: none;
+	color: #808080;
+}
+
+nav a:hover {
+	color: red;
+  text-decoration: none;
+}
+
+/* fjerner blå outline fra lenker i chrome */
+a:focus {
+  outline:0;
+}
+
+/* kode inspirert fra http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
+.search input[type="text"] {
+    font-family: Lato, Helvetica Neue, Helvetica, Arial;
+    font-size: 0.85em;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: #808080;
+    text-transform: none;
+		font-style: italic;
+    position: relative;
+
+    border: 1px solid #d1d1d1;
+    width: 150px;
+    padding: 3px 10px 3px 15px;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+.search input[type="text"]:focus {
+    width: 200px;
+    outline: 0;
+    border: 1px solid red;
+}
+
+#nav-container {
+	float: right;
+	padding-left: 35px;
+  padding-top: 17px;
+	width: 320px;
+}
+
+/* dropdown minside */
+.dropdown{
+	float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    background-color: white;
+    min-width: 120px;
+    border: 0.5px solid red;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+/* lenkene i dropdown */
+.dropdown-content a {
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+/* vise alternativer ved hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#minside {
+  color: red;
+}
+
+
+/*_____________Hoved section_____________*/
+
+#mainsection {
+  width: 70%;
+  margin: auto;
+  z-index: 0;
+  position: relative;
+  top: 80px;
+  padding: 10px;
+}
+
+a:hover {
+	color: red;
+  text-decoration: underline;
+}
+
+/* ______________________________ Responsive meny ________________________________________ */
+
+ @media only screen and (max-width: 1070px) {
+
+   /*_____________Fonts_____________*/
+
+   h2 {
+     font-size: 9px;
+   	font-weight: 400;
+   	letter-spacing: 1.5px;
+   }
+
+   h3 {
+     font-size: 1em;
+   }
+
+   p{
+     font-size: 0.7em;
+   }
+
+ }
+
+/* ______________________________________ Small screen _________________________________________*/
+
+@media only screen and (max-width: 750px) and (min-width: 410px){
+  #mainsection {
+    width: 90%;
+  }
+
+	nav{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	/*_____________Nav_____________*/
+
+	#menyikon {
+		display: inline-block;
+		border-bottom: 15px double red;
+	  border-top: 5px solid red;
+	  content:"";
+	  height: 5px;
+		width: 35px;
+		margin: 20px;
+		z-index: 10;
+		float: right;
+
+	}
+
+	nav #nav-container, #minside, #unresponsive_search {
+ 	display: none;
+  }
+
+	#responsive_search, nav:hover #nav-container, nav #nav-container:hover  {
+		display: block;
+	}
+
+	.dropdown-content{
+		display: block;
+		min-width: 120px;
+		height: 100px;
+		top: 30px;
+		position: relative;
+		right: -55px;
+	}
+
+  nav #nav-container {
+ 	text-align: center;
+ 	width: 100px;
+ 	z-index: 100;
+  }
+
+	.search input[id="film_title_res"] {
+			margin-top: 10px;
+	    width: 80px;
+	}
+
+	.search input[type="text"]:focus {
+	    width: 80px;
+	}
+
+  /*_____________Fonts_____________*/
+
+  h1{
+    font-size: 1.2em;
+  }
+
+  h2 {
+
+  }
+
+
+}
+
+/* ______________________________________ Smallest screen _________________________________________*/
+
+@media only screen and (max-width: 410px){
+
+  #mainsection {
+    width: 90%;
+  }
+
+  #logo {
+  	width: 80px;
+  }
+
+	nav{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	/*_____________Nav_____________*/
+
+	#menyikon {
+		display: inline-block;
+		border-bottom: 15px double red;
+		border-top: 5px solid red;
+		content:"";
+		height: 5px;
+		width: 35px;
+		margin: 20px;
+		z-index: 10;
+		float: right;
+
+	}
+
+	nav #nav-container, #minside, #unresponsive_search {
+	display: none;
+	}
+
+	#responsive_search, nav:hover #nav-container, nav #nav-container:hover  {
+		display: block;
+	}
+
+	.dropdown-content{
+		display: block;
+		min-width: 120px;
+		height: 100px;
+		top: 30px;
+		position: relative;
+		right: -55px;
+	}
+
+	nav #nav-container {
+	text-align: center;
+	width: 100px;
+	z-index: 100;
+	}
+
+	.search input[id="film_title_res"] {
+			margin-top: 10px;
+			width: 80px;
+	}
+
+	.search input[type="text"]:focus {
+			width: 80px;
+	}
+
+  /*_____________Fonts_____________*/
+
+  h1{
+    font-size: 1.2em;
+  }
+
+  h2{
+    padding-top: 30px;
+  }
+
+}
