@@ -22,29 +22,26 @@ h1 {
 	margin: 12px auto 25px auto;
 }
 
-p {
-  font-family: Lato, Helvetica Neue, Helvetica, Arial;
-	font-size: 0.8em;
-	color: #4d4d4d;
-}
-
-a {
+p, a {
   font-family: Lato, Helvetica Neue, Helvetica, Arial;
 	font-size: 0.8em;
 	color: #808080;
   text-decoration: none;
+	font-weight: 300;
 }
 
 h2 {
   font-family: Lato, Helvetica Neue, Helvetica, Arial;
-  font-size: 1.2em;
+  font-size: 1.6em;
 	font-weight: 300;
 	letter-spacing: 1.5px;
 	color: #808080;
+	margin-bottom: -7px;
 }
 
 ol {
   padding: 0px;
+	margin: 0px 0px 10px 0px;
 }
 
 /*_____________ Navigasjon _____________*/
@@ -190,17 +187,6 @@ a:hover {
  @media only screen and (max-width: 1070px) {
 
    /*_____________Fonts_____________*/
-
-   h2 {
-     font-size: 9px;
-   	font-weight: 400;
-   	letter-spacing: 1.5px;
-   }
-
-   h3 {
-     font-size: 1em;
-   }
-
    p{
      font-size: 0.7em;
    }
@@ -266,16 +252,10 @@ a:hover {
 	    width: 80px;
 	}
 
-  /*_____________Fonts_____________*/
-
-  h1{
-    font-size: 1.2em;
-  }
-
-  h2 {
-
-  }
-
+	/*_____________Fonts_____________*/
+	p{
+		font-size: 0.7em;
+	}
 
 }
 
@@ -343,14 +323,13 @@ a:hover {
 			width: 80px;
 	}
 
-  /*_____________Fonts_____________*/
+	/*_____________Fonts_____________*/
+	p{
+		font-size: 0.7em;
+	}
 
-  h1{
-    font-size: 1.2em;
-  }
-
-  h2{
-    padding-top: 30px;
-  }
-
+	h2 {
+	  font-size: 1.2em;
+		font-weight: 400;
+	}
 }

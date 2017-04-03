@@ -30,7 +30,7 @@ function search_for_title(e) {
 			var url = "film1.html?id=" + films[i].id;
 			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
 			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
 			var body = document.getElementById("title1");
 			body.appendChild(ol);
 		}
@@ -54,7 +54,7 @@ function search_for_title_res(e) {
 			var url = "film1.html?id=" + films[i].id;
 			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
 			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
 			var body = document.getElementById("title1");
 			body.appendChild(ol);
 		}
@@ -79,7 +79,7 @@ function search_for_movie_title(e) {
 			var url = "film1.html?id=" + films[i].id;
 			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
 			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
 			var body = document.getElementById("title2");
 			body.appendChild(ol);
 		}
@@ -104,7 +104,7 @@ function search_for_actor(e) {
 			var url = "film1.html?id=" + films[i].id;
 			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
 			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
 			var body = document.getElementById("actor");
 			body.appendChild(ol);
 		}
@@ -127,7 +127,7 @@ function search_for_director(e) {
 			var url = "film1.html?id=" + films[j].id;
 			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
 			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
 			var body = document.getElementById("director");
 			body.appendChild(ol);
 		}
@@ -151,7 +151,7 @@ for (x in genres_object){
 					var url = "film1.html?id=" + films[i].id;
 					// lage en liste av de ulike filmene. Viktig at elementene ikke overskrives.
 					var ol = document.createElement("ol");
-					ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+					ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
 					var body = document.getElementById("genre");
 					body.appendChild(ol);
 				}
@@ -176,7 +176,7 @@ function search_for_country(e) {
 			var url = "film1.html?id=" + films[i].id;
 			// lage en liste av de ulike filmene. Viktig at elementene ikke overskrives.
 			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">" + titles + "</a>";
+			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
 			var body = document.getElementById("country");
 			body.appendChild(ol);
 		}
@@ -193,19 +193,19 @@ window.onload = function() {
 
 	if (query_params.film_title) {
 				title1 = document.getElementById("title1");
-		title1.innerHTML = ("<h2> Filmtittel: <h2>");
+		title1.innerHTML = ("<h2> Filmtitler som inneholder "  + query_params.film_title +  ": <h2>");
 		search_for_title(input);
 		}
 
 	if (query_params.film_title_res) {
 				title1 = document.getElementById("title1");
-		title1.innerHTML = ("<h2> Filmtittel: <h2>");
+		title1.innerHTML = ("<h2> Filmtitler som inneholder "  + query_params.title +  ": <h2>");
 		search_for_title_res(input);
 		}
 
 	if (query_params.title) {
         title2 = document.getElementById("title2");
-		title2.innerHTML = ("<h2> Filmtittel: <h2>");
+		title2.innerHTML = ("<h2> Filmtitler som inneholder "  + query_params.title +  ": <h2>");
     search_for_movie_title(input);
     }
 
