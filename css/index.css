@@ -418,7 +418,7 @@ a:hover {
     border: 1px solid red;
 }
 
-.av_sok input[id="title"]{
+.av_sok input[class="film_title"]{
 	margin-left: 19px;
 }
 

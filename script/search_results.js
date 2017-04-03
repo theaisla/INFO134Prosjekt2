@@ -30,41 +30,6 @@ function search_for_title(e) {
 		}
 	}
 }
-
-//___________________________________ Søk etter tittel responsiv ______________________________________________________
-
-function search_for_title_res(e) {
-  //e.preventDefault();
-  readAsArray(e);
-  // søke gjennom objects til den finner en film med lik tittel som input.
-	for(var i = 0; i < films.length; i++){
-		if (films[i].otitle.toLowerCase().includes(input.title.toLowerCase()) ||
-		films[i].etitle.toLowerCase().includes(input.title.toLowerCase())  ||
-		films[i].ntitle.toLowerCase().includes(input.title.toLowerCase()) ){
-			//console.log(films[i]);
-			results.push(films[i]);
-			displayResults("title1", i);
-		}
-	}
-}
-
-//___________________________________ Søk etter tittel avansert søk _________________________________________________
-
-function search_for_movie_title(e) {
-  //e.preventDefault();
-  readAsArray(e);
-  // søke gjennom objects til den finner en film med lik tittel som input.
-	for(var i = 0; i < films.length; i++){
-		if (films[i].otitle.toLowerCase().includes(input.title.toLowerCase()) ||
-		films[i].etitle.toLowerCase().includes(input.title.toLowerCase())  ||
-		films[i].ntitle.toLowerCase().includes(input.title.toLowerCase()) ){
-			//console.log(films[i]);
-			results.push(films[i]);
-			displayResults("title2", i);
-		}
-	}
-}
-
 //___________________________________ Søk etter skuespiller _______________________________________________________
 
 function search_for_actor(e) {
@@ -156,50 +121,32 @@ window.onload = function() {
 	search_results = movies_object;
 
 	if (query_params.film_title) {
-				title1 = document.getElementById("title1");
 		title1.innerHTML = ("<h2> Filmtitler som inneholder "  + query_params.film_title +  ": <h2>");
 		search_for_title(input);
 		}
 
-	if (query_params.film_title_res) {
-				title1 = document.getElementById("title1");
-		title1.innerHTML = ("<h2> Filmtitler som inneholder "  + query_params.title +  ": <h2>");
-		search_for_title_res(input);
-		}
-
-	if (query_params.title) {
-        title2 = document.getElementById("title2");
-		title2.innerHTML = ("<h2> Filmtitler som inneholder "  + query_params.title +  ": <h2>");
-    search_for_movie_title(input);
-    }
-
 	if (query_params.actor) {
-        actor = document.getElementById("actor");
 		actor.innerHTML = ("<h2>" + query_params.actor + ", skuespiller i filmene: <h2>");
 		search_for_actor(input);
     }
 
 	if (query_params.director) {
-		director = document.getElementById("director");
 		director.innerHTML = ("<h2>" + query_params.director + ", regissør av filmene: <h2>");
 		search_for_director(input);
     }
 
 	if (query_params.genre) {
-        genre = document.getElementById("genre");
 		genre.innerHTML = ("<h2>Films with genre " + query_params.genre + ":<h2>");
 		search_for_genre(input);
     }
 
 	if (query_params.country) {
-        //country = document.getElementById("country");
 		country.innerHTML = ("<h2> Films from " + query_params.country + ":<h2>");
 		search_for_country(input);
 	}
 
-	if(results[""] == null){
-		nores = document.getElementById("nores");
+	// hvis resultarray er tomt, skriv det på resultatsiden
+	if(results.length == 0){
 		nores.innerHTML = ("<p>Beklager, fant ikke noen resultater</p>");
 	}
-	// hvis resultarray er tomt, skriv det på resultatsiden
 }
