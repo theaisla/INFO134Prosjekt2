@@ -1,3 +1,5 @@
+// Kode av: xut004, kandidat 268
+
 query_params = get_query_string_parameters();
 var relevanteFilmen = movies_object[query_params.id];
 var relevanteSjanger = genres_object[query_params.id];
@@ -13,7 +15,7 @@ for (key in relevanteAnmeldelse) {
 	var p2 = document.createElement("p");
 	var p3 = document.createElement("p");
 	var p4 = document.createElement("br");
-	p.innerHTML =bruker;
+	p.innerHTML = bruker;
 	p2.innerHTML = rate;
 	p3.innerHTML = kom;
 	p4.innerHTML = "";
@@ -51,7 +53,7 @@ if (relevanteAnmeldelse){
 	document.getElementById("rate2").appendChild(p);
 }
 
-//console.log( "The sum of all the elements is: " + total + " The average is: " + avg );
+//console.log( "Summen er: " + total + " Gjennomsnittet er: " + avg );
 /*------------------------------- slutt på review kode--------------------------------------------*/
 
 
