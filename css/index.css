@@ -211,6 +211,7 @@ a {
 	text-decoration: none;
 	color: #53749d;
 }
+ 
 a:hover {
 	color: red;
   text-decoration: underline;
