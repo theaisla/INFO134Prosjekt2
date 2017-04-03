@@ -270,7 +270,7 @@ a:hover {
  	z-index: 100;
   }
 
-	.search input[id="film_title_res"] {
+	.search input[class="film_title"] {
 			margin-top: 10px;
 	    width: 80px;
 	}
@@ -341,7 +341,7 @@ a:hover {
 	z-index: 100;
 	}
 
-	.search input[id="film_title_res"] {
+	.search input[class="film_title"] {
 			margin-top: 10px;
 			width: 80px;
 	}

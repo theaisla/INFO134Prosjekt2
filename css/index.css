@@ -211,7 +211,7 @@ a {
 	text-decoration: none;
 	color: #53749d;
 }
- 
+
 a:hover {
 	color: red;
   text-decoration: underline;
@@ -505,6 +505,11 @@ a:hover {
      padding: 5px;
    }
 
+	 .av_sok input[type="text"]:focus {
+			 width: 150px;
+	 }
+	 
+
  }
 
 /* ______________________________________ Small screen _________________________________________*/
@@ -557,13 +562,17 @@ a:hover {
  	z-index: 100;
   }
 
-	.search input[id="film_title_res"] {
+	.search input[class="film_title"] {
 			margin-top: 10px;
 	    width: 80px;
 	}
 
 	.search input[type="text"]:focus {
 	    width: 80px;
+	}
+
+	.av_sok input[type="text"]:focus {
+			width: 150px;
 	}
 
   /*_____________Fonts_____________*/
@@ -659,13 +668,17 @@ a:hover {
 	z-index: 100;
 	}
 
-	.search input[id="film_title_res"] {
+	.search input[class="film_title"] {
 			margin-top: 10px;
 			width: 80px;
 	}
 
 	.search input[type="text"]:focus {
 			width: 80px;
+	}
+
+	.av_sok input[type="text"]:focus {
+	    width: 150px;
 	}
 
   /*_____________Fonts_____________*/
