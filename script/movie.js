@@ -5,7 +5,6 @@ var relevanteFilmen = movies_object[query_params.id];
 var relevanteSjanger = genres_object[query_params.id];
 var relevanteAnmeldelse = reviews_object[query_params.id];
 
-
 /*------------------------------- Start på review kode--------------------------------------------*/
 //skriver ut bruker, rating og kommentar
 for (key in relevanteAnmeldelse) {
@@ -52,7 +51,6 @@ if (relevanteAnmeldelse){
 
 	document.getElementById("rate2").appendChild(p);
 }
-
 //console.log( "Summen er: " + total + " Gjennomsnittet er: " + avg );
 /*------------------------------- slutt på review kode--------------------------------------------*/
 
@@ -65,7 +63,6 @@ if(relevanteSjanger && relevanteSjanger[0] !== "" ){
 	var link = document.getElementById('genreDiv');
 	link.style.display = 'none'; //1697
 }
-
 /*------------------------------- Slutt på sjanger kode--------------------------------------------*/
 
 
@@ -88,8 +85,6 @@ if (trailerTilFilm["youtube trailer id"] !== "" ){
 document.getElementById("otitle").innerHTML =(relevanteFilmen["otitle"]); //orginaltittel til filmen
 document.getElementById("title").innerHTML =(relevanteFilmen["otitle"]); //tittel vises i breadcrum
 
-
-
 if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 	if(relevanteFilmen["ntitle"] !== ""){
 		document.getElementById("ntitle").innerHTML =("Norsk tittel: " + relevanteFilmen["ntitle"]);
@@ -102,9 +97,7 @@ if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 		//console.log("engelsk tittel");
 		//id 1697
 	}
-
 }
-
 //2345
 /*------------------------------- Slutt på tittel kode--------------------------------------------*/
 
@@ -141,7 +134,6 @@ if (relevanteFilmen["description"] === null || relevanteFilmen["description"] ==
 else{
 	document.getElementById("description").innerHTML =(relevanteFilmen["description"]);
 	//console.log(" discription");
-	
 }
 /*------------------------------- Slutt på handling kode--------------------------------------------*/
 
@@ -149,7 +141,6 @@ else{
 /*------------------------------- Start på personer kode--------------------------------------------*/
 if(movies_object["dir"] !== ""){
 	if (relevanteFilmen["dir"] !== ""){
-		
 		var direk = relevanteFilmen["dir"];
 		var direkList = direk.split(',');
 		var direkt = '<a href="search_results.html?director=' + direkList[0] + '">' + direkList[0] + '</a>'
@@ -191,7 +182,7 @@ if(bildeId){
 	document.getElementById("bilde").alt =('Coverbilde til ' + tittel);
 	document.getElementById("bilde2").alt =('Coverbilde til ' + tittel);
 	document.getElementById("bilde3").alt =('Coverbilde til ' + tittel);
-	// må fikse de som IKKE har bilde -- 1033
+
 	if(bildeId < 1000){
 		document.getElementById("bilde").src =('https://nelson.uib.no/o/0/' + bildeId +  ".jpg");
 		document.getElementById("bilde2").src =('https://nelson.uib.no/o/0/' + bildeId +  "b.jpg");
@@ -200,7 +191,7 @@ if(bildeId){
 	if (bildeId >= 1000 && bildeId < 2000){
 		document.getElementById("bilde").src =('https://nelson.uib.no/o/1/' + bildeId +  ".jpg");
 		document.getElementById("bilde2").src =('https://nelson.uib.no/o/1/' + bildeId +  "b.jpg");
-		document.getElementById("bilde3").src =('https://nelson.uib.no/o/1/' + bildeId +  "c.jpg");		
+		document.getElementById("bilde3").src =('https://nelson.uib.no/o/1/' + bildeId +  "c.jpg");
 	}
 	if (bildeId >= 2000 && bildeId < 3000){
 		document.getElementById("bilde").src =('https://nelson.uib.no/o/2/' + bildeId +  ".jpg");
