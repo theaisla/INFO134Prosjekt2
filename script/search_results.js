@@ -118,13 +118,13 @@ function search_for_director(e) {
   readAsArray(e);
 
   // søke gjennom objects til den finner en regissør med samme navn.
-	for(var j = 0; j < films.length; j++){
-		if (films[j].fdir && (films[j].dir.toLowerCase().indexOf(input.director.toLowerCase())) > -1){
-
+	for(var i = 0; i < films.length; i++){
+		if (films[i].dir && (films[i].dir.toLowerCase().indexOf(input.director.toLowerCase())) > -1){
+			console.log(films[i]);
 			// gjøre om filmtittel til string
-			var titles = films[j].otitle.toString();
+			var titles = films[i].otitle.toString();
 			// finne url til de ulike filmene.
-			var url = "film1.html?id=" + films[j].id;
+			var url = "film1.html?id=" + films[i].id;
 			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
 			var ol = document.createElement("ol");
 			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
