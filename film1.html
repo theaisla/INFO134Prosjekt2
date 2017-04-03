@@ -2,6 +2,7 @@
 
 <HTML>
 	<head>
+		<!-- Kode av: xut004, kandidat 268-->
 		<meta charset="UTF-8">
 
 		<title>Filmregister</title>
@@ -61,15 +62,13 @@
 
 			<!-- Filmen -->
 			<h1 id="otitle">Film</h1>
-			<div class="underline"></div>
-
 			<p id="ntitle"></p>
 			<p id ="etitle"></p>
 			<p id="facts"></p>
 
-
 			<!-- Gjennomsnittlig rate-->
-			<div id="rate2">	</div>
+			<div id="rate2"></div>
+			<!-- Rating -->
 			<div class="rate">
 				<input type="radio" id="star5" name="rate" value="5" />
 				<label for="star5" title="text">5 stjerner</label>
@@ -85,31 +84,24 @@
 
 			<!-- bildene -->
 			<section class="images">
-			<img id="bilde" src="#" alt="Bilde til den relevante filmen">
-			<img id="bilde2" src="#" alt="Bilde til den relevante filmen">
-			<img id="bilde3" src="#" alt="Bilde til den relevante filmen">
+				<img id="bilde" src="#" alt="Bilde til den relevante filmen">
+				<img id="bilde2" src="#" alt="Bilde til den relevante filmen">
+				<img id="bilde3" src="#" alt="Bilde til den relevante filmen">
 			</section>
 			
-			<!-- min liste 			-->
+			<!-- min liste -->
 			<a href="minside.html"><img src="img/icons/pluss.png" alt="Min Liste" title="Legg til i min liste" id="minListe"> </a>
 
 			<!-- Fakta om film -->
-			<div id="right">
-
-				<p id="dirDiv"><strong>Regissørene: </strong></p><div id="dir"></div>
-				<p id="folkDiv"><strong>Skuespillerer: </strong></p><div id="folk"></div>
-				<p id="genreDiv"><strong>Sjanger: </strong></p><div id="genre"></div>
-			</div>
-
+			<p id="dirDiv"><strong>Regissørene: </strong></p><div id="dir"></div>
+			<p id="folkDiv"><strong>Skuespillerer: </strong></p><div id="folk"></div>
+			<p id="genreDiv"><strong>Sjanger: </strong></p><div id="genre"></div>
 
 			<!-- Handling til filmen -->
 			<div id="descriptionDiv">
 				<h3>Handling </h3>
-				<div class="underlineh3"></div>
 				<p id="description"></p>
 			</div>
-
-
 
 			<!-- Trailer til filmen -->
 			<div id="trailerDiv">
@@ -118,11 +110,8 @@
 				<iframe id="trailer" width="560" height="315" src="#" allowfullscreen></iframe>
 			</div>
 
-
-
 			<!-- Kommentarer til filmen -->
 			<h3>Anmeldelse </h3>
-			<div class="underlineh3"></div>
 
 			<!-- Kommentarer Hentet fra reviews -->
 			<div id="review"></div>
@@ -137,16 +126,10 @@
 			</form>
 
 			<a href="http://www.imdb.com/title/tt2350496/reviews?ref_=tt_urv"> Les flere kommentarer...</a>
-
-
-
-
 		<!-- slutt på wrapper -->
 		</section>
 
 	<footer>
-		<p>&copy; <p>
-
 		<!-- JS -->
 		<script type="text/javascript" src="script/object.js"></script>
 		<script type="text/javascript" src="script/genres.js"></script>

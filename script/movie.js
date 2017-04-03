@@ -57,31 +57,6 @@ if (relevanteAnmeldelse){
 /*------------------------------- slutt på review kode--------------------------------------------*/
 
 
-/*------------------------------- Start på tittel kode--------------------------------------------*/
-document.getElementById("otitle").innerHTML =(relevanteFilmen["otitle"]); //orginaltittel til filmen
-document.getElementById("title").innerHTML =(relevanteFilmen["otitle"]); //tittel vises i breadcrum
-
-
-
-if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
-	if(relevanteFilmen["ntitle"] !== ""){
-		document.getElementById("ntitle").innerHTML =("Norsk tittel: " + relevanteFilmen["ntitle"]);
-		//console.log("norsk tittel");
-		//id=239
-	}
-
-	if(relevanteFilmen["etitle"] !== ""){
-		document.getElementById("etitle").innerHTML =("Engelsk tittel: " + relevanteFilmen["etitle"]);
-		//console.log("engelsk tittel");
-		//id 1697
-	}
-
-}
-
-//2345
-/*------------------------------- Slutt på tittel kode--------------------------------------------*/
-
-
 /*------------------------------- Start på sjanger kode--------------------------------------------*/
 if(relevanteSjanger && relevanteSjanger[0] !== "" ){
 	document.getElementById("genre").innerHTML =(relevanteSjanger);
@@ -107,6 +82,31 @@ if (trailerTilFilm["youtube trailer id"] !== "" ){
 	link.style.display = 'none';
 }
 /*------------------------------- Slutt på trailer kode--------------------------------------------*/
+
+
+/*------------------------------- Start på tittel kode--------------------------------------------*/
+document.getElementById("otitle").innerHTML =(relevanteFilmen["otitle"]); //orginaltittel til filmen
+document.getElementById("title").innerHTML =(relevanteFilmen["otitle"]); //tittel vises i breadcrum
+
+
+
+if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
+	if(relevanteFilmen["ntitle"] !== ""){
+		document.getElementById("ntitle").innerHTML =("Norsk tittel: " + relevanteFilmen["ntitle"]);
+		//console.log("norsk tittel");
+		//id=239
+	}
+
+	if(relevanteFilmen["etitle"] !== ""){
+		document.getElementById("etitle").innerHTML =("Engelsk tittel: " + relevanteFilmen["etitle"]);
+		//console.log("engelsk tittel");
+		//id 1697
+	}
+
+}
+
+//2345
+/*------------------------------- Slutt på tittel kode--------------------------------------------*/
 
 
 /*------------------------------- Start på fakta kode--------------------------------------------*/
