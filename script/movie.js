@@ -7,54 +7,48 @@ var relevanteAnmeldelse = reviews_object[query_params.id];
 /*------------------------------- Start på review kode--------------------------------------------*/
 //skriver ut bruker, rating og kommentar
 for (key in relevanteAnmeldelse) {
-			var bruker = relevanteAnmeldelse[key]['username'] + ":   ";
-
-			
-			var rate = " Karakter: " + relevanteAnmeldelse[key]['rating']  
-			var p = document.createElement("p");
-			var p2 = document.createElement("p");
-			var p3 = document.createElement("p");
-			var p4 = document.createElement("br");
-			p.innerHTML =bruker;
-			p2.innerHTML = rate;
-			p3.innerHTML = kom;
-			p4.innerHTML = "";
-			document.getElementById("review").appendChild(p);
-			document.getElementById("review").appendChild(p2);
-			if (relevanteAnmeldelse[key]['comment']!== ""){
-				var kom = " Kommentar: " + relevanteAnmeldelse[key]['comment'];
-				document.getElementById("review").appendChild(p3);
-			}
-			document.getElementById("review").appendChild(p4);
-
+	var bruker = relevanteAnmeldelse[key]['username'] + ":   ";
+	var rate = " Karakter: " + relevanteAnmeldelse[key]['rating']  
+	var p = document.createElement("p");
+	var p2 = document.createElement("p");
+	var p3 = document.createElement("p");
+	var p4 = document.createElement("br");
+	p.innerHTML =bruker;
+	p2.innerHTML = rate;
+	p3.innerHTML = kom;
+	p4.innerHTML = "";
+	document.getElementById("review").appendChild(p);
+	document.getElementById("review").appendChild(p2);
+	if (relevanteAnmeldelse[key]['comment']!== ""){
+		var kom = " Kommentar: " + relevanteAnmeldelse[key]['comment'];
+		document.getElementById("review").appendChild(p3);
+	}
+	document.getElementById("review").appendChild(p4);
 }
 
-	
 //skriver ut gjennomsnittlig rate
 if (relevanteAnmeldelse){
-var brukerneIArray = [];
-var karaktereneIArray = [];
-
-for(kommentarFraBruker in relevanteAnmeldelse){
-	brukerneIArray.push(relevanteAnmeldelse[kommentarFraBruker]);
-}
-for (var i=0; i < brukerneIArray.length; i++){
-	if(brukerneIArray[i]["rating"]){
-		karaktereneIArray.push(brukerneIArray[i]['rating']);
+	var brukerneIArray = [];
+	var karaktereneIArray = [];
+	for(kommentarFraBruker in relevanteAnmeldelse){
+		brukerneIArray.push(relevanteAnmeldelse[kommentarFraBruker]);
 	}
-}
+	for (var i=0; i < brukerneIArray.length; i++){
+		if(brukerneIArray[i]["rating"]){
+			karaktereneIArray.push(brukerneIArray[i]['rating']);
+		}
+	}
 
-var p = document.createElement("p");
-var total = 0;
-for(var i = 0; i < karaktereneIArray.length; i++) {
-	total += karaktereneIArray[i];
-}
+	var p = document.createElement("p");
+	var total = 0;
+	for(var i = 0; i < karaktereneIArray.length; i++) {
+		total += karaktereneIArray[i];
+	}
 
-var avg = total / karaktereneIArray.length;
-p.innerHTML ="Gjennomsnittlig karakter: "+avg;
+	var avg = total / karaktereneIArray.length;
+	p.innerHTML ="Gjennomsnittlig karakter: "+avg;
 
-
-document.getElementById("rate2").appendChild(p);
+	document.getElementById("rate2").appendChild(p);
 }
 
 //console.log( "The sum of all the elements is: " + total + " The average is: " + avg );
@@ -87,9 +81,7 @@ if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 
 
 /*------------------------------- Start på sjanger kode--------------------------------------------*/
-//får feil hvis filmen ikke har sjanger!! 1697
 if(relevanteSjanger && relevanteSjanger[0] !== "" ){
-	//console.log(relevanteSjanger[0]);//id = 3519
 	document.getElementById("genre").innerHTML =(relevanteSjanger);
 }else{
 	//console.log("null sjanger");
@@ -157,10 +149,10 @@ if(movies_object["dir"] !== ""){
 	if (relevanteFilmen["dir"] !== ""){
 		
 		var direk = relevanteFilmen["dir"];
-		var direkList = direk.split('og');
-		var direkt = '<a href="search_results.html?actor=' + direkList[0] + '">' + direkList[0] + '</a>'
+		var direkList = direk.split(',');
+		var direkt = '<a href="search_results.html?director=' + direkList[0] + '">' + direkList[0] + '</a>'
 		for(var i =1; i<direkList.length;i++){
-			direkt = direkt + ", " + '<a href="search_results.html?actor=' + direkList[i] + '">' + direkList[i] + '</a>';
+			direkt = direkt + ", " + '<a href="search_results.html?director=' + direkList[i] + '">' + direkList[i] + '</a>';
 		}
 	document.getElementById("dir").innerHTML =(direkt);
 	//console.log("direktør");
