@@ -4,6 +4,8 @@
 var input = get_query_string_parameters();
 // lagre filmer i en array
 var films = [];
+// lagre resultater i en array
+var results = [];
 
 //___________________________________ Gjør at objects.js kan leses som en array ___________________________________
 function readAsArray(e){
@@ -11,7 +13,6 @@ function readAsArray(e){
 		films.push(movies_object[x]);
 	}
 }
-
 
 //___________________________________ Søk etter tittel ____________________________________________________________
 
@@ -24,15 +25,8 @@ function search_for_title(e) {
 		films[i].etitle.toLowerCase().includes(input.film_title.toLowerCase())  ||
 		films[i].ntitle.toLowerCase().includes(input.film_title.toLowerCase()) ){
 			//console.log(films[i]);
-			// gjøre om filmtittel til string
-			var titles = films[i].otitle.toString();
-			// finne url til de ulike filmene.
-			var url = "film1.html?id=" + films[i].id;
-			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
-			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
-			var body = document.getElementById("title1");
-			body.appendChild(ol);
+			results.push(films[i]);
+			displayResults("title1", i);
 		}
 	}
 }
@@ -48,15 +42,8 @@ function search_for_title_res(e) {
 		films[i].etitle.toLowerCase().includes(input.title.toLowerCase())  ||
 		films[i].ntitle.toLowerCase().includes(input.title.toLowerCase()) ){
 			//console.log(films[i]);
-			// gjøre om filmtittel til string
-			var titles = films[i].otitle.toString();
-			// finne url til de ulike filmene.
-			var url = "film1.html?id=" + films[i].id;
-			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
-			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
-			var body = document.getElementById("title1");
-			body.appendChild(ol);
+			results.push(films[i]);
+			displayResults("title1", i);
 		}
 	}
 }
@@ -72,16 +59,8 @@ function search_for_movie_title(e) {
 		films[i].etitle.toLowerCase().includes(input.title.toLowerCase())  ||
 		films[i].ntitle.toLowerCase().includes(input.title.toLowerCase()) ){
 			//console.log(films[i]);
-
-			// gjøre om filmtittel til string
-			var titles = films[i].otitle.toString();
-			// finne url til de ulike filmene.
-			var url = "film1.html?id=" + films[i].id;
-			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
-			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
-			var body = document.getElementById("title2");
-			body.appendChild(ol);
+			results.push(films[i]);
+			displayResults("title2", i);
 		}
 	}
 }
@@ -97,16 +76,8 @@ function search_for_actor(e) {
 		//
 		if (films[i].folk && (films[i].folk.toLowerCase().indexOf(input.actor.toLowerCase())) > -1){
 			//console.log(films[i]);
-
-			// gjøre om filmtittel til string
-			var titles = films[i].otitle.toString();
-			// finne url til de ulike filmene.
-			var url = "film1.html?id=" + films[i].id;
-			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
-			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
-			var body = document.getElementById("actor");
-			body.appendChild(ol);
+			results.push(films[i]);
+			displayResults("actor", i);
 		}
 	}
 }
@@ -120,16 +91,9 @@ function search_for_director(e) {
   // søke gjennom objects til den finner en regissør med samme navn.
 	for(var i = 0; i < films.length; i++){
 		if (films[i].dir && (films[i].dir.toLowerCase().indexOf(input.director.toLowerCase())) > -1){
-			console.log(films[i]);
-			// gjøre om filmtittel til string
-			var titles = films[i].otitle.toString();
-			// finne url til de ulike filmene.
-			var url = "film1.html?id=" + films[i].id;
-			// lage en liste av de ulike filmene regissøren har laget. Viktig at elementene ikke overskrives.
-			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
-			var body = document.getElementById("director");
-			body.appendChild(ol);
+			//console.log(films[i]);
+			results.push(films[i]);
+			displayResults("director", i);
 		}
 	}
 }
@@ -145,15 +109,8 @@ for (x in genres_object){
 		if (genres_object[x] && (genres_object[x].indexOf(input.genre.toLowerCase())) > -1){
 			for (var i = 0; i < films.length; i++){
 				if (x == films[i].id){
-					// gjøre om filmtittel til string
-					var titles = films[i].otitle.toString();
-					// finne url til de ulike filmene.
-					var url = "film1.html?id=" + films[i].id;
-					// lage en liste av de ulike filmene. Viktig at elementene ikke overskrives.
-					var ol = document.createElement("ol");
-					ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
-					var body = document.getElementById("genre");
-					body.appendChild(ol);
+					results.push(films[i]);
+					displayResults("genre", i);
 				}
 			}
 		}
@@ -169,18 +126,25 @@ function search_for_country(e) {
   // søke gjennom objects til den finner en regissør med samme navn.
 	for(var i = 0; i < films.length; i++){
 		if (films[i].country.toLowerCase() === input.country.toLowerCase()){
+			results.push(films[i]);
+			displayResults("country", i);
 
-			// gjøre om filmtittel til string
-			var titles = films[i].otitle.toString();
-			// finne url til de ulike filmene.
-			var url = "film1.html?id=" + films[i].id;
-			// lage en liste av de ulike filmene. Viktig at elementene ikke overskrives.
-			var ol = document.createElement("ol");
-			ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
-			var body = document.getElementById("country");
-			body.appendChild(ol);
 		}
 	}
+}
+
+//___________________________________ display results ____________________________________________________________
+
+function displayResults(arg, i){
+	// gjøre om filmtittel til string
+	var titles = films[i].otitle.toString();
+	// finne url til de ulike filmene.
+	var url = "film1.html?id=" + films[i].id;
+	// lage en liste av de ulike filmene. Viktig at elementene ikke overskrives.
+	var ol = document.createElement("ol");
+	ol.innerHTML = "<a href=" + url + ">• " + titles + "</a>";
+	var body = document.getElementById(arg);
+	body.appendChild(ol);
 }
 
 
@@ -232,4 +196,10 @@ window.onload = function() {
 		country.innerHTML = ("<h2> Films from " + query_params.country + ":<h2>");
 		search_for_country(input);
 	}
+
+	if(results[""] == null){
+		nores = document.getElementById("nores");
+		nores.innerHTML = ("<p>Beklager, fant ikke noen resultater</p>");
+	}
+	// hvis resultarray er tomt, skriv det på resultatsiden
 }
