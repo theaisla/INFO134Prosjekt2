@@ -508,7 +508,7 @@ a:hover {
 	 .av_sok input[type="text"]:focus {
 			 width: 150px;
 	 }
-	 
+
 
  }
 
@@ -562,12 +562,12 @@ a:hover {
  	z-index: 100;
   }
 
-	.search input[class="film_title"] {
+	.search input[id="film_title_res"] {
 			margin-top: 10px;
 	    width: 80px;
 	}
 
-	.search input[type="text"]:focus {
+	.search input[id="film_title_res"]:focus {
 	    width: 80px;
 	}
 
@@ -668,12 +668,12 @@ a:hover {
 	z-index: 100;
 	}
 
-	.search input[class="film_title"] {
+	.search input[id="film_title_res"] {
 			margin-top: 10px;
 			width: 80px;
 	}
 
-	.search input[type="text"]:focus {
+	.search input[id="film_title_res"]:focus {
 			width: 80px;
 	}
 

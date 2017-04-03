@@ -35,14 +35,14 @@
           <a id="minside" href="minside.html">"Navn"</a>
           <div class="dropdown-content">
             <form class="search" id="responsive_search" action="search_results.html" method="get" >
-               <input class="film_title" name="film_title" type="text" placeholder="Søk filmtittel" >
+               <input class="film_title" id="film_title_res" name="film_title" type="text" placeholder="Søk filmtittel" >
             </form>
             <a href="minside.html">Min side</a>
             <a href="login.html">Logg ut</a>
           </div>
         </div>
         <form class="search" id="unresponsive_search" action="search_results.html" method="get" >
-           <input class="film_title" id="film_title_res" name="film_title" type="text" placeholder="Søk filmtittel" >
+           <input class="film_title" id="film_title_unres" name="film_title" type="text" placeholder="Søk filmtittel" >
         </form>
       </div>
     </nav>
@@ -184,8 +184,8 @@
 
             <form class="av_sok" id="avsok" action="search_results.html" method="get">
         			<div class="avsearch">
-        				<label for="title">Film tittel   </label>
-        				<input class="film_title" name="film_title" type="text" placeholder="e.g. King Kong" >
+        				<label for="avsoktitle">Film tittel</label>
+        				<input id="avsoktitle" class="film_title" name="film_title" type="text" placeholder="e.g. King Kong" >
         			</div>
         			<div class="avsearch">
         				<label for="actor">Skuespiller</label>
