@@ -203,11 +203,14 @@ a:hover {
 }
 
 .breadcrumb li, .breadcrumb a {
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.9em;
 	float: left;
 	padding-left: 0px;
 	padding-right: 10px;
 	color: white;
 }
+
 
 /* ______________________________ Responsive meny ________________________________________ */
 

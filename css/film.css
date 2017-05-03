@@ -30,8 +30,10 @@ border-bottom: 3px solid red;
 }
 
 p {
-font-size: 0.8em;
-color: black;
+  font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8rem;
+	font-weight: 300;
+	color: #4d4d4d;
 }
 
 a {
@@ -44,7 +46,7 @@ a:focus {
 outline:0;
 }
 
-/* breadbrumb liste */
+/*---------------------breadcrumb-------------------------*/
 .breadcrumb {
 list-style: none;
 padding: 0px;
@@ -52,7 +54,24 @@ padding: 0px;
 
 .breadcrumb li {
 float: left;
-padding-left: 35px;
+padding-left: 30px;
+padding-top: 3px;
+color: white;
+font-family: Lato, Helvetica Neue, Helvetica, Arial;
+font-size: 0.9em   !important;
+font-weight: 300;
+}
+
+.breadcrumb{
+margin-top:5em;
+background-color:red;
+border: 1px solid red;
+border-radius: 5px;
+height: 20px;
+}
+
+.breadcrumb a, .breadcrumb li{
+color: white  !important;
 }
 
 /*_____________ Navigasjon _____________*/
@@ -173,7 +192,7 @@ a:focus {
 #minside {
   color: red;
 }
-  
+
 
 
 /*_____________Main section_____________*/
@@ -237,20 +256,6 @@ color: #dbdbdb;
 .rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label, .rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label, .rate > label:hover ~ input:checked ~ label { color: #E12323; } /*når går over de som  allerede er valgt*/
 
 
-/*---------------------breadcrumb-------------------------*/
-
-.breadcrumb{
-margin-top:4em;
-background-color:red;
-}
-
-.breadcrumb a, .breadcrumb li{
-color: white  !important;
-}
-
-#visited{
-font-style: italic;
-}
 
 #minListe {
 height:2em !important;
@@ -267,6 +272,7 @@ color:#53749d;
 text-decoration: underline;
 color:red;
 }
+
 #wrapper p{
 margin: 0.5em;
 }
@@ -293,7 +299,7 @@ border:0;
 
 @media only screen and (max-width: 1070px) {
 #wrapper{
-width:60%;
+width:70%;
 }
 .images img{
 height: 10em;
@@ -325,7 +331,7 @@ font-size: 0.7em;
 
 @media only screen and (max-width: 750px) and (min-width: 410px){
 #wrapper{
-width:80%;
+width:90%;
 }
 .images img{
 height: 5em ;
@@ -409,7 +415,7 @@ font-size: 1.2em;
 
 @media only screen and (max-width: 410px){
 #wrapper{
-width:70%;
+width:90%;
 }
 .images img{
 height: 20em ;
