@@ -1,4 +1,4 @@
-/*_____________Kode av: xut004, kandidat 268 _____________*/
+/*_____________Kode av: kandidat 268 _____________*/
 
 body, html {
 margin: 0;
@@ -28,18 +28,6 @@ color: #808080;
 display: inline-table;
 border-bottom: 3px solid red;
 }
-/*
-.underline {
-width: 60px;
-border-bottom: 3px solid red;
-margin: auto 25px auto;
-}
-
-.underlineh3 {
-width: 60px;
-border-bottom: 3px solid red;
-margin-left:0.8em;
-}*/
 
 p {
 font-size: 0.8em;
@@ -82,7 +70,6 @@ padding-left: 35px;
   top: 0px;
 	z-index: 9;
   position: fixed;
-  /*border: 1px solid red;*/
 }
 
 nav {
@@ -97,7 +84,6 @@ nav {
 	top: 6px;
 	position: fixed;
 	z-index: 10;
-  /*border: 1px solid blue;*/
 }
 
 #logo {
@@ -197,7 +183,7 @@ color: #565655;
 margin:auto;
 max-width: 1000px;
 display: flex;
-flex-direction: column; /*| row-reverse | row | column-reverse;*/
+flex-direction: column;
 padding:1em;
 width: 70%;
 font-size: 0.8em;
@@ -417,8 +403,6 @@ z-index: 100;
 h1{
 font-size: 1.2em;
 }
-
-
 }
 
 /* ______________________________________ Smallest screen _________________________________________*/
@@ -428,7 +412,10 @@ font-size: 1.2em;
 width:70%;
 }
 .images img{
-height: 3em ;
+height: 20em ;
+}
+#bilde2, #bilde3{
+     display: none;
 }
 iframe{
 width: 200px;
