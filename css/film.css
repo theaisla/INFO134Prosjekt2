@@ -70,122 +70,124 @@ padding-left: 35px;
 /*_____________ Navigasjon _____________*/
 
 #responsive_search{
-display: none;
+	display: none;
 }
 
 #headerbackground {
-background-color: white;
-opacity: 0.93;
-height: 65px;
-width: 100%;
-position: fixed;
-top: 0px;
-z-index: 9;
-position: fixed;
-/*border: 1px solid red;*/
+	background-color: white;
+  opacity: 0.93;
+	height: 65px;
+	width: 100%;
+	position: fixed;
+  top: 0px;
+	z-index: 9;
+  position: fixed;
+  /*border: 1px solid red;*/
 }
 
 nav {
-font-size: 0.8em;
-text-transform: uppercase;
-font-weight: 300;
-letter-spacing: 0.15em;
-width: 70%;
-margin-left: 15%;
-margin-right: 15%;
-top: 6px;
-position: fixed;
-z-index: 10;
-/*border: 1px solid blue;*/
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 0.15em;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+	top: 6px;
+	position: fixed;
+	z-index: 10;
+  /*border: 1px solid blue;*/
 }
 
 #logo {
-width: 110px;
-padding: 5px 5px 5px 5px;
-height: auto;
-border: 0px;
-float: left;
-z-index: 11;
+	width: 110px;
+  padding: 5px 5px 5px 5px;
+	height: auto;
+	border: 0px;
+	float: left;
+  z-index: 11;
 }
 
 nav a {
-text-decoration: none;
-color: #808080;
+	text-decoration: none;
+	color: #808080;
 }
 nav a:hover {
-color: red;
-text-decoration: none;
+	color: red;
+  text-decoration: none;
 }
 
 /* fjerner blå outline fra lenker i chrome */
 a:focus {
-outline:0;
+  outline:0;
 }
 
 /* kode inspirert fra http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
 .search input[type="text"] {
-font-size: 0.85em;
-font-weight: 300;
-letter-spacing: 0.15em;
-color: #808080;
-text-transform: none;
-font-style: italic;
-position: relative;
+    font-family: Lato, Helvetica Neue, Helvetica, Arial;
+    font-size: 0.85em;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: #808080;
+    text-transform: none;
+		font-style: italic;
+    position: relative;
 
-border: 1px solid #d1d1d1;
-width: 150px;
-padding: 3px 10px 3px 15px;
-border-radius: 20px;
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
--webkit-transition: all 0.7s ease 0s;
-transition: all 0.7s ease 0s;
+    border: 1px solid #d1d1d1;
+    width: 150px;
+    padding: 3px 10px 3px 15px;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
 }
 
 .search input[type="text"]:focus {
-width: 200px;
-outline: 0;
-border: 1px solid red;
+    width: 200px;
+    outline: 0;
+    border: 1px solid red;
 }
 
 #nav-container {
-float: right;
-padding-left: 35px;
-padding-top: 17px;
-width: 320px;
+	float: right;
+	padding-left: 35px;
+  padding-top: 17px;
+	width: 320px;
 }
 
 /* dropdown minside */
 .dropdown{
-float: right;
+	float: right;
 }
 
 .dropdown-content {
-display: none;
-position: absolute;
-margin-top: 0px;
-background-color: white;
-min-width: 120px;
-border: 0.5px solid red;
-border-radius: 5px;
-z-index: 20;
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    background-color: white;
+    min-width: 120px;
+    border: 0.5px solid red;
+    border-radius: 5px;
+    z-index: 20;
 }
 
 /* lenkene i dropdown */
 .dropdown-content a {
-padding: 8px 8px;
-text-decoration: none;
-display: block;
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
 }
 
 /* vise alternativer ved hover */
 .dropdown:hover .dropdown-content {
-display: block;
+    display: block;
 }
 
 #minside {
-color: red;
+  color: red;
 }
-
+  
 
 
 /*_____________Main section_____________*/
@@ -351,23 +353,26 @@ height: 215px;
 width: 80px;
 }
 
-nav{
-width: 90%;
-margin-left: 5%;
+#mainsection {
+  width: 90%;
 }
 
+nav{
+  width: 90%;
+  margin-left: 5%;
+}
 /*_____________Nav_____________*/
 
 #menyikon {
-display: inline-block;
-border-bottom: 15px double red;
-border-top: 5px solid red;
-content:"";
-height: 5px;
-width: 35px;
-margin: 20px;
-z-index: 10;
-float: right;
+  display: inline-block;
+  border-bottom: 15px double red;
+  border-top: 5px solid red;
+  content:"";
+  height: 5px;
+  width: 35px;
+  margin: 20px;
+  z-index: 10;
+  float: right;
 
 }
 
@@ -376,16 +381,16 @@ display: none;
 }
 
 #responsive_search, nav:hover #nav-container, nav #nav-container:hover  {
-display: block;
+  display: block;
 }
 
 .dropdown-content{
-display: block;
-min-width: 120px;
-height: 100px;
-top: 30px;
-position: relative;
-right: -55px;
+  display: block;
+  min-width: 120px;
+  height: 100px;
+  top: 30px;
+  position: relative;
+  right: -55px;
 }
 
 nav #nav-container {
@@ -394,14 +399,19 @@ width: 100px;
 z-index: 100;
 }
 
-.search input[class="film_title"] {
-margin-top: 10px;
-width: 80px;
+.search input[id="film_title_res"] {
+    margin-top: 10px;
+    width: 80px;
 }
 
-.search input[type="text"]:focus {
-width: 80px;
+.search input[id="film_title_res"]:focus {
+    width: 80px;
 }
+
+.av_sok input[type="text"]:focus {
+    width: 150px;
+}
+
 /*_____________Fonts_____________*/
 
 h1{
@@ -425,27 +435,31 @@ width: 200px;
 height: 115px;
 }
 
+#mainsection {
+  width: 90%;
+}
+
 #logo {
-width: 80px;
+  width: 80px;
 }
 
 nav{
-width: 90%;
-margin-left: 5%;
+  width: 90%;
+  margin-left: 5%;
 }
 
 /*_____________Nav_____________*/
 
 #menyikon {
-display: inline-block;
-border-bottom: 15px double red;
-border-top: 5px solid red;
-content:"";
-height: 5px;
-width: 35px;
-margin: 20px;
-z-index: 10;
-float: right;
+  display: inline-block;
+  border-bottom: 15px double red;
+  border-top: 5px solid red;
+  content:"";
+  height: 5px;
+  width: 35px;
+  margin: 20px;
+  z-index: 10;
+  float: right;
 
 }
 
@@ -454,16 +468,16 @@ display: none;
 }
 
 #responsive_search, nav:hover #nav-container, nav #nav-container:hover  {
-display: block;
+  display: block;
 }
 
 .dropdown-content{
-display: block;
-min-width: 120px;
-height: 100px;
-top: 30px;
-position: relative;
-right: -55px;
+  display: block;
+  min-width: 120px;
+  height: 100px;
+  top: 30px;
+  position: relative;
+  right: -55px;
 }
 
 nav #nav-container {
@@ -472,14 +486,19 @@ width: 100px;
 z-index: 100;
 }
 
-.search input[class="film_title"] {
-margin-top: 10px;
-width: 80px;
+.search input[id="film_title_res"] {
+    margin-top: 10px;
+    width: 80px;
 }
 
-.search input[type="text"]:focus {
-width: 80px;
+.search input[id="film_title_res"]:focus {
+    width: 80px;
 }
+
+.av_sok input[type="text"]:focus {
+    width: 150px;
+}
+
 
 /*_____________Fonts_____________*/
 

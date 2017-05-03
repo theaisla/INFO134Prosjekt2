@@ -8,6 +8,7 @@ var films = [];
 var results = [];
 
 //___________________________________ Gjør at objects.js kan leses som en array ___________________________________
+
 function readAsArray(e){
 	for (x in movies_object){
 		films.push(movies_object[x]);
