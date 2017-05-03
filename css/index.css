@@ -8,7 +8,7 @@ body, html {
 
 h1 {
 	font-family: Lato, Helvetica Neue, Helvetica, Arial;
-	font-size: 2em;
+	font-size: 2rem;
 	font-weight: 300;
 	letter-spacing: 1.8px;
 	color: #808080;
@@ -31,7 +31,7 @@ p {
 
 h2 {
   font-family: Lato, Helvetica Neue, Helvetica, Arial;
-  font-size: 13px;
+  font-size: 0.8rem;
 	font-weight: 400;
 	letter-spacing: 1.5px;
 	color: white;
@@ -40,7 +40,7 @@ h2 {
 
 h3 {
 	font-family: Lato, Helvetica Neue, Helvetica, Arial;
-	font-size: 1.3em;
+	font-size: 1.3rem;
 	font-weight: 300;
 	letter-spacing: 1.8px;
 	color: #808080;
@@ -50,7 +50,7 @@ h3 {
 
 h4 {
 	font-family: Lato, Helvetica Neue, Helvetica, Arial;
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	font-weight: 300;
 	letter-spacing: 1.2px;
 	color: #808080;
@@ -58,19 +58,10 @@ h4 {
   text-align: center;
 }
 
-h5 {
-	font-family: Lato, Helvetica Neue, Helvetica, Arial;
-	font-size: 0.9em;
-	font-weight: 400;
-	letter-spacing: 1.2px;
-	color: #808080;
-  margin: 3px 0px 3px 3px;
-}
-
 label {
 	font-family: Lato, Helvetica Neue, Helvetica, Arial;
 	font-weight: bold;
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	color: #4d4d4d;
 }
 
@@ -94,7 +85,7 @@ label {
 
 nav {
 	font-family: Lato, Helvetica Neue, Helvetica, Arial;
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	text-transform: uppercase;
 	font-weight: 300;
 	letter-spacing: 0.15em;
@@ -133,9 +124,9 @@ a:focus {
 /* kode inspirert fra http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
 .search input[type="text"] {
     font-family: Lato, Helvetica Neue, Helvetica, Arial;
-    font-size: 0.85em;
+    font-size: 0.65rem;
     font-weight: 300;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.15rem;
     color: #808080;
     text-transform: none;
 		font-style: italic;
@@ -245,7 +236,7 @@ a:hover {
 
 .breadcrumb li, .breadcrumb a {
 	font-family: Lato, Helvetica Neue, Helvetica, Arial;
-	font-size: 0.9em;
+	font-size: 0.8rem;
 	font-weight: 300;
 	float: left;
 	padding-left: 0px;
@@ -427,7 +418,7 @@ a:hover {
 
 .av_sok input[type="text"] {
     font-family: Lato, Helvetica Neue, Helvetica, Arial;
-    font-size: 0.7em;
+    font-size: 0.7rem;
     font-weight: 300;
     letter-spacing: 0.15em;
     color: #808080;
@@ -471,7 +462,7 @@ a:hover {
 
 .av_sok input[type="submit"]{
 	font-family: Lato, Helvetica Neue, Helvetica, Arial;
-	font-size: 0.7em;
+	font-size: 0.7rem;
 	font-weight: 400;
 	letter-spacing: 0.15em;
 	color: #808080;
@@ -501,11 +492,11 @@ a:hover {
    }
 
    h3 {
-     font-size: 1em;
+     font-size: 1rem;
    }
 
    p{
-     font-size: 0.7em;
+     font-size: 0.7rem;
    }
 
    /*_____________ Bilde av filmer store _____________*/
@@ -608,13 +599,8 @@ a:hover {
   /*_____________Fonts_____________*/
 
   h1{
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
-
-  h2 {
-
-  }
-
 
   /*_____________ Bilde av filmer store _____________*/
 
@@ -714,7 +700,7 @@ a:hover {
   /*_____________Fonts_____________*/
 
   h1{
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   h2{
