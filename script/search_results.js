@@ -1,4 +1,4 @@
-// Kode av: tcl059, kandidat 139
+// Kode av: kandidat 139
 
 // lese input
 var input = get_query_string_parameters();

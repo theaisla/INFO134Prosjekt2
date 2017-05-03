@@ -1,4 +1,4 @@
-/*_____________ Kode av: tcl059, kandidat 139 _____________*/
+/*_____________ Kode av: kandidat 139 _____________*/
 body, html {
 	margin: 0;
   width: 100%;
@@ -514,7 +514,7 @@ a:hover {
 
 /* ______________________________________ Small screen _________________________________________*/
 
-@media only screen and (max-width: 750px) and (min-width: 410px){
+@media only screen and (max-width: 830px) and (min-width: 410px){
   #mainsection {
     width: 90%;
   }
