@@ -1,4 +1,4 @@
-// Kode av: xut004, kandidat 268
+// Kode av: kandidat 268
 
 query_params = get_query_string_parameters();
 var relevanteFilmen = movies_object[query_params.id];
@@ -51,7 +51,6 @@ if (relevanteAnmeldelse){
 
 	document.getElementById("rate2").appendChild(p);
 }
-//console.log( "Summen er: " + total + " Gjennomsnittet er: " + avg );
 /*------------------------------- slutt på review kode--------------------------------------------*/
 
 
@@ -59,7 +58,6 @@ if (relevanteAnmeldelse){
 if(relevanteSjanger && relevanteSjanger[0] !== "" ){
 	document.getElementById("genre").innerHTML =(relevanteSjanger);
 }else{
-	//console.log("null sjanger");
 	var link = document.getElementById('genreDiv');
 	link.style.display = 'none'; //1697
 }
@@ -71,10 +69,8 @@ var idTrailer = relevanteFilmen["id"];
 var trailerTilFilm = movies_object[idTrailer];
 
 if (trailerTilFilm["youtube trailer id"] !== "" ){
-	//console.log("trailer"); //id= 46
 	document.getElementById("trailer").src =('https://www.youtube.com/embed/' + trailerTilFilm["youtube trailer id"]);
 }else{
-	//console.log("null trailer");//id=64
 	var link = document.getElementById('trailerDiv');
 	link.style.display = 'none';
 }
@@ -88,39 +84,29 @@ document.getElementById("title").innerHTML =(relevanteFilmen["otitle"]); //titte
 if (relevanteFilmen["ntitle"] !== relevanteFilmen["etitle"]){
 	if(relevanteFilmen["ntitle"] !== ""){
 		document.getElementById("ntitle").innerHTML =("Norsk tittel: " + relevanteFilmen["ntitle"]);
-		//console.log("norsk tittel");
-		//id=239
 	}
-
 	if(relevanteFilmen["etitle"] !== ""){
 		document.getElementById("etitle").innerHTML =("Engelsk tittel: " + relevanteFilmen["etitle"]);
-		//console.log("engelsk tittel");
-		//id 1697
 	}
 }
-//2345
 /*------------------------------- Slutt på tittel kode--------------------------------------------*/
 
 
 /*------------------------------- Start på fakta kode--------------------------------------------*/
 if(relevanteFilmen["length"] !== null && relevanteFilmen["country"] !== null && relevanteFilmen["year"] !== null){
 document.getElementById("facts").innerHTML =("| " + relevanteFilmen["length"] + " minutter | " + relevanteFilmen["country"] + " | " + relevanteFilmen["year"] + " | " );
-}
-else if(relevanteFilmen["country"] !== null && relevanteFilmen["year"] !== null){
+}else if(relevanteFilmen["country"] !== null && relevanteFilmen["year"] !== null){
 	document.getElementById("facts").innerHTML =("| " + relevanteFilmen["country"] + " | " + relevanteFilmen["year"] + " | " );
-}
-else if(relevanteFilmen["length"] !== null && relevanteFilmen["year"] !== null){
-document.getElementById("facts").innerHTML =("| " + relevanteFilmen["length"] + " minutter | "  + " | " + relevanteFilmen["year"] + " | " );
-}
-else if(relevanteFilmen["length"] !== null && relevanteFilmen["country"] !== null){
-document.getElementById("facts").innerHTML =("| " + relevanteFilmen["length"] + " minutter | "  + " | " + relevanteFilmen["country"] + " | " );
-}
-else if(relevanteFilmen["length"] !== null){
-document.getElementById("facts").innerHTML =("| " + relevanteFilmen["length"] + " minutter | ");
+}else if(relevanteFilmen["length"] !== null && relevanteFilmen["year"] !== null){
+	document.getElementById("facts").innerHTML =("| " + relevanteFilmen["length"] + " minutter | "  + " | " + relevanteFilmen["year"] + " | " );
+}else if(relevanteFilmen["length"] !== null && relevanteFilmen["country"] !== null){
+	document.getElementById("facts").innerHTML =("| " + relevanteFilmen["length"] + " minutter | "  + " | " + relevanteFilmen["country"] + " | " );
+}else if(relevanteFilmen["length"] !== null){
+	document.getElementById("facts").innerHTML =("| " + relevanteFilmen["length"] + " minutter | ");
 }else if(relevanteFilmen["year"] !== null){
-document.getElementById("facts").innerHTML =("| " + relevanteFilmen["year"] + " | ");
+	document.getElementById("facts").innerHTML =("| " + relevanteFilmen["year"] + " | ");
 }else if(relevanteFilmen["country"] !== null){
-document.getElementById("facts").innerHTML =("| " + relevanteFilmen["country"] + " | ");
+	document.getElementById("facts").innerHTML =("| " + relevanteFilmen["country"] + " | ");
 }
 /*------------------------------- Slutt på fakta kode--------------------------------------------*/
 
