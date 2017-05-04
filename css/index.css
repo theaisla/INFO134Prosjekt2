@@ -204,6 +204,13 @@ a {
 	color: #53749d;
 }
 
+#seflere {
+	position: relative;
+	left: 9px;
+	top: -8px;
+	font-style: italic;
+}
+
 a:hover {
 	color: red;
   text-decoration: underline;
