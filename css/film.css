@@ -237,25 +237,25 @@ nav a:hover {
 	color: #dbdbdb;
 }
 
-.rate:not(:checked) > label:before { 
-	content: '★ '; 
+.rate:not(:checked) > label:before {
+	content: '★ ';
 }
 
 .rate > input:checked ~ label { /*når valgt*/
-	color: red; 
+	color: red;
 }
 
-.rate:not(:checked) > label:hover, 
+.rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label { /*når hover over*/
-	color: #E01515; 
-} 
+	color: #E01515;
+}
 
 /*når går over de som  allerede er valgt*/
-.rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label, 
-.rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label, 
-.rate > label:hover ~ input:checked ~ label { 
-	color: #E12323; 
-} 
+.rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+	color: #E12323;
+}
 
 
 
@@ -287,7 +287,7 @@ nav a:hover {
 }
 
 .images img{
-	height:15em;
+	height:18em;
 }
 
 iframe{
@@ -303,7 +303,7 @@ iframe{
 	width:70%;
 }
 .images img{
-	height: 10em;
+	height: 15em;
 }
 iframe{
 	width: 400px;
@@ -334,7 +334,7 @@ p{
 width:90%;
 }
 .images img{
-height: 5em ;
+height: 10em ;
 }
 iframe{
 width: 300px;
