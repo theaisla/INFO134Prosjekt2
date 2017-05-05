@@ -1,76 +1,73 @@
 /*_____________Kode av: kandidat 268 _____________*/
 
 body, html {
-margin: 0;
-width: 100%;
-font-family: Lato, "Helvetica Neue", Helvetica, Arial;
+	margin: 0;
+	width: 100%;
+	font-family: Lato, "Helvetica Neue", Helvetica, Arial;
 }
 
 /*_____________Fonts_____________*/
 
 h1 {
-font-size: 2rem;
-font-weight: 300;
-letter-spacing: 1.8px;
-color: #808080;
-text-align: center;
-display: inline-table;
-border-bottom: 3px solid red;
-margin: 2em 0 0 0;
+	font-size: 2rem;
+	font-weight: 300;
+	letter-spacing: 1.8px;
+	color: #808080;
+	text-align: center;
+	display: inline-table;
+	border-bottom: 3px solid red;
+	margin: 2em 0 0 0;
 }
 
 h2 {
-font-size: 1.3rem;
-font-weight: 300;
-letter-spacing: 1.8px;
-color: #808080;
-display: inline-table;
-border-bottom: 3px solid red;
+	font-size: 1.3rem;
+	font-weight: 300;
+	letter-spacing: 1.8px;
+	color: #808080;
+	display: inline-table;
+	border-bottom: 3px solid red;
 }
 
 p {
-  font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
 	font-size: 0.8rem;
 	font-weight: 300;
 	color: #4d4d4d;
 }
 
 a {
-text-decoration: none;
-color: #acacaa;
+	text-decoration: none;
+	color: #acacaa;
 }
 
 /* fjerner blå outline fra lenker i chrome */
 a:focus {
-outline:0;
+	outline:0;
 }
 
 /*---------------------breadcrumb-------------------------*/
 .breadcrumb {
-list-style: none;
-padding: 0px;
+	list-style: none;
+	padding: 0px;
+	margin-top:5em;
+	background-color:red;
+	border: 1px solid red;
+	border-radius: 5px;
+	height: 20px;
 }
 
 .breadcrumb li {
-float: left;
-padding-left: 30px;
-padding-top: 1px;
-color: white;
-font-family: Lato, Helvetica Neue, Helvetica, Arial;
-font-size: 0.8rem;
-font-weight: 300;
-}
-
-.breadcrumb{
-margin-top:5em;
-background-color:red;
-border: 1px solid red;
-border-radius: 5px;
-height: 20px;
+	float: left;
+	padding-left: 30px;
+	padding-top: 1px;
+	color: white;
+	font-family: Lato, Helvetica Neue, Helvetica, Arial;
+	font-size: 0.8rem;
+	font-weight: 300;
 }
 
 .breadcrumb a, .breadcrumb li{
-color: white  !important;
+	color: white  !important;
 }
 
 /*_____________ Navigasjon _____________*/
@@ -96,9 +93,9 @@ nav {
 	text-transform: uppercase;
 	font-weight: 300;
 	letter-spacing: 0.15rem;
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
 	top: 6px;
 	position: fixed;
 	z-index: 10;
@@ -106,11 +103,11 @@ nav {
 
 #logo {
 	width: 110px;
-  padding: 5px 5px 5px 5px;
+	padding: 5px 5px 5px 5px;
 	height: auto;
 	border: 0px;
 	float: left;
-  z-index: 11;
+	z-index: 11;
 }
 
 nav a {
@@ -119,12 +116,7 @@ nav a {
 }
 nav a:hover {
 	color: red;
-  text-decoration: none;
-}
-
-/* fjerner blå outline fra lenker i chrome */
-a:focus {
-  outline:0;
+	text-decoration: none;
 }
 
 /* kode inspirert fra http://www.bloggermint.com/2011/06/css3-search-box-inspired-by-apple-com/ */
@@ -135,7 +127,7 @@ a:focus {
     letter-spacing: 0.15rem;
     color: #808080;
     text-transform: none;
-		font-style: italic;
+	font-style: italic;
     position: relative;
 
     border: 1px solid #d1d1d1;
@@ -156,7 +148,7 @@ a:focus {
 #nav-container {
 	float: right;
 	padding-left: 35px;
-  padding-top: 17px;
+	padding-top: 17px;
 	width: 320px;
 }
 
@@ -197,133 +189,142 @@ a:focus {
 /*_____________Main section_____________*/
 
 #wrapper{
-color: #565655;
-margin:auto;
-max-width: 1000px;
-display: flex;
-flex-direction: column;
-padding:1em;
-width: 70%;
-font-size: 0.8rem;
+	color: #565655;
+	margin:auto;
+	max-width: 1000px;
+	display: flex;
+	flex-direction: column;
+	padding:1em;
+	width: 70%;
+	font-size: 0.8rem;
 }
 
 #right{
-float: right;
+	float: right;
 }
 
 
 /*---------------------post-------------------------*/
 #anmeldelse{
-display: flex;
-padding: 2em;
+	padding: 2em;
 }
 #comment{
-width:100%;
+	width:100%;
 }
 
 
 /*---------------------rating-------------------------*/
 /* code inspired by http://findnerd.com/list/view/Star-rating-using-pure-css/12096/ */
 .rate {
-float: right;
-height: 3em;
-padding: 0.5em;
-margin:1em;
+	float: right;
+	height: 3em;
+	padding: 0.5em;
+	margin:1em;
 }
 
 .rate:not(:checked) > input {
-position: absolute;
-top: -9999px;
+	position: absolute;
+	top: -9999px;
 }
 
 .rate:not(:checked) > label {
-float: right;
-width: 1em;
-overflow: hidden;
-white-space: nowrap;
-cursor: pointer;
-font-size: 30px;
-color: #dbdbdb;
+	float: right;
+	width: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 30px;
+	color: #dbdbdb;
 }
 
-.rate:not(:checked) > label:before { content: '★ '; }
+.rate:not(:checked) > label:before { 
+	content: '★ '; 
+}
 
-.rate > input:checked ~ label { color: red; } /*når valgt*/
+.rate > input:checked ~ label { /*når valgt*/
+	color: red; 
+}
 
-.rate:not(:checked) > label:hover, .rate:not(:checked) > label:hover ~ label { color: #E01515; } /*når hover over*/
+.rate:not(:checked) > label:hover, 
+.rate:not(:checked) > label:hover ~ label { /*når hover over*/
+	color: #E01515; 
+} 
 
-.rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label, .rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label, .rate > label:hover ~ input:checked ~ label { color: #E12323; } /*når går over de som  allerede er valgt*/
+/*når går over de som  allerede er valgt*/
+.rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label, 
+.rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label, 
+.rate > label:hover ~ input:checked ~ label { 
+	color: #E12323; 
+} 
 
 
 
 #minListe {
-height:2em !important;
-margin-left:auto;
-display:block;
-
+	height:2em !important;
+	margin-left:auto;
+	display:block;
 }
 
 #wrapper a{
-color:#53749d;
+	color:#53749d;
 }
 
 #wrapper a:hover{
-text-decoration: underline;
-color:red;
+	text-decoration: underline;
+	color:red;
 }
 
 #wrapper p{
-margin: 0.5em;
+	margin: 0.5em;
 }
 
 .handling{
-margin-left:3em;
+	margin-left:3em;
 }
 
 .images{
-margin: auto;
+	margin: auto;
 }
 
 .images img{
-height:15em;
+	height:15em;
 }
 
 iframe{
-margin: auto;
-padding:1em;
-border:0;
+	margin: auto;
+	padding:1em;
+	border:0;
 }
 
 /* ______________________________ Responsive meny ________________________________________ */
 
 @media only screen and (max-width: 1070px) {
 #wrapper{
-width:70%;
+	width:70%;
 }
 .images img{
-height: 10em;
+	height: 10em;
 }
 iframe{
-width: 400px;
-height: 215px;
+	width: 400px;
+	height: 215px;
 }
 
 /*_____________Fonts_____________*/
 
 h2 {
-font-size: 9px;
-font-weight: 400;
-letter-spacing: 1.5px;
+	font-size: 9px;
+	font-weight: 400;
+	letter-spacing: 1.5px;
 }
 
 h3 {
-font-size: 1rem;
+	font-size: 1rem;
 }
 
 p{
-font-size: 0.7rem;
+	font-size: 0.7rem;
 }
-
 }
 
 /* ______________________________________ Small screen _________________________________________*/

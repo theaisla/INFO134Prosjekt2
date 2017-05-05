@@ -68,7 +68,12 @@ if(relevanteSjanger && relevanteSjanger[0] !== "" ){
 var idTrailer = relevanteFilmen["id"];
 var trailerTilFilm = movies_object[idTrailer];
 
+
+
 if (trailerTilFilm["youtube trailer id"] !== "" ){
+	var h2 = document.createElement("h2");
+	h2.innerHTML ="Trailer";
+	document.getElementById("tra").appendChild(h2);
 	document.getElementById("trailer").src =('https://www.youtube.com/embed/' + trailerTilFilm["youtube trailer id"]);
 }else{
 	var link = document.getElementById('trailerDiv');
